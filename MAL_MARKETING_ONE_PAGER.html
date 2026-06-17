@@ -2,326 +2,192 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mal — Marketing Strategy One-Pager</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
-  :root {
-    --mal-black: #0a0a0a;
-    --mal-dark: #1a1a2e;
-    --mal-purple: #6c3ce0;
-    --mal-purple-light: #8b5cf6;
-    --mal-gold: #f5a623;
-    --mal-green: #10b981;
-    --mal-red: #ef4444;
-    --mal-blue: #3b82f6;
-    --mal-gray: #6b7280;
-    --mal-light: #f3f4f6;
-    --mal-white: #ffffff;
+  @page {
+    size: A3 portrait;
+    margin: 18mm 16mm;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    font-family: 'Inter', -apple-system, sans-serif;
-    background: var(--mal-white);
-    color: var(--mal-black);
-    line-height: 1.5;
-    padding: 40px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #0a0a0a;
+    line-height: 1.4;
+    font-size: 9.5px;
+    background: #fff;
   }
 
-  .page {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
+  .page { max-width: 1100px; margin: 0 auto; }
 
   /* HEADER */
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 32px;
-    background: linear-gradient(135deg, var(--mal-dark) 0%, #2d1b69 100%);
-    border-radius: 16px;
-    margin-bottom: 24px;
+    padding: 16px 22px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 100%);
+    border-radius: 10px;
+    margin-bottom: 14px;
     color: white;
   }
-  .header h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; }
-  .header .subtitle { font-size: 13px; color: rgba(255,255,255,0.6); margin-top: 4px; }
-  .header .meta { text-align: right; font-size: 12px; color: rgba(255,255,255,0.5); }
-  .header .meta .label { color: var(--mal-gold); font-weight: 600; }
-  .header .confidential {
-    background: rgba(239,68,68,0.2);
-    color: #fca5a5;
-    font-size: 10px;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 4px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-    display: inline-block;
+  .header h1 { font-size: 22px; font-weight: 800; letter-spacing: -0.3px; }
+  .header .subtitle { font-size: 10px; color: rgba(255,255,255,0.55); margin-top: 2px; }
+  .header .meta { text-align: right; font-size: 9px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+  .header .meta .label { color: #f5a623; font-weight: 600; }
+  .header .conf {
+    background: rgba(239,68,68,0.2); color: #fca5a5; font-size: 8px;
+    font-weight: 700; padding: 2px 8px; border-radius: 3px;
+    letter-spacing: 1.5px; text-transform: uppercase; display: inline-block; margin-bottom: 4px;
   }
 
   /* GRID */
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
-  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 20px; }
-  .grid-2-1 { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-bottom: 20px; }
-  .grid-1-2 { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; margin-bottom: 20px; }
-  .full { margin-bottom: 20px; }
+  .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  .g3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  .g21 { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-bottom: 12px; }
+  .g12 { display: grid; grid-template-columns: 1fr 2fr; gap: 12px; margin-bottom: 12px; }
+  .g32 { display: grid; grid-template-columns: 3fr 2fr; gap: 12px; margin-bottom: 12px; }
+  .full { margin-bottom: 12px; }
 
   /* CARD */
   .card {
-    background: var(--mal-white);
     border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 20px;
-    position: relative;
+    border-radius: 8px;
+    padding: 12px 14px;
+    background: #fff;
+    break-inside: avoid;
   }
-  .card-header {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: var(--mal-purple);
-    margin-bottom: 14px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--mal-purple);
+  .ch {
+    font-size: 8.5px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; margin-bottom: 8px; padding-bottom: 5px;
+    border-bottom: 2px solid currentColor;
   }
-  .card-header.gold { color: var(--mal-gold); border-color: var(--mal-gold); }
-  .card-header.green { color: var(--mal-green); border-color: var(--mal-green); }
-  .card-header.blue { color: var(--mal-blue); border-color: var(--mal-blue); }
-  .card-header.red { color: var(--mal-red); border-color: var(--mal-red); }
+  .ch-p { color: #6c3ce0; }
+  .ch-g { color: #10b981; }
+  .ch-b { color: #3b82f6; }
+  .ch-o { color: #f5a623; }
+  .ch-r { color: #ef4444; }
+  .ch-d { color: #1a1a2e; }
 
-  /* POSITIONING PYRAMID */
-  .pyramid { display: flex; flex-direction: column; align-items: center; gap: 0; }
-  .pyramid-level {
-    text-align: center;
-    padding: 14px 20px;
-    font-weight: 700;
-    font-size: 13px;
-    color: white;
-    position: relative;
-    border-radius: 6px;
-    margin-bottom: 6px;
-  }
-  .pyramid-level .priority-tag {
-    position: absolute;
-    right: -70px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 9px;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 3px;
-    white-space: nowrap;
-  }
-  .p1 { background: var(--mal-dark); width: 60%; }
-  .p1 .priority-tag { background: var(--mal-dark); color: white; }
-  .p2 { background: var(--mal-purple); width: 75%; }
-  .p2 .priority-tag { background: var(--mal-purple); color: white; }
-  .p3 { background: var(--mal-green); width: 90%; }
-  .p3 .priority-tag { background: var(--mal-green); color: white; }
-  .pyramid-label { font-size: 10px; color: var(--mal-gray); margin-top: 2px; font-weight: 400; }
-
-  /* TABLES */
-  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  /* TABLE */
+  table { width: 100%; border-collapse: collapse; font-size: 8.5px; }
   th {
-    background: var(--mal-light);
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 10px;
-    letter-spacing: 0.8px;
-    padding: 10px 12px;
-    text-align: left;
-    color: var(--mal-dark);
-    border-bottom: 2px solid #d1d5db;
+    background: #f3f4f6; font-weight: 700; text-transform: uppercase;
+    font-size: 7.5px; letter-spacing: 0.6px; padding: 6px 8px;
+    text-align: left; color: #1a1a2e; border-bottom: 1.5px solid #d1d5db;
   }
-  td {
-    padding: 10px 12px;
-    border-bottom: 1px solid #f3f4f6;
-    vertical-align: top;
-  }
-  tr:hover { background: #faf5ff; }
+  td { padding: 5px 8px; border-bottom: 1px solid #f3f4f6; vertical-align: top; }
 
-  /* BADGES */
-  .badge {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 10px;
-    font-weight: 600;
-    white-space: nowrap;
+  /* BADGE */
+  .b {
+    display: inline-block; padding: 1px 6px; border-radius: 3px;
+    font-size: 7.5px; font-weight: 600; white-space: nowrap;
   }
-  .badge-purple { background: #ede9fe; color: var(--mal-purple); }
-  .badge-green { background: #d1fae5; color: #065f46; }
-  .badge-gold { background: #fef3c7; color: #92400e; }
-  .badge-blue { background: #dbeafe; color: #1e40af; }
-  .badge-red { background: #fee2e2; color: #991b1b; }
-  .badge-gray { background: #f3f4f6; color: #374151; }
+  .b-p { background: #ede9fe; color: #6c3ce0; }
+  .b-g { background: #d1fae5; color: #065f46; }
+  .b-o { background: #fef3c7; color: #92400e; }
+  .b-b { background: #dbeafe; color: #1e40af; }
+  .b-r { background: #fee2e2; color: #991b1b; }
+  .b-k { background: #f3f4f6; color: #374151; }
+  .b-d { background: #1a1a2e; color: white; }
 
-  /* TIMELINE */
-  .timeline { position: relative; padding-left: 24px; }
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 8px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, var(--mal-purple), var(--mal-green));
+  /* PYRAMID */
+  .pyr { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .pyr-l {
+    text-align: center; padding: 10px 14px; font-weight: 700;
+    font-size: 10px; color: white; border-radius: 5px;
   }
-  .timeline-item {
-    position: relative;
-    margin-bottom: 16px;
-    padding-left: 12px;
-  }
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -20px;
-    top: 6px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--mal-purple);
-    border: 2px solid white;
-    box-shadow: 0 0 0 2px var(--mal-purple);
-  }
-  .timeline-item.active::before { background: var(--mal-green); box-shadow: 0 0 0 2px var(--mal-green); }
-  .timeline-item.future::before { background: white; box-shadow: 0 0 0 2px var(--mal-gray); }
-  .timeline-date { font-size: 10px; font-weight: 700; color: var(--mal-purple); text-transform: uppercase; letter-spacing: 0.5px; }
-  .timeline-title { font-size: 13px; font-weight: 600; color: var(--mal-dark); margin: 2px 0; }
-  .timeline-desc { font-size: 11px; color: var(--mal-gray); }
+  .pyr-sub { font-size: 8px; color: #6b7280; text-align: center; margin-bottom: 2px; }
 
   /* FUNNEL */
-  .funnel { display: flex; flex-direction: column; align-items: center; gap: 4px; }
-  .funnel-step {
-    text-align: center;
-    padding: 10px;
-    color: white;
-    font-size: 11px;
-    font-weight: 600;
-    border-radius: 6px;
-    position: relative;
+  .fun { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .fun-s {
+    text-align: center; padding: 7px 8px; color: white;
+    font-size: 8.5px; font-weight: 600; border-radius: 4px;
   }
-  .funnel-step .funnel-label { font-size: 9px; font-weight: 400; opacity: 0.8; margin-top: 2px; }
-  .f1 { background: #9ca3af; width: 100%; }
-  .f2 { background: #6366f1; width: 85%; }
-  .f3 { background: var(--mal-purple); width: 70%; }
-  .f4 { background: var(--mal-green); width: 55%; }
-  .funnel-arrow { color: var(--mal-gray); font-size: 10px; }
+  .fun-sub { font-size: 7px; font-weight: 400; opacity: 0.85; margin-top: 1px; }
+  .fun-a { color: #6b7280; font-size: 8px; }
 
-  /* OWNERSHIP BAR */
-  .own-bar { display: flex; border-radius: 6px; overflow: hidden; height: 28px; margin-bottom: 6px; }
-  .own-bar div { display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; color: white; }
-  .own-growth { background: var(--mal-purple); }
-  .own-mktg { background: var(--mal-blue); }
-  .own-sales { background: var(--mal-gold); }
-  .own-product { background: var(--mal-green); }
+  /* TIMELINE */
+  .tl { position: relative; padding-left: 18px; }
+  .tl::before {
+    content: ''; position: absolute; left: 5px; top: 0; bottom: 0;
+    width: 2px; background: linear-gradient(to bottom, #6c3ce0, #10b981);
+  }
+  .tl-i { position: relative; margin-bottom: 8px; padding-left: 10px; }
+  .tl-i::before {
+    content: ''; position: absolute; left: -16px; top: 4px;
+    width: 8px; height: 8px; border-radius: 50%;
+    border: 2px solid white;
+  }
+  .tl-i.now::before { background: #10b981; box-shadow: 0 0 0 1.5px #10b981; }
+  .tl-i.next::before { background: #6c3ce0; box-shadow: 0 0 0 1.5px #6c3ce0; }
+  .tl-i.fut::before { background: white; box-shadow: 0 0 0 1.5px #9ca3af; }
+  .tl-d { font-size: 7.5px; font-weight: 700; color: #6c3ce0; text-transform: uppercase; letter-spacing: 0.3px; }
+  .tl-t { font-size: 9.5px; font-weight: 600; color: #1a1a2e; margin: 1px 0; }
+  .tl-x { font-size: 8px; color: #6b7280; }
 
   /* CALLOUT */
-  .callout {
-    background: #fef3c7;
-    border-left: 4px solid var(--mal-gold);
-    padding: 12px 16px;
-    border-radius: 0 8px 8px 0;
-    margin: 12px 0;
-    font-size: 12px;
+  .co {
+    border-left: 3px solid #f5a623; background: #fef3c7;
+    padding: 7px 10px; border-radius: 0 5px 5px 0;
+    font-size: 8.5px; margin: 8px 0;
   }
-  .callout-red {
-    background: #fee2e2;
-    border-left: 4px solid var(--mal-red);
-    padding: 12px 16px;
-    border-radius: 0 8px 8px 0;
-    margin: 12px 0;
-    font-size: 12px;
+  .co-r {
+    border-left: 3px solid #ef4444; background: #fee2e2;
+    padding: 7px 10px; border-radius: 0 5px 5px 0;
+    font-size: 8.5px; margin: 8px 0;
   }
 
-  /* SMALL TEXT */
-  .small { font-size: 11px; color: var(--mal-gray); }
-  .bold { font-weight: 700; }
-  .highlight { color: var(--mal-purple); font-weight: 600; }
-
-  /* METRIC BOX */
-  .metric-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-  .metric-box {
-    text-align: center;
-    padding: 16px 12px;
-    background: var(--mal-light);
-    border-radius: 8px;
+  /* METRIC */
+  .mg { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 12px; }
+  .mb {
+    text-align: center; padding: 10px 8px;
+    background: #f3f4f6; border-radius: 6px;
   }
-  .metric-box .number { font-size: 24px; font-weight: 800; color: var(--mal-dark); }
-  .metric-box .unit { font-size: 11px; color: var(--mal-gray); margin-top: 2px; }
+  .mb .n { font-size: 20px; font-weight: 800; color: #1a1a2e; }
+  .mb .u { font-size: 8px; color: #6b7280; margin-top: 1px; }
 
-  /* SECTION DIVIDER */
-  .section-divider {
-    font-size: 16px;
-    font-weight: 800;
-    color: var(--mal-dark);
-    margin: 28px 0 16px 0;
-    padding-bottom: 8px;
-    border-bottom: 3px solid var(--mal-dark);
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  /* SECTION */
+  .sd {
+    font-size: 12px; font-weight: 800; color: #1a1a2e;
+    margin: 16px 0 10px 0; padding-bottom: 5px;
+    border-bottom: 2.5px solid #1a1a2e;
+    display: flex; align-items: center; gap: 6px;
   }
-  .section-divider .section-num {
-    background: var(--mal-dark);
-    color: white;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
+  .sn {
+    background: #1a1a2e; color: white;
+    width: 18px; height: 18px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px; flex-shrink: 0;
   }
 
-  /* OWNERSHIP LEGEND */
-  .legend { display: flex; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
-  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; }
-  .legend-dot { width: 10px; height: 10px; border-radius: 3px; }
+  .sm { font-size: 8px; color: #6b7280; }
+  .bld { font-weight: 700; }
 
-  /* ACTION ITEMS */
-  .action-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid #f3f4f6;
-    font-size: 12px;
-  }
-  .action-item:last-child { border-bottom: none; }
-  .action-owner {
-    min-width: 100px;
-    font-weight: 600;
-    font-size: 11px;
+  /* OWN BAR */
+  .ob { display: flex; border-radius: 4px; overflow: hidden; height: 22px; margin-bottom: 4px; }
+  .ob div {
+    display: flex; align-items: center; justify-content: center;
+    font-size: 8px; font-weight: 600; color: white;
   }
 
-  /* RED TEAM */
-  .red-team-item {
-    padding: 8px 12px;
-    margin-bottom: 6px;
-    border-radius: 6px;
-    font-size: 11px;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
+  /* PRODUCT GRID */
+  .prod-cat {
+    font-size: 8px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; padding: 4px 8px; border-radius: 4px;
+    margin-bottom: 6px; display: inline-block;
   }
-  .red-team-item .risk-icon {
-    font-size: 14px;
-    min-width: 18px;
-  }
-  .risk-high { background: #fee2e2; }
-  .risk-med { background: #fef3c7; }
-  .risk-low { background: #dbeafe; }
+  .pc-bank { background: #ede9fe; color: #6c3ce0; }
+  .pc-lend { background: #d1fae5; color: #065f46; }
+  .pc-ai { background: #dbeafe; color: #1e40af; }
 
-  /* PRINT */
-  @media print {
-    body { padding: 20px; font-size: 11px; }
-    .card { break-inside: avoid; }
+  /* FOOTER */
+  .footer {
+    margin-top: 16px; padding: 12px 16px;
+    background: #f3f4f6; border-radius: 8px;
+    display: flex; justify-content: space-between; align-items: center;
   }
 </style>
 </head>
@@ -331,712 +197,452 @@
 <!-- HEADER -->
 <div class="header">
   <div>
-    <div class="confidential">CONFIDENTIAL — INTERNAL USE ONLY</div>
+    <div class="conf">CONFIDENTIAL — INTERNAL USE ONLY</div>
     <h1>MAL — Marketing Strategy One-Pager</h1>
-    <div class="subtitle">Consolidated from SVP Marketing & Founder Strategy Sessions</div>
+    <div class="subtitle">Consolidated from SVP Marketing & Founder Strategy Sessions | 25 Products across Retail & SME</div>
   </div>
   <div class="meta">
     <div><span class="label">Prepared:</span> June 2025</div>
     <div><span class="label">Status:</span> Pre-License / Pre-Launch</div>
-    <div><span class="label">Target Launch:</span> Oct 10, 2025</div>
-    <div><span class="label">License ETA:</span> Sep 1, 2025</div>
+    <div><span class="label">License ETA:</span> Sep 2025</div>
+    <div><span class="label">Launch Event:</span> Oct 10, 2025 (contingency Nov 11)</div>
+    <div><span class="label">First Products Live:</span> Jul 2026</div>
   </div>
 </div>
 
 <!-- KPI TARGETS -->
-<div class="metric-grid">
-  <div class="metric-box">
-    <div class="number">1M</div>
-    <div class="unit">Waitlist Users (Global)</div>
-  </div>
-  <div class="metric-box">
-    <div class="number">500K</div>
-    <div class="unit">SMEs (within 2mo of launch)</div>
-  </div>
-  <div class="metric-box">
-    <div class="number">1M</div>
-    <div class="unit">Social Followers (Roadmap)</div>
-  </div>
-  <div class="metric-box">
-    <div class="number">20%+</div>
-    <div class="unit">Marketing Contribution to Growth</div>
-  </div>
+<div class="mg">
+  <div class="mb"><div class="n">1M</div><div class="u">Waitlist Users (Global)</div></div>
+  <div class="mb"><div class="n">500K</div><div class="u">SMEs (within 2mo of waitlist)</div></div>
+  <div class="mb"><div class="n">1M</div><div class="u">Social Followers (Roadmap)</div></div>
+  <div class="mb"><div class="n">20%+</div><div class="u">Mktg Contribution to Growth</div></div>
 </div>
 
 <!-- SECTION 1: POSITIONING + OWNERSHIP -->
-<div class="section-divider"><span class="section-num">1</span> POSITIONING & OWNERSHIP SPLIT</div>
+<div class="sd"><span class="sn">1</span> POSITIONING & OWNERSHIP SPLIT</div>
 
-<div class="grid-2">
-
-  <!-- POSITIONING PYRAMID -->
+<div class="g2">
   <div class="card">
-    <div class="card-header">Positioning Pyramid (Priority Order)</div>
-    <div class="pyramid">
-      <div class="pyramid-level p1" style="width:55%">
-        LICENSED FINANCIAL INSTITUTION
-        <span class="priority-tag" style="background:var(--mal-dark);color:white;">P0 — LEAD WITH</span>
-      </div>
-      <div class="pyramid-label">"Clearly a bank — a full bank with a license"</div>
-
-      <div class="pyramid-level p2" style="width:72%; margin-top:8px;">
-        AI-NATIVE BANKING
-        <span class="priority-tag" style="background:var(--mal-purple);color:white;">P1 — DIFFERENTIATOR</span>
-      </div>
-      <div class="pyramid-label">"Open an account in 30 seconds — not competing with traditional banks"</div>
-
-      <div class="pyramid-level p3" style="width:90%; margin-top:8px;">
-        ISLAMIC & SHARIAH-COMPLIANT
-        <span class="priority-tag" style="background:var(--mal-green);color:white;">P2 — CHERRY ON TOP</span>
-      </div>
-      <div class="pyramid-label">"Ethical banking as the added value layer"</div>
+    <div class="ch ch-p">Positioning Pyramid (Priority Order)</div>
+    <div class="pyr">
+      <div class="pyr-l" style="width:50%; background:#1a1a2e;">LICENSED FINANCIAL INSTITUTION</div>
+      <div class="pyr-sub">"Clearly a bank — a full bank with a license" <span class="b b-d">P0 LEAD</span></div>
+      <div class="pyr-l" style="width:68%; background:#6c3ce0;">AI-NATIVE BANKING</div>
+      <div class="pyr-sub">"Open an account in 30 seconds — new generation banking" <span class="b b-p">P1 DIFFERENTIATOR</span></div>
+      <div class="pyr-l" style="width:85%; background:#10b981;">ISLAMIC & SHARIAH-COMPLIANT</div>
+      <div class="pyr-sub">"Ethical banking as the added value layer" <span class="b b-g">P2 CHERRY ON TOP</span></div>
     </div>
-
-    <div class="callout" style="margin-top:16px;">
-      <strong>Global by Default:</strong> AI-native = global by default. First product is a US-product (ACH/USD accounts). Mal (global entity) ≠ Mal Bank (UAE-focused entity under CBUAE).
+    <div class="co" style="margin-top:10px;">
+      <strong>Global by Default:</strong> AI-native = global. First product = US (ACH/USD). Mal (global) ≠ Mal Bank (UAE/CBUAE). CBUAE does not care about global Mal activity. AAS = primary POC for Public Affairs.
     </div>
-
-    <div class="callout-red">
-      <strong>MOAT GAP:</strong> "The only moat is user-base; everything else is replicable." No unique claim text yet — need something only Mal can say (not generic "faster, nicer, cheaper"). Must be quantitative: "You just transferred money in 2 seconds."
+    <div class="co-r">
+      <strong>MOAT GAP:</strong> "The only moat is user-base; everything else is replicable." No unique claim text yet. Must be quantitative: "You just transferred money in 2 seconds. Will your other bank do this?" Study Brave's marketing approach.
     </div>
   </div>
 
-  <!-- OWNERSHIP MATRIX -->
   <div class="card">
-    <div class="card-header blue">Ownership Matrix — Who Owns What</div>
-
-    <div style="margin-bottom:16px;">
-      <div style="font-size:11px;font-weight:600;margin-bottom:6px;">BUDGET ALLOCATION</div>
-      <div class="own-bar">
-        <div class="own-growth" style="width:80%;">GROWTH — 80%</div>
-        <div class="own-mktg" style="width:20%;">BRAND & MKTG — 20%</div>
+    <div class="ch ch-b">Ownership Matrix — Who Owns What</div>
+    <div style="margin-bottom:10px;">
+      <div style="font-size:8px;font-weight:600;margin-bottom:3px;">BUDGET ALLOCATION</div>
+      <div class="ob">
+        <div style="width:80%;background:#6c3ce0;">GROWTH — 80%</div>
+        <div style="width:20%;background:#3b82f6;">BRAND & MKTG — 20%</div>
       </div>
-      <div class="small">Budget holder: Amine | Growth strategist: Mukund (needs to develop budget request strategy)</div>
+      <div class="sm">Budget holder: Amine | Growth strategist: Mukund (must develop budget request strategy)</div>
     </div>
-
     <table>
-      <thead>
-        <tr><th>Domain</th><th>Owner</th><th>Scope</th></tr>
-      </thead>
+      <thead><tr><th>Domain</th><th>Owner</th><th>Scope</th></tr></thead>
       <tbody>
-        <tr>
-          <td><span class="badge badge-purple">Growth</span></td>
-          <td>Mukund / Growth Team</td>
-          <td>Userbase, economics, retention, referral program, acquisition budget (80%)</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-blue">Marketing</span></td>
-          <td>Manar, Yasmeen, Isham</td>
-          <td>Brand, PR, influencers, events, social, content, sponsorships, TOV</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-gold">Sales / SME</span></td>
-          <td>SME Team + Isham (offline)</td>
-          <td>SME onboarding, CFO Summit, distribution partnerships, pipeline</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-green">Product</span></td>
-          <td>David, VK, Manar (demos)</td>
-          <td>Product demos, technical comms, product launches</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-gray">Public Affairs</span></td>
-          <td>AAS (primary POC)</td>
-          <td>Regulator relations, CBUAE comms (UAE-focused only)</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-red">Compliance</span></td>
-          <td>Maen + Walid</td>
-          <td>Risk, compliance positioning, regulatory readiness</td>
-        </tr>
+        <tr><td><span class="b b-p">Growth</span></td><td>Mukund / Growth</td><td>Userbase, economics, retention, referral program, acquisition (80% budget)</td></tr>
+        <tr><td><span class="b b-b">Marketing</span></td><td>Manar, Yasmeen, Isham</td><td>Brand, PR, influencers, events, social, content, sponsorships, TOV</td></tr>
+        <tr><td><span class="b b-o">Sales / SME</span></td><td>SME Team + Isham</td><td>SME onboarding (offline), CFO Summit, distribution partnerships, pipeline</td></tr>
+        <tr><td><span class="b b-g">Product</span></td><td>David, VK, Manar</td><td>Product demos, technical comms, launches. Manar schedules demos with leads</td></tr>
+        <tr><td><span class="b b-k">Public Affairs</span></td><td>AAS (primary POC)</td><td>Regulator relations, CBUAE comms (UAE-only). Disclaimer to regulators</td></tr>
+        <tr><td><span class="b b-r">Compliance</span></td><td>Maen + Walid</td><td>Risk, compliance positioning, regulatory readiness</td></tr>
       </tbody>
     </table>
-
-    <div class="callout" style="margin-top:12px;">
-      <strong>Key Rule:</strong> Marketing does NOT own growth metrics, but everything must CONTRIBUTE to growth — minimum 20% contribution. Every activity ties to a growth metric.
+    <div class="co" style="margin-top:8px;">
+      <strong>Key Rule:</strong> Marketing does NOT own growth metrics, but every activity must CONTRIBUTE to growth (min 20%). Referral program owned by Growth (they own the economics). Sama handles hiring, Amine handles budget.
     </div>
   </div>
 </div>
 
-<!-- SECTION 2: ROADMAP & TIMELINE -->
-<div class="section-divider"><span class="section-num">2</span> PHASED ROADMAP & TIMELINE</div>
+<!-- SECTION 2: PRODUCT SUITE ROADMAP -->
+<div class="sd"><span class="sn">2</span> PRODUCT SUITE ROADMAP — 25 PRODUCTS</div>
 
-<div class="grid-2-1">
+<div class="g2">
+  <!-- RETAIL -->
   <div class="card">
-    <div class="card-header green">Launch Timeline</div>
-    <div class="timeline">
-      <div class="timeline-item active">
-        <div class="timeline-date">NOW — Phase 1: Plumbing</div>
-        <div class="timeline-title">Test that the app works</div>
-        <div class="timeline-desc">Internal QA, stress testing, end-to-end flows. No external comms.</div>
+    <div class="ch ch-p">Retail — 14 Products (Individuals, Expats, Blue-Collar)</div>
+
+    <div class="prod-cat pc-bank">BANKING — 6 Products</div>
+    <table>
+      <thead><tr><th>Product</th><th>Launch</th><th>Markets</th></tr></thead>
+      <tbody>
+        <tr><td><strong>USD Account</strong> — US-dollar account, 18 markets</td><td><span class="b b-g">Jul 2026</span></td><td>Pakistan, UAE, Egypt +</td></tr>
+        <tr><td><strong>USD Payout</strong> — Local-currency payouts (Thunes)</td><td><span class="b b-g">Jul 2026</span></td><td>18 markets</td></tr>
+        <tr><td><strong>USD Card</strong> — Rain card, Pakistan first</td><td><span class="b b-g">Jul 2026</span></td><td>Pakistan, UAE, Egypt</td></tr>
+        <tr><td><strong>AED Account</strong> — Local dirham account (post-license)</td><td><span class="b b-o">Oct 2026</span></td><td>UAE</td></tr>
+        <tr><td><strong>AED Payout</strong> — Domestic UAE transfers</td><td><span class="b b-o">Oct 2026</span></td><td>UAE</td></tr>
+        <tr><td><strong>AED Card</strong> — UAE dirham debit card</td><td><span class="b b-o">Oct 2026</span></td><td>UAE</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prod-cat pc-lend" style="margin-top:8px;">LENDING — 5 Products (90% of Revenue)</div>
+    <table>
+      <thead><tr><th>Product</th><th>Dev</th><th>Launch</th><th>Market</th></tr></thead>
+      <tbody>
+        <tr><td><strong>IVF Financing</strong> — Shariah-compliant fertility</td><td>Aug '26</td><td><span class="b b-g">Nov 2026</span></td><td>UAE</td></tr>
+        <tr><td><strong>Tuition Financing</strong> — School/university fees</td><td>Sep '26</td><td><span class="b b-g">Dec 2026</span></td><td>UAE</td></tr>
+        <tr><td><strong>Auto Financing</strong> — Car loans (Stitch / Mal)</td><td>Sep '26</td><td><span class="b b-g">Oct 2026</span></td><td>UAE</td></tr>
+        <tr><td><strong>Personal Financing</strong> — Everyday needs</td><td>Sep '26</td><td><span class="b b-g">Oct 2026</span></td><td>UAE</td></tr>
+        <tr><td><strong>Credit Card</strong> — Shariah-compliant</td><td>—</td><td><span class="b b-g">Nov 2026</span></td><td>UAE</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prod-cat pc-ai" style="margin-top:8px;">FINTECH AI AGENTS — 3 Products</div>
+    <table>
+      <thead><tr><th>Product</th><th>Launch</th><th>Markets</th></tr></thead>
+      <tbody>
+        <tr><td><strong>PFM Agent</strong> — AI view of all your money</td><td><span class="b b-g">Jul 2026</span></td><td>18 markets</td></tr>
+        <tr><td><strong>Travel Agent</strong> — Book flights/hotels via AI</td><td><span class="b b-b">2027</span></td><td>18 markets</td></tr>
+        <tr><td><strong>Shopping Agent</strong> — Agentic shopping & checkout</td><td><span class="b b-b">2027</span></td><td>18 markets</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SME -->
+  <div class="card">
+    <div class="ch ch-o">SME — 11 Products (Businesses, 5-500 Employees)</div>
+
+    <div class="prod-cat pc-bank">BANKING — 6 Products</div>
+    <table>
+      <thead><tr><th>Product</th><th>Launch</th><th>Markets</th></tr></thead>
+      <tbody>
+        <tr><td><strong>SME USD Account</strong> — Business account, minutes</td><td><span class="b b-g">Jul 2026</span></td><td>Pakistan, UAE, Egypt</td></tr>
+        <tr><td><strong>SME USD Payout</strong> — Pay suppliers cross-border</td><td><span class="b b-g">Jul 2026</span></td><td>18 markets</td></tr>
+        <tr><td><strong>SME USD Card</strong> — Corporate cards for team</td><td><span class="b b-g">Jul 2026</span></td><td>Pakistan, UAE</td></tr>
+        <tr><td><strong>SME AED Account</strong> — Local dirham business acct</td><td><span class="b b-o">Oct 2026</span></td><td>UAE</td></tr>
+        <tr><td><strong>SME AED Payout</strong> — Domestic UAE payments</td><td><span class="b b-o">Oct 2026</span></td><td>UAE</td></tr>
+        <tr><td><strong>SME AED Card</strong> — Mastercard</td><td><span class="b b-o">Oct 2026</span></td><td>UAE</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prod-cat pc-lend" style="margin-top:8px;">LENDING — 2 Products</div>
+    <table>
+      <thead><tr><th>Product</th><th>Dev</th><th>Launch</th><th>Market</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Invoice Factoring</strong> — Unpaid invoices → working capital</td><td>Jul '26</td><td><span class="b b-g">Aug 2026</span></td><td>UAE</td></tr>
+        <tr><td><strong>SME Financing</strong> — Credit lines & growth financing</td><td>Sep '26</td><td><span class="b b-g">Oct 2026</span></td><td>UAE</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prod-cat pc-ai" style="margin-top:8px;">FINTECH AI AGENTS — 3 Products</div>
+    <table>
+      <thead><tr><th>Product</th><th>Launch</th><th>Markets</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Tax Agent</strong> — Automated VAT & corporate tax</td><td><span class="b b-b">2027</span></td><td>UAE</td></tr>
+        <tr><td><strong>CFO Agent</strong> — AI cash-flow & finance co-pilot</td><td><span class="b b-b">2027</span></td><td>UAE</td></tr>
+        <tr><td><strong>Accounting Agent</strong> — Books & reconciliation on autopilot</td><td><span class="b b-b">2027</span></td><td>UAE</td></tr>
+      </tbody>
+    </table>
+
+    <div class="co" style="margin-top:10px;">
+      <strong>Competitive Stack:</strong> FAB = large SMEs, no lending. WIO = tiny SMEs only. EFG = lender, not a bank. <strong>Mal = Bank + Lender. One-stop shop. Retail + SME.</strong>
+    </div>
+
+    <div class="co" style="margin-top:4px;">
+      <strong>Revenue Principle:</strong> ALL products revenue-generating (acquire → retain). 90% of revenue from lending/financing. "Pure flex" products for brand halo. Not ready to lend yet — building pipeline.
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: PHASED TIMELINE -->
+<div class="sd"><span class="sn">3</span> PHASED TIMELINE & LAUNCH SEQUENCE</div>
+
+<div class="g32">
+  <div class="card">
+    <div class="ch ch-g">Master Timeline</div>
+    <div class="tl">
+      <div class="tl-i now">
+        <div class="tl-d">NOW — Phase 1: Plumbing</div>
+        <div class="tl-t">Test that the app works</div>
+        <div class="tl-x">Internal QA, stress testing, end-to-end flows. No external comms.</div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-date">July 2025 — SME Lending Promotion</div>
-        <div class="timeline-title">Invoice factoring & SME lending pipeline</div>
-        <div class="timeline-desc">Begin promoting SME lending products. Not ready to lend yet — build pipeline.</div>
+      <div class="tl-i next">
+        <div class="tl-d">Phase 2 — Waitlist Hype (Pre-Launch)</div>
+        <div class="tl-t">LinkedIn-Led Hype Campaign</div>
+        <div class="tl-x"><strong>5 Hype Wins:</strong> 1) UI excellence 2) Authentically Islamic 3) Product speed & suite 4) Referral + Founder Card + 1-yr sub + beta 5) Private community forum [MKTG WIN]. 20-30 LI influencers paid.</div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-date">Phase 2 — Waitlist Hype</div>
-        <div class="timeline-title">LinkedIn-Led Hype Campaign</div>
-        <div class="timeline-desc">
-          <strong>4-5 Hype Wins:</strong> 1) UI excellence, 2) Authentically Islamic, 3) Product speed & suite, 4) Referral + Founder Card + 1-yr subscription + beta access, 5) Private community forum [MARKETING WIN]<br>
-          <strong>Tactic:</strong> 20-30 LI influencers/experts covering all themes. Paid promotion.
-        </div>
+      <div class="tl-i next">
+        <div class="tl-d">Sep 2025 — CBUAE License (Expected)</div>
+        <div class="tl-t">Regulatory Milestone</div>
+        <div class="tl-x">If delayed: launch moves to Nov 1 or event to Nov 11.</div>
       </div>
-      <div class="timeline-item future">
-        <div class="timeline-date">Sep 1, 2025 — CBUAE License (Expected)</div>
-        <div class="timeline-title">Regulatory Milestone</div>
-        <div class="timeline-desc">If delayed: Launch moves to Nov 1 or event to Nov 11.</div>
+      <div class="tl-i next">
+        <div class="tl-d" style="color:#f5a623;">Oct 10, 2025 — LAUNCH EVENT</div>
+        <div class="tl-t" style="font-size:11px;">Grand Launch</div>
+        <div class="tl-x">Contingency: Nov 11, 2025 if license delayed past Sep 1.</div>
       </div>
-      <div class="timeline-item future">
-        <div class="timeline-date">Phase 3 — ACH Accounts Launch</div>
-        <div class="timeline-title">USD Accounts — Real Money, Real Tech</div>
-        <div class="timeline-desc">
-          Target: Users who don't want to hold local currency (Egypt, Turkey, India, Pakistan).<br>
-          <strong>Message:</strong> "You have Mal — you will never need SWIFT again."<br>
-          Consider fixed deposit rates for Egypt market.
-        </div>
+      <div class="tl-i fut">
+        <div class="tl-d">Jun 2026 — PFM Agent Dev Starts</div>
+        <div class="tl-t">First AI Agent in Development</div>
+        <div class="tl-x">AI view of all money — 18 markets. Proves "AI-native" positioning.</div>
       </div>
-      <div class="timeline-item future">
-        <div class="timeline-date" style="color: var(--mal-gold);">Oct 10, 2025 — LAUNCH EVENT</div>
-        <div class="timeline-title" style="font-size:15px;">Grand Launch</div>
-        <div class="timeline-desc">Contingency: Nov 11 if license delayed past Sep 1.</div>
+      <div class="tl-i fut">
+        <div class="tl-d" style="color:#10b981;">Jul 2026 — WAVE 1 LAUNCH</div>
+        <div class="tl-t" style="font-size:11px;">USD Banking + PFM Agent (12 products)</div>
+        <div class="tl-x">USD Account/Payout/Card (Retail + SME) across Pakistan, UAE, Egypt, 18 markets. Invoice Factoring dev starts. SME lending pipeline promotion begins.</div>
       </div>
-      <div class="timeline-item future">
-        <div class="timeline-date">Post-License — Lending/Financing</div>
-        <div class="timeline-title">Revenue Engine: 90% from Lending</div>
-        <div class="timeline-desc">IVF, scholarships, Welcome to Dubai loans, instant car loans (2 min), student lending, SME facilities (AED 300K at 5%).</div>
+      <div class="tl-i fut">
+        <div class="tl-d">Aug 2026 — Invoice Factoring Launch</div>
+        <div class="tl-t">First SME Lending Product</div>
+        <div class="tl-x">Turn unpaid invoices into working capital. UAE market.</div>
+      </div>
+      <div class="tl-i fut">
+        <div class="tl-d" style="color:#f5a623;">Oct 2026 — WAVE 2 LAUNCH</div>
+        <div class="tl-t" style="font-size:11px;">AED Banking + Lending (12 products)</div>
+        <div class="tl-x">AED Account/Payout/Card (Retail + SME). Auto Financing, Personal Financing, SME Financing. UAE market.</div>
+      </div>
+      <div class="tl-i fut">
+        <div class="tl-d">Nov–Dec 2026 — WAVE 3</div>
+        <div class="tl-t">IVF, Credit Card, Tuition</div>
+        <div class="tl-x">Niche lending products. "Welcome to Dubai" loans, student lending, instant car loans (2 min).</div>
+      </div>
+      <div class="tl-i fut">
+        <div class="tl-d">2027 — WAVE 4: AI AGENTS</div>
+        <div class="tl-t">Travel, Shopping, Tax, CFO, Accounting</div>
+        <div class="tl-x">Full AI-agent suite. 5 agents across Retail (Travel, Shopping) + SME (Tax, CFO, Accounting).</div>
       </div>
     </div>
   </div>
 
   <div>
-    <!-- WAITLIST FUNNEL -->
-    <div class="card" style="margin-bottom:20px;">
-      <div class="card-header gold">Waitlist User Funnel</div>
-      <div class="funnel">
-        <div class="funnel-step f1">
-          Email Only
-          <div class="funnel-label">Shows intent (weak signal)</div>
-        </div>
-        <div class="funnel-arrow">▼</div>
-        <div class="funnel-step f2">
-          Email + KYC Complete
-          <div class="funnel-label">Shows intent + interest</div>
-        </div>
-        <div class="funnel-arrow">▼</div>
-        <div class="funnel-step f3">
-          Email + KYC + Referrals
-          <div class="funnel-label">Shows intent + interest + engagement</div>
-        </div>
-        <div class="funnel-arrow">▼</div>
-        <div class="funnel-step f4">
-          Completes Loans
-          <div class="funnel-label">IDEAL USER — Full financial data shared</div>
-        </div>
+    <div class="card" style="margin-bottom:10px;">
+      <div class="ch ch-o">Waitlist User Funnel</div>
+      <div class="fun">
+        <div class="fun-s" style="width:100%;background:#9ca3af;">Email Only <div class="fun-sub">Intent (weak signal)</div></div>
+        <div class="fun-a">▼</div>
+        <div class="fun-s" style="width:85%;background:#6366f1;">Email + KYC Complete <div class="fun-sub">Intent + Interest</div></div>
+        <div class="fun-a">▼</div>
+        <div class="fun-s" style="width:70%;background:#6c3ce0;">Email + KYC + Referrals <div class="fun-sub">Intent + Interest + Engagement</div></div>
+        <div class="fun-a">▼</div>
+        <div class="fun-s" style="width:55%;background:#10b981;">Completes Loans <div class="fun-sub">IDEAL USER — Full financial data</div></div>
       </div>
-      <div class="small" style="margin-top:10px; text-align:center;">Waitlist depth determines timeline priorities per product</div>
+      <div class="sm" style="margin-top:6px;text-align:center;">Waitlist depth per product determines timeline priorities</div>
     </div>
 
-    <!-- 3-MONTH FOCUS -->
     <div class="card">
-      <div class="card-header red">Next 3 Months — Social Metrics Focus</div>
-      <ul style="font-size:12px; list-style:none; padding:0;">
-        <li style="padding:4px 0;">▸ Benchmark against <strong>Revolut</strong> (global) and <strong>beat WIO</strong> (local)</li>
-        <li style="padding:4px 0;">▸ Build roadmap to <strong>1M followers</strong></li>
-        <li style="padding:4px 0;">▸ Define owned media / social web</li>
-        <li style="padding:4px 0;">▸ Map amplification network: social PR, influencers, events, outlets</li>
-        <li style="padding:4px 0;">▸ Study <strong>Brave</strong> marketing approach</li>
-        <li style="padding:4px 0;">▸ Establish TOV, brand architecture, comms style</li>
-      </ul>
+      <div class="ch ch-r">Next 3 Months — Social Focus</div>
+      <div style="font-size:8.5px;">
+        <div style="padding:3px 0;">▸ Benchmark against <strong>Revolut</strong> (global), beat <strong>WIO</strong> (local)</div>
+        <div style="padding:3px 0;">▸ Build roadmap to <strong>1M followers</strong> with timeline</div>
+        <div style="padding:3px 0;">▸ Define owned media / social web & amplification network</div>
+        <div style="padding:3px 0;">▸ Map: social PR, influencers, events, outlets</div>
+        <div style="padding:3px 0;">▸ Study <strong>Brave</strong> marketing approach</div>
+        <div style="padding:3px 0;">▸ Establish TOV, brand architecture, comms style</div>
+        <div style="padding:3px 0;">▸ Brand visibility: events, sponsorships, etc.</div>
+        <div style="padding:3px 0;">▸ Partnership ecosystem: McKinsey papers, amplification</div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- SECTION 3: INCENTIVE STRATEGY & SEGMENTS -->
-<div class="section-divider"><span class="section-num">3</span> INCENTIVE STRATEGY BY SEGMENT</div>
+<!-- SECTION 4: INCENTIVE STRATEGY -->
+<div class="sd"><span class="sn">4</span> INCENTIVE STRATEGY BY SEGMENT</div>
 
 <div class="full">
   <div class="card">
     <table>
       <thead>
-        <tr>
-          <th style="width:14%;">Segment</th>
-          <th style="width:18%;">Hook</th>
-          <th style="width:28%;">Incentive</th>
-          <th style="width:24%;">Product Angle</th>
-          <th style="width:16%;">Channel</th>
-        </tr>
+        <tr><th style="width:12%;">Segment</th><th style="width:16%;">Hook</th><th style="width:22%;">Incentive</th><th style="width:25%;">Product Angle</th><th style="width:12%;">Channel</th><th style="width:13%;">Key Message</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td><span class="badge badge-gray">Window Shoppers</span></td>
+          <td><span class="b b-k">Window Shoppers</span></td>
           <td>"Join waitlist and get paid"</td>
-          <td>Cash incentive for signup; share on LI/IG/X for $X free</td>
+          <td>Cash for signup; share on LI/IG/X for $X free</td>
           <td>Waitlist referral virality</td>
           <td>Social, Paid LI</td>
+          <td>Incentive-driven acquisition</td>
         </tr>
         <tr>
-          <td><span class="badge badge-blue">Adopters</span></td>
+          <td><span class="b b-b">Adopters</span></td>
           <td>"Try the tech first"</td>
-          <td>Founder Card + 1-yr subscription + beta access + private community</td>
+          <td>Founder Card + 1-yr sub + beta + private community</td>
           <td>UI excellence, speed, process quality</td>
-          <td>LI Thought Leaders, Network</td>
+          <td>LI Thought Leaders</td>
+          <td>"I have 5 slots to give"</td>
         </tr>
         <tr>
-          <td><span class="badge badge-purple">Retail</span></td>
-          <td>"Welcome to Dubai" / "Never need SWIFT again"</td>
-          <td>4x salary on account opening; instant car loan (2 min); student loans</td>
-          <td>New UAE joiners, expats, students; ACH/USD for emerging markets</td>
+          <td><span class="b b-p">Retail</span></td>
+          <td>"Never need SWIFT again"</td>
+          <td>4x salary on opening; instant car loan (2 min); student loans</td>
+          <td>New UAE joiners, expats; ACH/USD for EG/TR/IN/PK</td>
           <td>Partnerships, Digital</td>
+          <td>"Welcome to Dubai loan"</td>
         </tr>
         <tr>
-          <td><span class="badge badge-gold">SMEs</span></td>
+          <td><span class="b b-o">SMEs</span></td>
           <td>"Upload paperwork — eligible in seconds"</td>
-          <td>AED 300K lending facility at 5% rate; Mal pays your bills (vendor onboarding)</td>
-          <td>Account opening + lending (one-stop shop). Mal = Bank + Lender (vs. FAB/WIO/EFG)</td>
-          <td>CFO Summit, Offline (Isham), Direct Network</td>
+          <td>AED 300K facility at 5%; Mal pays your bills (vendor onboard)</td>
+          <td>Account + lending one-stop. Bank + Lender vs FAB/WIO/EFG</td>
+          <td>CFO Summit, Offline (Isham)</td>
+          <td>"Eligible in seconds"</td>
         </tr>
       </tbody>
     </table>
-
-    <div class="callout" style="margin-top:12px;">
-      <strong>Competitive Positioning — SME Stack:</strong> FAB = large exposure SMEs (no lending). WIO = tiny SMEs only. EFG = lender, not a bank. <strong>Mal = Bank + Lender. One-stop shop. Retail + SME.</strong>
-    </div>
   </div>
 </div>
 
-<!-- SECTION 4: DISTRIBUTION & PARTNERSHIPS -->
-<div class="section-divider"><span class="section-num">4</span> DISTRIBUTION, PARTNERSHIPS & EVENTS</div>
+<!-- SECTION 5: DISTRIBUTION & EVENTS -->
+<div class="sd"><span class="sn">5</span> DISTRIBUTION, EVENTS & WAITLIST PLAYBOOK</div>
 
-<div class="grid-2">
+<div class="g3">
   <div class="card">
-    <div class="card-header gold">Distribution & Partnerships</div>
+    <div class="ch ch-o">Distribution & Partnerships</div>
     <table>
-      <thead><tr><th>Area</th><th>Approach</th><th>Status/Notes</th></tr></thead>
+      <thead><tr><th>Area</th><th>Status</th></tr></thead>
       <tbody>
-        <tr>
-          <td><strong>Framework</strong></td>
-          <td>No sales & marketing framework established yet</td>
-          <td><span class="badge badge-red">GAP</span></td>
-        </tr>
-        <tr>
-          <td><strong>Client vs Partner</strong></td>
-          <td>Clients (e.g., ADNOC) ≠ Partners — calling them partners closes doors</td>
-          <td><span class="badge badge-gold">PRINCIPLE</span></td>
-        </tr>
-        <tr>
-          <td><strong>Custom Approach</strong></td>
-          <td>Each design partner approached with "What is the biggest gap Mal fills for you?"</td>
-          <td>Aldar = bad example</td>
-        </tr>
-        <tr>
-          <td><strong>Pipeline</strong></td>
-          <td>Build via CFO conference, direct network; schedule demos (Manar ↔ leads)</td>
-          <td><span class="badge badge-blue">IN PROGRESS</span></td>
-        </tr>
-        <tr>
-          <td><strong>Amplification</strong></td>
-          <td>McKinsey papers, partnership ecosystem, social PR</td>
-          <td><span class="badge badge-gray">TO EXPLORE</span></td>
-        </tr>
-        <tr>
-          <td><strong>Offline SMEs</strong></td>
-          <td>Isham approaches right profiles; offline effort for onboarding</td>
-          <td><span class="badge badge-green">ASSIGNED</span></td>
-        </tr>
+        <tr><td>Sales & marketing framework</td><td><span class="b b-r">NOT ESTABLISHED</span></td></tr>
+        <tr><td>Clients ≠ Partners (e.g., ADNOC = client)</td><td><span class="b b-o">PRINCIPLE</span></td></tr>
+        <tr><td>Custom approach per design partner</td><td><span class="b b-o">REQUIRED</span></td></tr>
+        <tr><td>Pipeline via CFO conf + direct network</td><td><span class="b b-b">IN PROGRESS</span></td></tr>
+        <tr><td>McKinsey papers / ecosystem amplify</td><td><span class="b b-k">TO EXPLORE</span></td></tr>
+        <tr><td>Offline SME onboarding (Isham)</td><td><span class="b b-g">ASSIGNED</span></td></tr>
       </tbody>
     </table>
+    <div class="sm" style="margin-top:4px;">"What is the biggest gap Mal can fill for this design partner?" — each approached in custom format. Aldar = bad example.</div>
   </div>
 
   <div class="card">
-    <div class="card-header red">CFO Summit & Launch Event</div>
+    <div class="ch ch-r">CFO Summit & Launch Event</div>
+    <div style="font-size:8.5px;">
+      <div style="font-weight:700;margin-bottom:4px;">CFO Summit</div>
+      <div style="padding:2px 0;">▸ Top CFOs in ME (50 max, private round table)</div>
+      <div style="padding:2px 0;">▸ 2-3 speakers CFOs want to meet (e.g., Hazem)</div>
+      <div style="padding:2px 0;">▸ "Where are you facing issues with your existing bank?"</div>
+      <div style="padding:2px 0;">▸ Capture: company info, employees, distribution channel</div>
+      <div style="padding:2px 0;">▸ "Mal pays your bills — onboard your vendors"</div>
+      <div style="padding:2px 0;">▸ Tone: "You are lucky to be a Mal partner"</div>
 
-    <div style="font-size:13px; font-weight:700; margin-bottom:8px;">CFO Summit</div>
-    <ul style="font-size:12px; list-style:none; padding:0; margin-bottom:16px;">
-      <li style="padding:3px 0;">▸ Target: Top CFOs in Middle East (50 max, private round table)</li>
-      <li style="padding:3px 0;">▸ 2-3 speakers CFOs want to meet (e.g., Hazem)</li>
-      <li style="padding:3px 0;">▸ Pitch: "Where are you facing issues with your existing bank?"</li>
-      <li style="padding:3px 0;">▸ Capture: company info, employees, distribution channel</li>
-      <li style="padding:3px 0;">▸ Incentivize: "You have X bills — Mal pays on your behalf, onboard your vendors"</li>
-      <li style="padding:3px 0;">▸ Tone: "You are lucky to be a Mal partner"</li>
-    </ul>
-
-    <div style="font-size:13px; font-weight:700; margin-bottom:8px;">Media Training Required For:</div>
-    <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:12px;">
-      <span class="badge badge-purple">Amine (media)</span>
-      <span class="badge badge-blue">David (product)</span>
-      <span class="badge badge-green">VK (SME-product)</span>
-      <span class="badge badge-gold">Zigor (security)</span>
-      <span class="badge badge-red">Maen + Walid (compliance)</span>
-      <span class="badge badge-gray">Youssef Salem (credibility, Fractional CIO)</span>
+      <div style="font-weight:700;margin:6px 0 4px;">Media Training Required</div>
+      <div style="display:flex;flex-wrap:wrap;gap:3px;">
+        <span class="b b-p">Amine</span>
+        <span class="b b-b">David</span>
+        <span class="b b-g">VK</span>
+        <span class="b b-o">Zigor</span>
+        <span class="b b-r">Maen + Walid</span>
+        <span class="b b-k">Youssef Salem</span>
+      </div>
+      <div class="sm" style="margin-top:3px;"><strong>2nd line:</strong> Talga, Rideu, Izz | <strong>AI:</strong> Agents trained on content for internal comms</div>
     </div>
-    <div class="small"><strong>Second line:</strong> Talga, Rideu, Izz (talk about their work)</div>
-    <div class="small" style="margin-top:4px;"><strong>Internal AI:</strong> AI-agents trained on content for internal corporate comms</div>
+  </div>
+
+  <div class="card">
+    <div class="ch ch-p">Waitlist Hype Playbook</div>
+    <div style="font-size:8.5px;">
+      <div style="font-weight:700;margin-bottom:4px;">Paid Thought-Leader Strategy</div>
+      <div style="padding:2px 0;">▸ 10-20 LI thought-leaders (paid)</div>
+      <div style="padding:2px 0;">▸ Themes: UI, Shariah authenticity, speed, referrals</div>
+      <div style="padding:2px 0;">▸ Script: "Credit limit in 30 seconds, once licensed they'll kill it"</div>
+      <div style="padding:2px 0;">▸ CTA: "I have 5 slots to give"</div>
+      <div style="padding:2px 0;">▸ Referral: Share to LI/IG/X → get $X free</div>
+      <div style="padding:2px 0;">▸ Benchmarks: Revolut, Clubhouse</div>
+
+      <div style="font-weight:700;margin:6px 0 4px;">4 Hype Pillars</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+        <div style="background:#f3f4f6;padding:5px;border-radius:4px;text-align:center;font-size:8px;font-weight:600;">This is what Mal is</div>
+        <div style="background:#f3f4f6;padding:5px;border-radius:4px;text-align:center;font-size:8px;font-weight:600;">Mal looks legit</div>
+        <div style="background:#f3f4f6;padding:5px;border-radius:4px;text-align:center;font-size:8px;font-weight:600;">Positive tech feedback</div>
+        <div style="background:#f3f4f6;padding:5px;border-radius:4px;text-align:center;font-size:8px;font-weight:600;">Speed & process</div>
+      </div>
+      <div class="sm" style="margin-top:4px;"><strong>Rule:</strong> Only flex successful experiences. Be quantitative.</div>
+    </div>
   </div>
 </div>
 
-<!-- SECTION 5: PRODUCT LINES & REVENUE -->
-<div class="section-divider"><span class="section-num">5</span> PRODUCT LINES & REVENUE MODEL</div>
+<!-- SECTION 6: BRAND & GUARDRAILS -->
+<div class="sd"><span class="sn">6</span> BRAND ESTABLISHMENT & GUARDRAILS</div>
+
+<div class="g2">
+  <div class="card">
+    <div class="ch ch-d">Brand DNA & Social Web (To Define)</div>
+    <div class="g2" style="margin-bottom:0;">
+      <div style="font-size:8.5px;">
+        <div style="font-weight:700;margin-bottom:4px;">Brand Foundation</div>
+        <div style="padding:2px 0;">▸ Tone of Voice (TOV)</div>
+        <div style="padding:2px 0;">▸ Brand Architecture</div>
+        <div style="padding:2px 0;">▸ Target Audience (targets, NOT personas)</div>
+        <div style="padding:2px 0;">▸ Communication Style</div>
+        <div style="padding:2px 0;">▸ Marketing Assets: decks, attire, gifting</div>
+        <div style="padding:2px 0;">▸ Internal corporate comms (AI-agents)</div>
+      </div>
+      <div style="font-size:8.5px;">
+        <div style="font-weight:700;margin-bottom:4px;">Owned Media Map</div>
+        <div style="padding:2px 0;">▸ LinkedIn (primary), IG, X</div>
+        <div style="padding:2px 0;">▸ 10-20 paid LI thought-leaders</div>
+        <div style="padding:2px 0;">▸ Events: CFO Summit, Launch, sponsorships</div>
+        <div style="padding:2px 0;">▸ PR coverage strategy</div>
+        <div style="padding:2px 0;">▸ McKinsey papers / partnership ecosystem</div>
+        <div style="padding:2px 0;">▸ Private community (beta forum)</div>
+      </div>
+    </div>
+    <div class="sm" style="margin-top:4px;">"We don't believe in personas. We have targets, but serve everyone." Budget 20% split across PR, influencers, events. Minimum dollar spend philosophy.</div>
+  </div>
+
+  <div class="card">
+    <div class="ch ch-r">Guardrails & Principles</div>
+    <table>
+      <thead><tr><th>Rule</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Do NOT call clients "partners"</td><td>Closes doors elsewhere (e.g., ADNOC = client)</td></tr>
+        <tr><td>No generic claims</td><td>"Faster, nicer, cheaper" = noise. Be quantitative</td></tr>
+        <tr><td>Mal (global) ≠ Mal Bank (UAE)</td><td>CBUAE only cares about UAE. Don't mix comms</td></tr>
+        <tr><td>No user personas</td><td>Targets, not personas. Serve everyone</td></tr>
+        <tr><td>Every $ ties to growth metric</td><td>Min 20% contribution to growth always</td></tr>
+        <tr><td>Only flex successful experiences</td><td>"You transferred in 2 seconds" not "we're fast"</td></tr>
+        <tr><td>ACH message = convenience</td><td>"You have Mal — never need SWIFT again"</td></tr>
+        <tr><td>SME target for waitlist: 500K in 2mo</td><td>CFO Summit first year: 50 max per room, private</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- SECTION 7: IMMEDIATE ACTION ITEMS -->
+<div class="sd"><span class="sn">7</span> IMMEDIATE ACTION ITEMS</div>
 
 <div class="full">
   <div class="card">
     <table>
       <thead>
-        <tr>
-          <th>Product</th>
-          <th>Type</th>
-          <th>Revenue Role</th>
-          <th>Timeline</th>
-          <th>Key Message</th>
-        </tr>
+        <tr><th style="width:4%;">#</th><th style="width:18%;">Owner(s)</th><th style="width:52%;">Action</th><th style="width:13%;">Priority</th><th style="width:13%;">Status</th></tr>
       </thead>
       <tbody>
-        <tr>
-          <td><strong>ACH / USD Accounts</strong></td>
-          <td><span class="badge badge-blue">First Product</span></td>
-          <td>Acquire users (global)</td>
-          <td>Phase 3 (pre-license)</td>
-          <td>"You will never need SWIFT again"</td>
-        </tr>
-        <tr>
-          <td><strong>SME Lending / Invoice Factoring</strong></td>
-          <td><span class="badge badge-gold">Revenue Core</span></td>
-          <td>90% of revenue</td>
-          <td>Promote from July; post-license</td>
-          <td>"Eligible in seconds — AED 300K at 5%"</td>
-        </tr>
-        <tr>
-          <td><strong>Retail Lending</strong></td>
-          <td><span class="badge badge-gold">Revenue Core</span></td>
-          <td>90% of revenue</td>
-          <td>Post CBUAE license</td>
-          <td>"Welcome to Dubai — 4x salary on opening"</td>
-        </tr>
-        <tr>
-          <td><strong>IVF / Scholarship Financing</strong></td>
-          <td><span class="badge badge-purple">Niche Lending</span></td>
-          <td>Revenue-generating</td>
-          <td>Post-license</td>
-          <td>Purpose-driven ethical lending</td>
-        </tr>
-        <tr>
-          <td><strong>Instant Car Loans</strong></td>
-          <td><span class="badge badge-purple">Retail Lending</span></td>
-          <td>Revenue-generating</td>
-          <td>Post-license</td>
-          <td>"Know your limit in 2 minutes"</td>
-        </tr>
-        <tr>
-          <td><strong>Fixed Deposit Rates</strong></td>
-          <td><span class="badge badge-green">Retention</span></td>
-          <td>Retain users (Egypt focus)</td>
-          <td>With ACH launch</td>
-          <td>Competitive FD rates for emerging markets</td>
-        </tr>
-        <tr>
-          <td><strong>"Pure Flex" Products</strong></td>
-          <td><span class="badge badge-gray">Brand / Flex</span></td>
-          <td>Brand halo, PR</td>
-          <td>TBD</td>
-          <td>Show capability — "what other banks can't do"</td>
-        </tr>
+        <tr><td>1</td><td><strong>AAS + Walid</strong></td><td>Draft exact timeline dates — one-pager roadmap and product suite sign-off</td><td><span class="b b-r">URGENT</span></td><td><span class="b b-o">PENDING</span></td></tr>
+        <tr><td>2</td><td><strong>Manar + Yasmeen + Isham</strong></td><td>Brainstorm marketing strategy, roles & incentive strategy</td><td><span class="b b-r">URGENT</span></td><td><span class="b b-o">PENDING</span></td></tr>
+        <tr><td>3</td><td><strong>Manar + Yasmeen + Isham</strong></td><td>Brainstorm CFO Summit + Launch Event (Oct 10 / Nov 11)</td><td><span class="b b-r">URGENT</span></td><td><span class="b b-o">PENDING</span></td></tr>
+        <tr><td>4</td><td><strong>Manar</strong></td><td>Budget allocations: marketing, brand, sales, growth (with Mukund input)</td><td><span class="b b-p">HIGH</span></td><td><span class="b b-o">PENDING</span></td></tr>
+        <tr><td>5</td><td><strong>Manar + Walid</strong></td><td>Meet Global Accounts team → schedule demos with all product leads</td><td><span class="b b-p">HIGH</span></td><td><span class="b b-o">PENDING</span></td></tr>
+        <tr><td>6</td><td><strong>Marketing Team</strong></td><td>Define waitlist referral package (share to LI/IG/X → $X reward)</td><td><span class="b b-p">HIGH</span></td><td><span class="b b-o">PENDING</span></td></tr>
+        <tr><td>7</td><td><strong>Marketing Team</strong></td><td>Identify 10-20 LI thought-leaders for paid hype campaign</td><td><span class="b b-p">HIGH</span></td><td><span class="b b-o">PENDING</span></td></tr>
+        <tr><td>8</td><td><strong>Mukund</strong></td><td>Develop growth budget request strategy (currently with Amine)</td><td><span class="b b-b">MEDIUM</span></td><td><span class="b b-o">PENDING</span></td></tr>
+        <tr><td>9</td><td><strong>Walid</strong></td><td>Draft and document marketing roadmap for team alignment</td><td><span class="b b-b">MEDIUM</span></td><td><span class="b b-o">PENDING</span></td></tr>
+        <tr><td>10</td><td><strong>Sama / Amine</strong></td><td>Hiring plan for marketing team (Sama = hiring, Amine = budget)</td><td><span class="b b-b">MEDIUM</span></td><td><span class="b b-o">PENDING</span></td></tr>
       </tbody>
     </table>
-
-    <div class="callout" style="margin-top:8px;">
-      <strong>Revenue Principle:</strong> ALL products are revenue-generating (acquire → retain). 90% of revenue from lending/financing. Products launched post-license. Pre-license = pipeline building + ACH.
-    </div>
-  </div>
-</div>
-
-<!-- SECTION 6: WAITLIST PLAYBOOK -->
-<div class="section-divider"><span class="section-num">6</span> WAITLIST HYPE PLAYBOOK</div>
-
-<div class="grid-2">
-  <div class="card">
-    <div class="card-header">Paid Thought-Leader Strategy</div>
-    <table>
-      <thead><tr><th>Element</th><th>Detail</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Target</strong></td><td>10-20 LinkedIn thought-leaders (+ explore other platforms)</td></tr>
-        <tr><td><strong>Themes</strong></td><td>1) UI excellence 2) Shariah authenticity 3) Speed & process 4) Referral program</td></tr>
-        <tr><td><strong>Script</strong></td><td>"UI is great, credit limit in 30 seconds, once they get their license they will kill it"</td></tr>
-        <tr><td><strong>Referral CTA</strong></td><td>"I just joined the Mal waitlist and I have 5 slots to give"</td></tr>
-        <tr><td><strong>Incentive</strong></td><td>Share to LI, IG, X → get $X free (TBD by team)</td></tr>
-        <tr><td><strong>Benchmarks</strong></td><td>Study Revolut & Clubhouse waitlist success models</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="card">
-    <div class="card-header green">Hype Creation Framework</div>
-    <div style="font-size:12px;">
-      <p style="margin-bottom:10px; font-weight:600;">We want to create hype around 4 pillars:</p>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
-        <div style="background:#f3f4f6; padding:10px; border-radius:6px; text-align:center;">
-          <div style="font-size:16px; margin-bottom:4px;">🏦</div>
-          <div style="font-weight:600; font-size:11px;">This is what Mal is</div>
-          <div style="font-size:10px; color:var(--mal-gray);">Identity & Legitimacy</div>
-        </div>
-        <div style="background:#f3f4f6; padding:10px; border-radius:6px; text-align:center;">
-          <div style="font-size:16px; margin-bottom:4px;">✅</div>
-          <div style="font-weight:600; font-size:11px;">Mal looks legit</div>
-          <div style="font-size:10px; color:var(--mal-gray);">Trust & Credibility</div>
-        </div>
-        <div style="background:#f3f4f6; padding:10px; border-radius:6px; text-align:center;">
-          <div style="font-size:16px; margin-bottom:4px;">💡</div>
-          <div style="font-weight:600; font-size:11px;">Positive tech feedback</div>
-          <div style="font-size:10px; color:var(--mal-gray);">UI / UX Excellence</div>
-        </div>
-        <div style="background:#f3f4f6; padding:10px; border-radius:6px; text-align:center;">
-          <div style="font-size:16px; margin-bottom:4px;">⚡</div>
-          <div style="font-weight:600; font-size:11px;">Speed & process</div>
-          <div style="font-size:10px; color:var(--mal-gray);">Positive Process Feedback</div>
-        </div>
-      </div>
-      <div class="callout" style="margin-top:12px;">
-        <strong>Communication Rule:</strong> Only flex successful experiences. Be quantitative. "You just transferred money in 2 seconds. Will your other bank do this?"
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SECTION 7: BRAND ESTABLISHMENT -->
-<div class="section-divider"><span class="section-num">7</span> BRAND ESTABLISHMENT & SOCIAL WEB</div>
-
-<div class="grid-3">
-  <div class="card">
-    <div class="card-header">Brand DNA (To Define)</div>
-    <ul style="font-size:12px; list-style:none; padding:0;">
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ Tone of Voice (TOV)</li>
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ Brand Architecture</li>
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ Target Audience (not personas — targets)</li>
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ Communication Style</li>
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ Marketing Assets: decks, attire, gifting/giveaway</li>
-      <li style="padding:5px 0;">▸ Internal corporate comms (AI-agents on content)</li>
-    </ul>
-    <div class="small" style="margin-top:8px;"><strong>Principle:</strong> "We don't believe in personas. We have targets, but we serve everyone."</div>
-  </div>
-
-  <div class="card">
-    <div class="card-header blue">Owned Media / Social Web</div>
-    <ul style="font-size:12px; list-style:none; padding:0;">
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ <strong>Social PR:</strong> LinkedIn-first (primary), IG, X</li>
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ <strong>Influencers:</strong> 10-20 paid LI thought-leaders</li>
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ <strong>Events:</strong> CFO Summit, Launch Event, sponsorships</li>
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ <strong>Outlets:</strong> PR coverage strategy (TBD)</li>
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ <strong>Partnerships:</strong> McKinsey papers, ecosystem amplification</li>
-      <li style="padding:5px 0;">▸ <strong>Private Community:</strong> Beta forum for early adopters</li>
-    </ul>
-    <div class="small" style="margin-top:8px;"><strong>Goal:</strong> Map who will amplify our message and why we choose them.</div>
-  </div>
-
-  <div class="card">
-    <div class="card-header gold">Budget Allocation (Brand & Mktg 20%)</div>
-    <ul style="font-size:12px; list-style:none; padding:0;">
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ PR & Media</li>
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ Influencer Fees</li>
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ Events & Sponsorships</li>
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ Brand Assets & Collateral</li>
-      <li style="padding:5px 0;">▸ Minimum dollar spend philosophy</li>
-    </ul>
-    <div class="callout" style="margin-top:8px;">
-      <strong>Manar</strong> to propose full budget allocation across marketing, brand, sales, growth based on Mukund discussions.
-    </div>
-  </div>
-</div>
-
-<!-- SECTION 8: PUBLIC AFFAIRS -->
-<div class="section-divider"><span class="section-num">8</span> PUBLIC AFFAIRS & REGULATORY COMMS</div>
-
-<div class="grid-2">
-  <div class="card">
-    <div class="card-header">Entity Structure & Regulatory Scope</div>
-    <table>
-      <thead><tr><th>Entity</th><th>Scope</th><th>Regulator</th><th>Comms Rule</th></tr></thead>
-      <tbody>
-        <tr>
-          <td><strong>Mal</strong> (Global)</td>
-          <td>Global operations, US product</td>
-          <td>Various</td>
-          <td>CBUAE does NOT care about global Mal activity</td>
-        </tr>
-        <tr>
-          <td><strong>Mal Bank</strong> (UAE)</td>
-          <td>UAE-focused banking</td>
-          <td>CBUAE</td>
-          <td>All regulatory comms through AAS as POC</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="small" style="margin-top:8px;"><strong>AAS</strong> = main point of contact for Public Affairs (disclaimer to regulators).</div>
-  </div>
-
-  <div class="card">
-    <div class="card-header red">Key Guardrails</div>
-    <ul style="font-size:12px; list-style:none; padding:0;">
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ Do NOT position clients as "partners" (closes doors elsewhere)</li>
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ Do NOT use generic claims ("faster, nicer, cheaper")</li>
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ Do NOT mix Mal Bank (UAE) regulatory comms with Mal (Global)</li>
-      <li style="padding:5px 0; border-bottom:1px solid #f3f4f6;">▸ No user personas — we serve everyone with targets</li>
-      <li style="padding:5px 0;">▸ Every $ spent must tie to a measurable growth contribution</li>
-    </ul>
-  </div>
-</div>
-
-<!-- SECTION 9: IMMEDIATE ACTION ITEMS -->
-<div class="section-divider"><span class="section-num">9</span> IMMEDIATE ACTION ITEMS</div>
-
-<div class="full">
-  <div class="card">
-    <table>
-      <thead>
-        <tr>
-          <th style="width:5%;">#</th>
-          <th style="width:20%;">Owner(s)</th>
-          <th style="width:50%;">Action</th>
-          <th style="width:12%;">Priority</th>
-          <th style="width:13%;">Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td><strong>AAS + Walid</strong></td>
-          <td>Draft exact timeline dates and sign off — one-pager roadmap and product suite</td>
-          <td><span class="badge badge-red">URGENT</span></td>
-          <td><span class="badge badge-gold">PENDING</span></td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td><strong>Manar + Yasmeen + Isham</strong></td>
-          <td>Brainstorm marketing strategy, roles & incentive strategy</td>
-          <td><span class="badge badge-red">URGENT</span></td>
-          <td><span class="badge badge-gold">PENDING</span></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td><strong>Manar + Yasmeen + Isham</strong></td>
-          <td>Brainstorm CFO Summit + Launch Event (Oct 10 / Nov 11)</td>
-          <td><span class="badge badge-red">URGENT</span></td>
-          <td><span class="badge badge-gold">PENDING</span></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td><strong>Manar</strong></td>
-          <td>Budget allocations for marketing, brand, sales, growth (based on Mukund discussions)</td>
-          <td><span class="badge badge-purple">HIGH</span></td>
-          <td><span class="badge badge-gold">PENDING</span></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td><strong>Manar + Walid</strong></td>
-          <td>Meet Global Accounts team → schedule demos with all product leads</td>
-          <td><span class="badge badge-purple">HIGH</span></td>
-          <td><span class="badge badge-gold">PENDING</span></td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td><strong>Marketing Team</strong></td>
-          <td>Define referral package for waitlist (share to LI/IG/X → $X reward)</td>
-          <td><span class="badge badge-purple">HIGH</span></td>
-          <td><span class="badge badge-gold">PENDING</span></td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td><strong>Marketing Team</strong></td>
-          <td>Identify 10-20 LI thought-leaders for paid hype (UI, tech, process, referral)</td>
-          <td><span class="badge badge-purple">HIGH</span></td>
-          <td><span class="badge badge-gold">PENDING</span></td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td><strong>Mukund</strong></td>
-          <td>Develop strategy for requesting growth budget from Amine</td>
-          <td><span class="badge badge-blue">MEDIUM</span></td>
-          <td><span class="badge badge-gold">PENDING</span></td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td><strong>Walid</strong></td>
-          <td>Draft and document marketing roadmap for team alignment</td>
-          <td><span class="badge badge-blue">MEDIUM</span></td>
-          <td><span class="badge badge-gold">PENDING</span></td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td><strong>Yasmeen / Sama</strong></td>
-          <td>Hiring plan for marketing team (Sama for hiring, Amin for budget)</td>
-          <td><span class="badge badge-blue">MEDIUM</span></td>
-          <td><span class="badge badge-gold">PENDING</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<!-- SECTION 10: RED TEAM RISKS -->
-<div class="section-divider"><span class="section-num">10</span> RED TEAM — STRATEGIC RISKS & TENSIONS</div>
-
-<div class="grid-2">
-  <div class="card">
-    <div class="card-header red">Critical Risks</div>
-    <div class="red-team-item risk-high">
-      <span class="risk-icon">🔴</span>
-      <div><strong>No Moat Identified:</strong> "Everything is replicable" — no unique claim text ("Just do it" equivalent). Without a defensible differentiator, paid acquisition will have poor LTV/CAC.</div>
-    </div>
-    <div class="red-team-item risk-high">
-      <span class="risk-icon">🔴</span>
-      <div><strong>1M Waitlist + 500K SMEs Target:</strong> Extremely ambitious without an established distribution framework, brand awareness, or proven referral economics. Clubhouse peaked at ~10M waitlist with massive organic virality.</div>
-    </div>
-    <div class="red-team-item risk-high">
-      <span class="risk-icon">🔴</span>
-      <div><strong>License Dependency:</strong> Sep 1 license is an assumption, not a commitment. 90% of revenue (lending) is gated on this. Entire launch timeline is fragile.</div>
-    </div>
-    <div class="red-team-item risk-med">
-      <span class="risk-icon">🟡</span>
-      <div><strong>Growth vs. Marketing Tension:</strong> Marketing must contribute 20%+ to growth but doesn't own growth metrics and only gets 20% of budget. Accountability without authority.</div>
-    </div>
-    <div class="red-team-item risk-med">
-      <span class="risk-icon">🟡</span>
-      <div><strong>Paid Waitlist Quality:</strong> "Join and get paid" attracts bounty hunters, not banking customers. Risk of vanity metrics with low conversion.</div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header gold">Tensions & Gaps</div>
-    <div class="red-team-item risk-med">
-      <span class="risk-icon">🟡</span>
-      <div><strong>Positioning Contradiction:</strong> "AI-native" is the differentiator, but Islamic compliance is "cherry on top" — yet the Islamic segment IS a defensible niche. May be underweighting the actual moat.</div>
-    </div>
-    <div class="red-team-item risk-med">
-      <span class="risk-icon">🟡</span>
-      <div><strong>Global vs. UAE Focus:</strong> First product is US-focused (ACH), but SME strategy is UAE/MENA-centric. Brand messaging needs to reconcile this dual identity.</div>
-    </div>
-    <div class="red-team-item risk-low">
-      <span class="risk-icon">🔵</span>
-      <div><strong>"No Personas" Philosophy:</strong> Serving everyone = serving no one. The incentive strategy already segments (window shoppers, adopters, retail, SMEs) — this IS targeting. Align language with practice.</div>
-    </div>
-    <div class="red-team-item risk-low">
-      <span class="risk-icon">🔵</span>
-      <div><strong>Team Readiness:</strong> Multiple leaders need media training before CFO Summit. Pitching capability is a dependency for the distribution strategy.</div>
-    </div>
-    <div class="red-team-item risk-low">
-      <span class="risk-icon">🔵</span>
-      <div><strong>Roadmap URL Inaccessible:</strong> Product suite roadmap at mal-product-suite.surge.sh returned 403 — this one-pager should be re-validated against the live roadmap once access is restored.</div>
-    </div>
   </div>
 </div>
 
 <!-- FOOTER -->
-<div style="margin-top:32px; padding:20px 24px; background:var(--mal-light); border-radius:12px; display:flex; justify-content:space-between; align-items:center;">
+<div class="footer">
   <div>
-    <div style="font-size:11px; font-weight:700; color:var(--mal-dark);">NEXT STEP</div>
-    <div style="font-size:13px; color:var(--mal-dark);">AAS + Walid to finalize timeline → Team alignment meeting → Execute Phase 2 (Waitlist Hype)</div>
+    <div style="font-size:9px;font-weight:700;color:#1a1a2e;">NEXT STEP</div>
+    <div style="font-size:10px;color:#1a1a2e;">AAS + Walid finalize timeline → Team alignment meeting → Execute Phase 2 (Waitlist Hype) → Wave 1 products go live Jul 2026</div>
   </div>
   <div style="text-align:right;">
-    <div style="font-size:10px; color:var(--mal-gray);">Prepared for internal leadership review</div>
-    <div style="font-size:10px; color:var(--mal-gray);">⚠ Roadmap alignment pending — surge.sh link returned 403</div>
+    <div style="font-size:8px;color:#6b7280;">Prepared for internal leadership review</div>
+    <div style="font-size:8px;color:#6b7280;">25 products | 4 launch waves | 18 markets</div>
   </div>
 </div>
 
