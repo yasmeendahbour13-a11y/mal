@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mal — CEO Meeting Brief</title>
+<style>
+  @page { size: A2 landscape; margin: 14mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #1a1a2e; line-height: 1.5; font-size: 15px; background: #fff;
+  }
+
+  .top-bar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 0; border-bottom: 1px solid #e5e7eb; margin-bottom: 14px;
+  }
+  .top-bar h1 { font-size: 28px; font-weight: 800; color: #1a1a2e; }
+  .top-bar h1 span { color: #6c3ce0; }
+  .top-bar .meta { font-size: 14px; color: #9ca3af; }
+
+  .section-label {
+    font-size: 14px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 1.2px; padding: 6px 14px; border-radius: 4px;
+    display: inline-block; margin-bottom: 10px; color: white;
+  }
+
+  .grid-2 { display: flex; gap: 12px; margin-bottom: 12px; }
+  .grid-2 > div { flex: 1; }
+  .grid-3 { display: flex; gap: 12px; margin-bottom: 12px; }
+  .grid-3 > div { flex: 1; }
+
+  .card {
+    border: 1px solid #e5e7eb; border-radius: 10px;
+    padding: 12px 14px; background: #fff; height: 100%;
+  }
+  .card-h {
+    font-size: 14px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; margin-bottom: 8px; padding-bottom: 6px;
+    border-bottom: 2px solid currentColor;
+  }
+
+  .qa { margin-bottom: 8px; }
+  .qa-q { font-size: 12px; font-weight: 700; color: #6c3ce0; text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 3px; }
+  .qa-a { font-size: 14px; color: #1a1a2e; line-height: 1.5; }
+  .qa-a strong { color: #1a1a2e; }
+
+  .b {
+    display: inline-block; padding: 3px 7px; border-radius: 3px;
+    font-size: 11px; font-weight: 600;
+  }
+  .b-p { background: #f3f0ff; color: #6c3ce0; }
+  .b-g { background: #ecfdf5; color: #059669; }
+  .b-o { background: #fffbeb; color: #b45309; }
+  .b-b { background: #eff6ff; color: #2563eb; }
+  .b-r { background: #fef2f2; color: #dc2626; }
+  .b-k { background: #f3f4f6; color: #374151; }
+  .b-d { background: #1a1a2e; color: white; }
+
+  .callout {
+    border-left: 3px solid #6c3ce0; background: #f8f6ff;
+    padding: 8px 12px; border-radius: 0 6px 6px 0; font-size: 13px; margin: 8px 0;
+  }
+  .callout-r {
+    border-left: 3px solid #dc2626; background: #fef2f2;
+    padding: 8px 12px; border-radius: 0 6px 6px 0; font-size: 13px; margin: 8px 0;
+  }
+  .callout-o {
+    border-left: 3px solid #d97706; background: #fffbeb;
+    padding: 8px 12px; border-radius: 0 6px 6px 0; font-size: 13px; margin: 8px 0;
+  }
+
+  .pill-row { display: flex; gap: 6px; flex-wrap: wrap; margin: 6px 0; }
+  .pill {
+    padding: 5px 10px; border-radius: 6px; font-size: 12px; font-weight: 600;
+    border: 1px solid #e5e7eb; background: #f9fafb;
+  }
+
+  .pos-grid { display: flex; gap: 10px; margin: 10px 0; }
+  .pos-card {
+    flex: 1; border-radius: 8px; padding: 12px 14px; color: white;
+  }
+  .pos-num { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; opacity: 0.8; margin-bottom: 3px; }
+  .pos-title { font-size: 17px; font-weight: 800; margin-bottom: 3px; }
+  .pos-sub { font-size: 12px; opacity: 0.8; }
+
+  table.info { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.info th {
+    background: #f9fafb; font-weight: 600; text-transform: uppercase;
+    font-size: 11px; letter-spacing: 0.4px; padding: 6px 8px;
+    text-align: left; color: #374151; border-bottom: 1px solid #e5e7eb;
+  }
+  table.info td { padding: 6px 8px; border-bottom: 1px solid #f3f4f6; vertical-align: top; }
+
+  .footer {
+    margin-top: 10px; padding: 8px 14px;
+    background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <h1>Mal <span>·</span> CEO Meeting Brief</h1>
+  <div class="meta">Prepared by: Manar El Amin &nbsp;·&nbsp; Brand, Communications & Marketing &nbsp;·&nbsp; June 2026</div>
+</div>
+
+<!-- STRATEGIC CONTEXT -->
+<div style="background:#1a1a2e;color:white;border-radius:10px;padding:14px 18px;margin-bottom:14px;">
+  <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;opacity:0.7;margin-bottom:6px;">Key Takeaway</div>
+  <div style="font-size:15px;line-height:1.6;">Mal is a <strong>licensed financial institution first</strong>, <strong>AI-native second</strong>, and <strong>Shariah-compliant third</strong>. We do not believe in user personas — we have targets, but we serve everyone. The only moat is <strong>user-base and distribution</strong>; everything else is replicable. 90% of revenue will come from lending post-licence. Every marketing activity must tie to a growth metric and contribute at least 20% to growth.</div>
+</div>
+
+<!-- ROW 1: POSITIONING + TARGET CUSTOMERS -->
+<div class="grid-2">
+  <div class="card">
+    <div class="card-h" style="color:#6c3ce0;">1. Strategic Clarity — Positioning &amp; Target</div>
+
+    <div class="qa">
+      <div class="qa-q">Brand Positioning (Priority Order)</div>
+    </div>
+    <div class="pos-grid">
+      <div class="pos-card" style="background:#1a1a2e;">
+        <div class="pos-num">P0 — Lead</div>
+        <div class="pos-title">Financial Institution</div>
+        <div class="pos-sub">Full bank with a licence. New generation banking — not competing with traditional banks.</div>
+      </div>
+      <div class="pos-card" style="background:#6c3ce0;">
+        <div class="pos-num">P1 — Differentiator</div>
+        <div class="pos-title">AI-Native</div>
+        <div class="pos-sub">Open an account in 30 seconds. Built for speed. AI-native = global by default.</div>
+      </div>
+      <div class="pos-card" style="background:#059669;">
+        <div class="pos-num">P2 — Trust Layer</div>
+        <div class="pos-title">Shariah-Compliant</div>
+        <div class="pos-sub">The cherry on top. A differentiator, not a defensible moat alone.</div>
+      </div>
+    </div>
+
+    <div class="qa">
+      <div class="qa-q">Launch Customers</div>
+      <div class="qa-a">
+        <strong>No user personas.</strong> We have targets, but serve everyone.<br>
+        <span class="b b-p">UAE Retail</span> Tech-savvy customers &nbsp;
+        <span class="b b-o">UAE SMEs</span> Offline approach by Mal team (Isham) &nbsp;
+        <span class="b b-g">Global</span> USD earners (PK, EG) wanting fast, low-cost payouts
+      </div>
+    </div>
+
+    <div class="qa" style="margin-top:8px;">
+      <div class="qa-q">Competitive Moat</div>
+      <div class="qa-a">"The only moat is user-base; everything else is replicable." The stack: <strong>Retail + SME + Lending combined.</strong> FAB = no lending. Wio = tiny SMEs. EFG = lender not bank. <strong>Mal = bank + lender. One-stop shop.</strong></div>
+    </div>
+    <div class="callout-r">
+      <strong>Gap:</strong> We don't yet have a claim only Mal can make. Need quantitative flex, not generic positioning. E.g. "You just transferred money in 2 seconds. Will your other bank do this?"
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h" style="color:#2563eb;">2. Product Readiness &amp; Roadmap</div>
+
+    <div class="qa">
+      <div class="qa-q">What's Built vs Planned</div>
+      <div class="qa-a">
+        <span class="b b-g">SME</span> Core banking infra built; cards in progress → <strong>live mid-end Jul</strong><br>
+        <span class="b b-p">Retail</span> Cards, accounts, PFM built; in testing → <strong>live beginning Jul</strong>
+      </div>
+    </div>
+
+    <div class="qa">
+      <div class="qa-q">Launch Priority</div>
+      <div class="qa-a"><strong>Global Accounts + PFM first.</strong> USD IBAN, card, local-currency payouts. Pakistan = initial target. Vanilla products → quick wins → build user base before full licence.</div>
+    </div>
+
+    <div class="qa">
+      <div class="qa-q">Revenue Model</div>
+      <div class="qa-a"><strong>90% revenue = lending/financing</strong> (IVF, scholarships, auto loans, invoice factoring) — kicks in after CBUAE licence. SME lending can be promoted as of Jul. Not ready to lend yet — ready to build a lending pipeline.</div>
+    </div>
+
+    <table class="info" style="margin-top:6px;">
+      <thead><tr><th>Phase</th><th>Products</th><th>Timeline</th></tr></thead>
+      <tbody>
+        <tr><td><span class="b b-d">Block 0</span></td><td>Cards, Accounts, PFM</td><td>Jul 2026 (Launch)</td></tr>
+        <tr><td><span class="b b-p">Shortly After</span></td><td>Credit Cards → Lending (student loans, auto loans)</td><td>Post-launch</td></tr>
+        <tr><td><span class="b b-r">Regulated</span></td><td>Full lending, expanded products</td><td>Post CBUAE licence</td></tr>
+        <tr><td><span class="b b-o">Stablecoin</span></td><td>Stablecoin cards, remittances (Rain.xyz model)</td><td>3–6 months post-launch</td></tr>
+      </tbody>
+    </table>
+
+    <div class="qa" style="margin-top:8px;">
+      <div class="qa-q">AI Personal Banker</div>
+      <div class="qa-a"><strong>Live product</strong> — not a concept.</div>
+    </div>
+
+    <div class="callout">
+      <strong>Key dates:</strong> Licence target Sep 1 → Launch event Oct 10 → Fallback: announce Nov 1 or shift event to Nov 11.
+    </div>
+  </div>
+</div>
+
+<!-- ROW 2: REGULATORY + PARTNERSHIPS + MANDATE -->
+<div class="grid-3">
+  <div class="card">
+    <div class="card-h" style="color:#dc2626;">3. Regulatory Constraints</div>
+
+    <div class="qa">
+      <div class="qa-q">Licence Path</div>
+      <div class="qa-a">
+        <strong>Full licence target:</strong> October<br>
+        <strong>Application submission:</strong> end of August<br>
+        <strong>Other licences in application:</strong> ADGM Category 2 (money services; USD lending to SMEs) — not for public disclosure
+      </div>
+    </div>
+
+    <div class="qa">
+      <div class="qa-q">IPA Constraints</div>
+      <div class="qa-a">AED only (not USD) · UAE residents only for certain activities · Asset limitations</div>
+    </div>
+
+    <div class="qa">
+      <div class="qa-q">What Can Be Said Publicly</div>
+      <div class="qa-a">CBUAE scope = UAE only. Always <strong>"Mal" not "Mal Bank"</strong> externally. <strong>AAS = main POC for public affairs</strong> (disclaimer to regulators). Global Accounts positioning → check with Loay.</div>
+    </div>
+
+    <div class="qa">
+      <div class="qa-q">Shariah Board</div>
+      <div class="qa-a">2 of 3 members appointed. <strong>Not named internally or externally yet.</strong></div>
+    </div>
+
+    <div class="qa">
+      <div class="qa-q">Stablecoin / Cross-Border Mortgage</div>
+      <div class="qa-a"><strong>Not reviewed</strong> as part of IPA process.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h" style="color:#d97706;">4. Distribution &amp; Partnerships</div>
+
+    <div class="callout-r" style="margin-top:0;">
+      <strong>Key principle:</strong> A partner ≠ a client. ADNOC = client, not partner. Labelling them a partner closes doors elsewhere.
+    </div>
+
+    <table class="info" style="margin-top:6px;">
+      <thead><tr><th>Entity</th><th>Status</th><th>Next Step</th></tr></thead>
+      <tbody>
+        <tr><td><strong>EDGE</strong></td><td><span class="b b-g">Most advanced</span></td><td>NDA signed, flows scoped → commercials + MOU</td></tr>
+        <tr><td><strong>Noon</strong></td><td><span class="b b-o">Early</span></td><td>Custom approach per framework</td></tr>
+        <tr><td><strong>Mubadala</strong></td><td><span class="b b-o">Early</span></td><td>Custom approach per framework</td></tr>
+        <tr><td><strong>ADNOC</strong></td><td><span class="b b-k">Client, not partner</span></td><td>Treat as client relationship</td></tr>
+      </tbody>
+    </table>
+
+    <div class="qa" style="margin-top:8px;">
+      <div class="qa-q">Approach Framework</div>
+      <div class="qa-a">Each relationship needs a custom approach: <strong>"What is the biggest gap Mal can fill for them?"</strong></div>
+    </div>
+
+    <div class="qa">
+      <div class="qa-q">Competitors as Context</div>
+    </div>
+    <table class="info">
+      <thead><tr><th>Player</th><th>Positioning</th><th>Gap</th></tr></thead>
+      <tbody>
+        <tr><td>FAB</td><td>Large SME accounts</td><td>No lending</td></tr>
+        <tr><td>Wio</td><td>Tiny SMEs</td><td>Limited scope</td></tr>
+        <tr><td>EFG</td><td>Lender</td><td>Not a bank</td></tr>
+        <tr><td><strong>Mal</strong></td><td><strong>Bank + Lender</strong></td><td><strong>One-stop shop</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-h" style="color:#059669;">5. My Mandate &amp; Resources</div>
+
+    <div class="qa">
+      <div class="qa-q">Success at 3 Months</div>
+      <div class="qa-a">Brand & Comms <strong>do not own growth</strong> — Growth owns user base, economics, retention. Every activity must tie to a growth metric and contribute <strong>at least 20%</strong>.</div>
+    </div>
+
+    <div style="font-size:12px;font-weight:700;color:#059669;text-transform:uppercase;margin:6px 0 4px;">Focus Areas — Next 3 Months</div>
+    <div class="pill-row">
+      <div class="pill">Social metrics (beat Wio, benchmark Revolut)</div>
+      <div class="pill">Roadmap to 1M followers</div>
+      <div class="pill">Social web: owned media, influencers, events</div>
+      <div class="pill">Brand DNA: TOV, architecture, audience</div>
+      <div class="pill">Events &amp; sponsorships</div>
+      <div class="pill">Partnership amplification (McKinsey, ecosystem)</div>
+      <div class="pill">Minimum dollar spend</div>
+    </div>
+
+    <div class="qa" style="margin-top:8px;">
+      <div class="qa-q">Budget &amp; Hiring</div>
+      <div class="qa-a">
+        <strong>Budget:</strong> Speak to Amine (growth budget ≠ brand budget)<br>
+        <strong>Hiring:</strong> Speak to Sama (headcount + compensation bands)<br>
+        <strong>Final approval:</strong> AAS has final sign-off on brand &amp; comms
+      </div>
+    </div>
+
+    <div class="callout-o" style="margin-top:8px;">
+      <strong>Open items:</strong><br>
+      · AAS to share brand &amp; comms metrics draft<br>
+      · Manar to push own draft in the meantime<br>
+      · Walid to produce benchmarks report (Revolut, NSave, Wio at comparable stage)<br>
+      · Schedule product demos between Manar and all leads<br>
+      · Global Accounts public positioning — check with Loay
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div>
+    <div style="font-size:13px;color:#9ca3af;">Source: CEO Meeting Q&A — Manar El Amin, Brand, Communications & Marketing</div>
+  </div>
+  <div style="text-align:right;">
+    <div style="font-size:12px;color:#9ca3af;">Confidential · Internal use only</div>
+  </div>
+</div>
+
+</body>
+</html>
