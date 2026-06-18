@@ -4,185 +4,196 @@
 <meta charset="UTF-8">
 <title>Mal — Marketing Strategy One-Pager</title>
 <style>
-  @page { size: A2 landscape; margin: 12mm; }
+  @page { size: A2 landscape; margin: 10mm; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #1a1a2e; line-height: 1.35; font-size: 11px; background: #fff;
   }
-  .page { max-width: 1800px; margin: 0 auto; }
+  .page { margin: 0 auto; }
 
   .top-bar {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 14px 0; border-bottom: 1px solid #e5e7eb; margin-bottom: 16px;
+    padding: 10px 0; border-bottom: 1px solid #e5e7eb; margin-bottom: 12px;
   }
-  .top-bar h1 { font-size: 20px; font-weight: 800; color: #1a1a2e; }
+  .top-bar h1 { font-size: 18px; font-weight: 800; color: #1a1a2e; }
   .top-bar h1 span { color: #6c3ce0; }
   .top-bar .meta { font-size: 10px; color: #9ca3af; }
 
   /* GOALS */
-  .goals-section { margin-bottom: 16px; }
   .goals-label {
-    font-size: 11px; font-weight: 800; text-transform: uppercase;
-    letter-spacing: 1.5px; color: #1a1a2e; margin-bottom: 8px;
-    padding-bottom: 4px; border-bottom: 2px solid #1a1a2e; display: inline-block;
+    font-size: 10px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 1.5px; color: #1a1a2e; margin-bottom: 6px;
+    padding-bottom: 3px; border-bottom: 2px solid #1a1a2e; display: inline-block;
   }
-  .goals-row { display: flex; gap: 10px; }
+  .goals-row { display: flex; gap: 8px; margin-bottom: 12px; }
   .goal {
-    flex: 1; border: 1px solid #e5e7eb; border-radius: 10px;
-    padding: 12px 14px; background: #fff; position: relative;
-    border-left: 4px solid #6c3ce0;
+    flex: 1; border: 1px solid #e5e7eb; border-radius: 8px;
+    padding: 8px 10px; background: #fff; border-left: 4px solid #6c3ce0;
   }
-  .goal-num { font-size: 24px; font-weight: 800; color: #1a1a2e; }
-  .goal-lbl { font-size: 9px; color: #6b7280; margin-top: 2px; }
-  .goal-owner { font-size: 7.5px; color: #9ca3af; margin-top: 4px; font-style: italic; }
+  .goal-num { font-size: 20px; font-weight: 800; color: #1a1a2e; }
+  .goal-lbl { font-size: 8px; color: #6b7280; margin-top: 1px; }
+  .goal-owner { font-size: 7px; color: #9ca3af; margin-top: 2px; font-style: italic; }
 
   /* POSITIONING */
   .pos-section {
-    border: 1px solid #e5e7eb; border-radius: 12px;
-    padding: 16px 20px; margin-bottom: 16px; background: #fafafa;
+    border: 1px solid #e5e7eb; border-radius: 10px;
+    padding: 12px 16px; margin-bottom: 12px; background: #fafafa;
   }
   .pos-label {
-    font-size: 11px; font-weight: 800; text-transform: uppercase;
-    letter-spacing: 1.5px; color: #6c3ce0; margin-bottom: 10px;
+    font-size: 10px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 1.2px; color: #6c3ce0; margin-bottom: 8px;
   }
-  .pos-grid { display: flex; gap: 16px; align-items: stretch; }
+  .pos-grid { display: flex; gap: 12px; align-items: stretch; }
   .pos-card {
-    flex: 1; border-radius: 10px; padding: 14px 16px; color: white;
+    flex: 1; border-radius: 8px; padding: 10px 12px; color: white;
     display: flex; flex-direction: column; justify-content: space-between;
   }
   .pos-priority {
-    font-size: 8px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 1px; opacity: 0.8; margin-bottom: 6px;
+    font-size: 7px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; opacity: 0.8; margin-bottom: 4px;
   }
-  .pos-title { font-size: 13px; font-weight: 800; margin-bottom: 4px; }
-  .pos-quote { font-size: 9px; font-style: italic; opacity: 0.85; margin-bottom: 6px; }
-  .pos-why { font-size: 8px; opacity: 0.75; }
+  .pos-title { font-size: 12px; font-weight: 800; margin-bottom: 3px; }
+  .pos-quote { font-size: 8px; font-style: italic; opacity: 0.85; margin-bottom: 4px; }
+  .pos-why { font-size: 7.5px; opacity: 0.7; }
   .pos-arrow {
     display: flex; align-items: center; justify-content: center;
-    font-size: 16px; color: #d1d5db; flex-shrink: 0; padding: 0 4px;
+    font-size: 14px; color: #d1d5db; flex-shrink: 0; padding: 0 2px;
   }
-  .pos-context {
-    display: flex; gap: 12px; margin-top: 12px; font-size: 9px;
+  .pos-ctx {
+    display: flex; gap: 10px; margin-top: 8px; font-size: 8px;
   }
   .pos-ctx-item {
-    padding: 6px 10px; border-radius: 6px; border: 1px solid #e5e7eb;
+    padding: 5px 8px; border-radius: 5px; border: 1px solid #e5e7eb;
     background: #fff; color: #374151; flex: 1;
   }
   .pos-ctx-item strong { color: #1a1a2e; }
 
-  /* TIMELINE */
-  .timeline-container {
-    border: 1px solid #e5e7eb; border-radius: 12px;
-    overflow: hidden; margin-bottom: 14px;
+  /* ===== ROADMAP ===== */
+  .roadmap {
+    position: relative;
+    height: 720px;
+    margin-bottom: 12px;
+    overflow: visible;
   }
-  .tl-title {
-    font-size: 11px; font-weight: 800; text-transform: uppercase;
-    letter-spacing: 1.5px; color: #1a1a2e; margin-bottom: 8px;
-  }
-  table.tl { width: 100%; border-collapse: collapse; table-layout: fixed; }
-  table.tl th {
-    padding: 10px 6px; font-size: 10px; font-weight: 600; color: #6b7280;
-    border-bottom: 1px solid #e5e7eb; background: #fafafa; text-align: center;
-  }
-  table.tl th:first-child {
-    text-align: left; padding-left: 14px; color: #1a1a2e; font-weight: 700; width: 170px;
-  }
-  table.tl td {
-    padding: 3px 3px; border-bottom: 1px solid #f8f9fa;
-    text-align: center; vertical-align: middle; height: 32px;
-  }
-  table.tl td:first-child {
-    text-align: left; padding-left: 14px; font-size: 9.5px; font-weight: 500; color: #374151;
-  }
-  tr.section-row td {
-    padding: 5px 6px; border-bottom: 1px solid #f3f4f6;
-    border-top: 1px solid #e5e7eb; background: #fff;
-  }
-  tr.section-row td:first-child {
-    font-size: 8.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;
-  }
-  .section-dot {
-    width: 7px; height: 7px; border-radius: 50%; display: inline-block;
-    vertical-align: middle; margin-right: 5px;
+  .roadmap-title {
+    font-size: 10px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 1.2px; color: #1a1a2e; margin-bottom: 6px;
   }
 
-  .chip {
-    display: inline-block; padding: 3px 8px; border-radius: 6px;
-    font-size: 7.5px; font-weight: 600; white-space: nowrap;
+  /* Timeline axis */
+  .rd-axis {
+    position: absolute;
+    top: 380px; left: 0; right: 0;
+    height: 2px; background: #e5e7eb;
   }
-  .chip-bank { background: #f3f0ff; color: #6c3ce0; border: 1px solid #e9e2ff; }
-  .chip-lend { background: #ecfdf5; color: #059669; border: 1px solid #d1fae5; }
-  .chip-ai { background: #eff6ff; color: #2563eb; border: 1px solid #dbeafe; }
-  .chip-dev { background: #f9fafb; color: #6b7280; border: 1px solid #e5e7eb; font-style: italic; }
-  .chip-mktg { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
-  .chip-license { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
-  .chip-event { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
-  .chip-sme { background: #fffbeb; color: #b45309; border: 1px solid #fde68a; }
-  .chip-growth { background: #ede9fe; color: #5b21b6; border: 1px solid #ddd6fe; }
-  .chip-phase { background: #1a1a2e; color: white; border: none; font-weight: 700; }
 
-  .icon-dot {
-    width: 18px; height: 18px; border-radius: 5px;
-    display: inline-flex; align-items: center; justify-content: center;
-    font-size: 9px; color: white; vertical-align: middle; margin-right: 3px;
+  /* Month markers */
+  .rd-month {
+    position: absolute; top: 368px;
+    text-align: center; width: 80px; margin-left: -40px;
   }
-  .id-purple { background: #6c3ce0; }
-  .id-green { background: #059669; }
-  .id-blue { background: #2563eb; }
-  .id-red { background: #dc2626; }
-  .id-amber { background: #d97706; }
-  .id-dark { background: #1a1a2e; }
-
-  .badge {
-    display: inline-block; padding: 1px 4px; border-radius: 3px;
-    font-size: 6.5px; font-weight: 600;
+  .rd-month-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    border: 2px solid #d1d5db; background: white;
+    margin: 0 auto 3px;
   }
-  .badge-retail { background: #f3f0ff; color: #6c3ce0; }
-  .badge-sme { background: #fffbeb; color: #b45309; }
-  .badge-global { background: #eff6ff; color: #2563eb; }
-
-  .span-bar {
-    display: inline-block; width: 100%; padding: 4px 6px; border-radius: 5px;
-    font-size: 7.5px; font-weight: 600; text-align: center;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  .rd-month-dot.active { border-color: #6c3ce0; background: #6c3ce0; }
+  .rd-month-label {
+    font-size: 10px; font-weight: 600; color: #374151;
   }
-  .sb-mktg { background: #dbeafe; color: #1e40af; }
-  .sb-growth { background: #ede9fe; color: #5b21b6; }
-  .sb-sme-pipe { background: #fef3c7; color: #92400e; }
-  .sb-license { background: #fee2e2; color: #991b1b; }
-  .sb-event { background: #fde68a; color: #78350f; }
+  .rd-month-sub {
+    font-size: 7px; color: #9ca3af; text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
 
-  /* LOWER SECTIONS */
-  .lower-grid { display: flex; gap: 12px; margin-bottom: 12px; }
+  /* Product cards */
+  .rd-card {
+    position: absolute; width: 150px;
+    background: white; border: 1px solid #e5e7eb; border-radius: 10px;
+    padding: 7px 9px; display: flex; align-items: flex-start; gap: 7px;
+  }
+  .rd-card-icon {
+    width: 28px; height: 28px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; color: white; flex-shrink: 0;
+  }
+  .rd-card-body { flex: 1; min-width: 0; }
+  .rd-card-name { font-size: 9.5px; font-weight: 700; color: #1a1a2e; }
+  .rd-card-meta { display: flex; align-items: center; gap: 4px; margin-top: 2px; flex-wrap: wrap; }
+  .rd-seg {
+    font-size: 7px; font-weight: 700; padding: 1px 4px; border-radius: 3px;
+  }
+  .rd-seg-r { background: #f3f0ff; color: #6c3ce0; }
+  .rd-seg-s { background: #fffbeb; color: #b45309; }
+  .rd-dev {
+    font-size: 6.5px; color: #9ca3af; display: flex; align-items: center; gap: 2px;
+  }
+  .rd-flags { font-size: 8px; letter-spacing: 1px; }
+
+  /* Connector lines */
+  .rd-line {
+    position: absolute; width: 1px; background: #e5e7eb;
+  }
+
+  /* Marketing milestone cards */
+  .rd-mktg {
+    position: absolute; width: 175px;
+    border-radius: 10px; padding: 8px 10px;
+  }
+  .rd-mktg-date {
+    font-size: 7px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; opacity: 0.8; margin-bottom: 2px;
+  }
+  .rd-mktg-title { font-size: 10px; font-weight: 800; margin-bottom: 2px; }
+  .rd-mktg-desc { font-size: 7.5px; opacity: 0.85; }
+
+  .rd-mktg-dark { background: #1a1a2e; color: white; }
+  .rd-mktg-blue { background: #2563eb; color: white; }
+  .rd-mktg-red { background: #dc2626; color: white; }
+  .rd-mktg-amber { background: #d97706; color: white; }
+  .rd-mktg-green { background: #059669; color: white; }
+
+  /* Wide spanning bar for hype phase */
+  .rd-hype-bar {
+    position: absolute;
+    border-radius: 8px; padding: 7px 12px;
+    background: #eff6ff; border: 1px solid #bfdbfe;
+    color: #1e40af;
+  }
+  .rd-hype-bar strong { font-size: 9px; }
+  .rd-hype-bar .desc { font-size: 7px; margin-top: 2px; color: #3b82f6; }
+
+  /* ===== LOWER SECTIONS ===== */
+  .lower-grid { display: flex; gap: 10px; margin-bottom: 10px; }
   .lower-grid > .card { flex: 1; }
-  .lower-grid-3 { display: flex; gap: 12px; margin-bottom: 12px; }
+  .lower-grid-3 { display: flex; gap: 10px; margin-bottom: 10px; }
   .lower-grid-3 > .card { flex: 1; }
 
   .card {
     border: 1px solid #e5e7eb; border-radius: 10px;
-    padding: 12px 14px; background: #fff;
+    padding: 10px 12px; background: #fff;
   }
   .card-h {
-    font-size: 10px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.8px; margin-bottom: 8px; padding-bottom: 5px;
+    font-size: 9px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; margin-bottom: 6px; padding-bottom: 4px;
     border-bottom: 2px solid currentColor;
   }
   .card-h-p { color: #6c3ce0; } .card-h-b { color: #2563eb; }
   .card-h-o { color: #d97706; } .card-h-r { color: #dc2626; }
   .card-h-d { color: #1a1a2e; } .card-h-g { color: #059669; }
 
-  table.info { width: 100%; border-collapse: collapse; font-size: 9px; }
+  table.info { width: 100%; border-collapse: collapse; font-size: 8.5px; }
   table.info th {
     background: #f9fafb; font-weight: 600; text-transform: uppercase;
-    font-size: 8px; letter-spacing: 0.4px; padding: 5px 6px;
+    font-size: 7.5px; letter-spacing: 0.4px; padding: 4px 5px;
     text-align: left; color: #374151; border-bottom: 1px solid #e5e7eb;
   }
-  table.info td { padding: 5px 6px; border-bottom: 1px solid #f3f4f6; vertical-align: top; }
+  table.info td { padding: 4px 5px; border-bottom: 1px solid #f3f4f6; vertical-align: top; }
 
   .b {
-    display: inline-block; padding: 1px 5px; border-radius: 3px;
-    font-size: 7.5px; font-weight: 600;
+    display: inline-block; padding: 1px 4px; border-radius: 3px;
+    font-size: 7px; font-weight: 600;
   }
   .b-p { background: #f3f0ff; color: #6c3ce0; } .b-g { background: #ecfdf5; color: #059669; }
   .b-o { background: #fffbeb; color: #b45309; } .b-b { background: #eff6ff; color: #2563eb; }
@@ -191,35 +202,31 @@
 
   .co {
     border-left: 3px solid #d97706; background: #fffbeb;
-    padding: 6px 10px; border-radius: 0 6px 6px 0; font-size: 9px; margin: 8px 0;
+    padding: 5px 8px; border-radius: 0 6px 6px 0; font-size: 8px; margin: 6px 0;
   }
   .co-r {
     border-left: 3px solid #dc2626; background: #fef2f2;
-    padding: 6px 10px; border-radius: 0 6px 6px 0; font-size: 9px; margin: 8px 0;
-  }
-  .co-b {
-    border-left: 3px solid #2563eb; background: #eff6ff;
-    padding: 6px 10px; border-radius: 0 6px 6px 0; font-size: 9px; margin: 8px 0;
+    padding: 5px 8px; border-radius: 0 6px 6px 0; font-size: 8px; margin: 6px 0;
   }
 
   .fun { display: flex; flex-direction: column; align-items: center; gap: 2px; }
   .fun-s {
-    text-align: center; padding: 6px 8px; color: white;
-    font-size: 9px; font-weight: 600; border-radius: 5px;
+    text-align: center; padding: 5px 6px; color: white;
+    font-size: 8px; font-weight: 600; border-radius: 4px;
   }
   .fun-sub { font-weight: 400; opacity: 0.85; }
-  .fun-a { color: #9ca3af; font-size: 8px; }
-  .sm { font-size: 8px; color: #6b7280; }
+  .fun-a { color: #9ca3af; font-size: 7px; }
+  .sm { font-size: 7px; color: #6b7280; }
 
-  .ob { display: flex; border-radius: 5px; overflow: hidden; height: 22px; margin-bottom: 4px; }
+  .ob { display: flex; border-radius: 4px; overflow: hidden; height: 18px; margin-bottom: 3px; }
   .ob div {
     display: flex; align-items: center; justify-content: center;
-    font-size: 8px; font-weight: 600; color: white;
+    font-size: 7px; font-weight: 600; color: white;
   }
 
   .footer {
-    margin-top: 14px; padding: 10px 16px;
-    background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px;
+    margin-top: 10px; padding: 8px 14px;
+    background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px;
     display: flex; justify-content: space-between; align-items: center;
   }
 </style>
@@ -232,44 +239,44 @@
   <div class="meta">Confidential, internal use only &nbsp;·&nbsp; June 2026</div>
 </div>
 
-<!-- ===== GOALS ===== -->
-<div class="goals-section">
+<!-- GOALS -->
+<div style="margin-bottom:12px;">
   <div class="goals-label">Marketing Goals</div>
   <div class="goals-row">
     <div class="goal">
       <div class="goal-num">1M</div>
       <div class="goal-lbl">Waitlist Users (Global)</div>
-      <div class="goal-owner">Growth owns · Mktg contributes 20%+ · Excl. sanctioned markets</div>
+      <div class="goal-owner">Growth owns · Mktg contributes 20%+</div>
     </div>
     <div class="goal">
       <div class="goal-num">500K</div>
-      <div class="goal-lbl">SME Pipeline within 2 months of waitlist</div>
+      <div class="goal-lbl">SME Pipeline (within 2mo of waitlist)</div>
       <div class="goal-owner">CFO Summit + Offline (Isham) + Direct Network</div>
     </div>
     <div class="goal">
       <div class="goal-num">1M</div>
       <div class="goal-lbl">Social Followers</div>
-      <div class="goal-owner">Benchmark Revolut · Beat WIO · LinkedIn-first, explore IG/X</div>
+      <div class="goal-owner">Benchmark Revolut · Beat WIO · LI-first</div>
     </div>
     <div class="goal">
       <div class="goal-num">20%+</div>
-      <div class="goal-lbl">Marketing Contribution to Growth</div>
-      <div class="goal-owner">Every $ ties to a measurable growth metric</div>
+      <div class="goal-lbl">Mktg Contribution to Growth</div>
+      <div class="goal-owner">Every $ ties to a measurable metric</div>
     </div>
     <div class="goal" style="border-left-color:#dc2626;">
       <div class="goal-num">CBUAE</div>
       <div class="goal-lbl">License (Expected Sep 2026)</div>
-      <div class="goal-owner">AAS = regulator POC · Contingency: Nov 1</div>
+      <div class="goal-owner">AAS = regulator POC · Contingency Nov 1</div>
     </div>
     <div class="goal" style="border-left-color:#d97706;">
       <div class="goal-num">18</div>
-      <div class="goal-lbl">Markets at Wave 1 Launch</div>
-      <div class="goal-owner">USD/ACH global · AED = UAE only · Mal ≠ Mal Bank</div>
+      <div class="goal-lbl">Markets at Wave 1</div>
+      <div class="goal-owner">USD/ACH global · AED = UAE only</div>
     </div>
   </div>
 </div>
 
-<!-- ===== POSITIONING ===== -->
+<!-- POSITIONING -->
 <div class="pos-section">
   <div class="pos-label">Positioning — How We Talk About Mal (Priority Order)</div>
   <div class="pos-grid">
@@ -279,16 +286,16 @@
         <div class="pos-title">Licensed Financial Institution</div>
         <div class="pos-quote">"Clearly a bank — a full bank with a license"</div>
       </div>
-      <div class="pos-why">This is what separates Mal from every fintech. We are not a wrapper, not a prepaid card, not an EMI. We are a licensed bank. This is always the first thing we say.</div>
+      <div class="pos-why">Not a wrapper, not a prepaid card, not an EMI. Always the first thing we say.</div>
     </div>
     <div class="pos-arrow">&#9654;</div>
     <div class="pos-card" style="background:#6c3ce0;">
       <div>
         <div class="pos-priority">P1 — DIFFERENTIATOR</div>
         <div class="pos-title">AI-Native Banking</div>
-        <div class="pos-quote">"Open an account in 30 seconds — a new generation of banking"</div>
+        <div class="pos-quote">"Open an account in 30 seconds"</div>
       </div>
-      <div class="pos-why">AI is not a feature we added. The entire bank is built on it. This is what makes us a new-gen bank, not a legacy bank with a chatbot.</div>
+      <div class="pos-why">AI is not a feature. The entire bank is built on it.</div>
     </div>
     <div class="pos-arrow">&#9654;</div>
     <div class="pos-card" style="background:#059669;">
@@ -297,301 +304,296 @@
         <div class="pos-title">Islamic &amp; Shariah-Compliant</div>
         <div class="pos-quote">"Ethical banking as the added value layer"</div>
       </div>
-      <div class="pos-why">Shariah compliance is built in, not bolted on. It's the ethical foundation — but we lead with the bank, not the religion. This layer earns trust without narrowing the audience.</div>
+      <div class="pos-why">Built in, not bolted on. Earns trust without narrowing the audience.</div>
     </div>
   </div>
-  <div class="pos-context">
-    <div class="pos-ctx-item"><strong>Global vs UAE:</strong> Mal (global, AI-native, USD/ACH) ≠ Mal Bank (UAE, CBUAE-licensed). CBUAE does not care about global Mal. AAS = primary POC for Public Affairs.</div>
-    <div class="pos-ctx-item"><strong>Moat:</strong> "Only moat is user-base; everything else is replicable." No unique claim text yet — must be quantitative, not generic. Study Brave's marketing.</div>
-    <div class="pos-ctx-item"><strong>Messaging rule:</strong> No generic claims. "Faster, nicer" = noise. Only flex real experiences. "Transferred in 2 seconds" not "we're fast." Be quantitative or stay quiet.</div>
+  <div class="pos-ctx">
+    <div class="pos-ctx-item"><strong>Global vs UAE:</strong> Mal (global) ≠ Mal Bank (UAE/CBUAE). AAS = POC for Public Affairs.</div>
+    <div class="pos-ctx-item"><strong>Moat:</strong> "Only moat is user-base; everything else is replicable." Must be quantitative.</div>
+    <div class="pos-ctx-item"><strong>Messaging:</strong> No generic claims. Only flex real experiences. Be quantitative or stay quiet.</div>
   </div>
 </div>
 
-<!-- ===== UNIFIED ROADMAP ===== -->
-<div class="tl-title">Unified Roadmap — Product, Marketing, Licensing &amp; Events</div>
-<div class="timeline-container">
-  <table class="tl">
-    <thead>
-      <tr>
-        <th>Stream</th>
-        <th>Jun 2026</th><th>Jul 2026</th><th>Aug 2026</th><th>Sep 2026</th>
-        <th>Oct 2026</th><th>Nov 2026</th><th>Dec 2026</th><th>2027</th>
-      </tr>
-    </thead>
-    <tbody>
+<!-- ===== UNIFIED ROADMAP — Product Roadmap Design ===== -->
+<div class="roadmap-title">Unified Roadmap — Product Launches, Marketing Phases, Licensing &amp; Events</div>
+<div class="roadmap">
 
-      <!-- MARKETING PHASES -->
-      <tr class="section-row">
-        <td><div class="section-dot" style="background:#1a1a2e;"></div>MARKETING PHASES</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-dark">1</div> Phase 1: Plumbing</td>
-        <td><div class="chip chip-phase">NOW</div></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-blue">2</div> Phase 2: Waitlist Hype</td>
-        <td colspan="4"><div class="span-bar sb-mktg">LI primary + explore IG/X/other platforms · 20-30 influencers (Isham + agency) · Founder Card + Beta + Private Community</div></td>
-        <td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-blue">3</div> Phase 3: ACH Launch Comms</td>
-        <td></td>
-        <td colspan="7"><div class="span-bar sb-mktg" style="opacity:0.8;">"You have Mal — never need SWIFT again" · EG, TR, IN, PK · Convenience is the message</div></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-blue">&#128176;</div> SME Lending Promotion</td>
-        <td></td>
-        <td colspan="7"><div class="span-bar sb-mktg" style="opacity:0.65;">Can promote from Jul — Invoice factoring + SME financing pipeline · Not lending yet, building pipeline</div></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot" style="background:#7c3aed;">&#128101;</div> Social → 1M Followers</td>
-        <td colspan="8"><div class="span-bar sb-growth" style="opacity:0.5;">Ongoing — Benchmark Revolut · Beat WIO · LinkedIn-first · Min $ spend</div></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot" style="background:#7c3aed;">&#127970;</div> SME Pipeline → 500K</td>
-        <td colspan="8"><div class="span-bar sb-sme-pipe" style="opacity:0.5;">CFO Summit + Offline (Isham) + Direct Network — Target 500K within 2 months of waitlist</div></td>
-      </tr>
+  <!-- Timeline axis -->
+  <div class="rd-axis"></div>
 
-      <!-- LICENSING & EVENTS -->
-      <tr class="section-row">
-        <td><div class="section-dot" style="background:#dc2626;"></div>LICENSING &amp; EVENTS</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-red">&#9878;</div> CBUAE License</td>
-        <td></td><td></td><td></td>
-        <td><div class="chip chip-license">LICENSE (expected)</div></td>
-        <td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-red" style="opacity:0.5;">&#9878;</div> License Contingency</td>
-        <td></td><td></td><td></td><td></td>
-        <td><div class="chip chip-license" style="opacity:0.6;">IF DELAY → Nov 1</div></td>
-        <td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-amber">&#127908;</div> Launch Event</td>
-        <td></td><td></td><td></td><td></td>
-        <td><div class="chip chip-event">OCT 10, 2026</div></td>
-        <td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-amber" style="opacity:0.5;">&#127908;</div> Event Contingency</td>
-        <td></td><td></td><td></td><td></td><td></td>
-        <td><div class="chip chip-event" style="opacity:0.6;">NOV 11 if delayed</div></td>
-        <td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-amber">&#128203;</div> CFO Summit (50 pax)</td>
-        <td colspan="8"><div class="span-bar sb-event" style="opacity:0.5;">Date TBD — Within first year · 50 max · Private round table · Top CFOs in ME</div></td>
-      </tr>
+  <!-- Month markers -->
+  <div class="rd-month" style="left:6%;"><div class="rd-month-dot"></div><div class="rd-month-label">Jun 2026</div><div class="rd-month-sub">Internal</div></div>
+  <div class="rd-month" style="left:18%;"><div class="rd-month-dot active"></div><div class="rd-month-label">Jul 2026</div><div class="rd-month-sub">Launch</div></div>
+  <div class="rd-month" style="left:30%;"><div class="rd-month-dot"></div><div class="rd-month-label">Aug 2026</div></div>
+  <div class="rd-month" style="left:42%;"><div class="rd-month-dot"></div><div class="rd-month-label">Sep 2026</div></div>
+  <div class="rd-month" style="left:55%;"><div class="rd-month-dot"></div><div class="rd-month-label">Oct 2026</div></div>
+  <div class="rd-month" style="left:67%;"><div class="rd-month-dot"></div><div class="rd-month-label">Nov 2026</div></div>
+  <div class="rd-month" style="left:79%;"><div class="rd-month-dot"></div><div class="rd-month-label">Dec 2026</div></div>
+  <div class="rd-month" style="left:92%;"><div class="rd-month-dot active"></div><div class="rd-month-label">2027</div><div class="rd-month-sub">Scale</div></div>
 
-      <!-- RETAIL BANKING -->
-      <tr class="section-row">
-        <td><div class="section-dot" style="background:#6c3ce0;"></div>RETAIL — BANKING (6)</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-purple">&#127974;</div> USD Account <span class="badge badge-retail">Retail</span></td>
-        <td></td>
-        <td><div class="chip chip-bank">LIVE · 18 mkts</div></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-purple">&#8599;</div> USD Payout <span class="badge badge-retail">Retail</span></td>
-        <td></td>
-        <td><div class="chip chip-bank">LIVE · Thunes · 18 mkts</div></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-purple">&#128179;</div> USD Card <span class="badge badge-retail">Retail</span></td>
-        <td></td>
-        <td><div class="chip chip-bank">LIVE · Rain · PK, UAE, EG</div></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-purple">&#127974;</div> AED Account <span class="badge badge-retail">Retail</span></td>
-        <td></td><td></td><td></td>
-        <td><div class="chip chip-dev">DEV</div></td>
-        <td><div class="chip chip-bank">LIVE · UAE</div></td>
-        <td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-purple">&#8599;</div> AED Payout <span class="badge badge-retail">Retail</span></td>
-        <td></td><td></td><td></td>
-        <td><div class="chip chip-dev">DEV</div></td>
-        <td><div class="chip chip-bank">LIVE · UAE</div></td>
-        <td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-purple">&#128179;</div> AED Card <span class="badge badge-retail">Retail</span></td>
-        <td></td><td></td><td></td>
-        <td><div class="chip chip-dev">DEV</div></td>
-        <td><div class="chip chip-bank">LIVE · UAE</div></td>
-        <td></td><td></td><td></td>
-      </tr>
+  <!-- ===== MARKETING MILESTONE CARDS ===== -->
 
-      <!-- RETAIL LENDING -->
-      <tr class="section-row">
-        <td><div class="section-dot" style="background:#059669;"></div>RETAIL — LENDING (5)</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-green">&#128663;</div> Auto Financing <span class="badge badge-retail">Retail</span></td>
-        <td></td><td></td><td></td>
-        <td><div class="chip chip-dev">DEV</div></td>
-        <td><div class="chip chip-lend">LIVE · Stitch/Mal · UAE</div></td>
-        <td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-green">&#128181;</div> Personal Financing <span class="badge badge-retail">Retail</span></td>
-        <td></td><td></td><td></td>
-        <td><div class="chip chip-dev">DEV</div></td>
-        <td><div class="chip chip-lend">LIVE · UAE</div></td>
-        <td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-green">&#129329;</div> IVF Financing <span class="badge badge-retail">Retail</span></td>
-        <td></td><td></td>
-        <td><div class="chip chip-dev">DEV</div></td>
-        <td></td><td></td>
-        <td><div class="chip chip-lend">LIVE · UAE</div></td>
-        <td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-green">&#128179;</div> Credit Card <span class="badge badge-retail">Retail</span></td>
-        <td></td><td></td><td></td><td></td><td></td>
-        <td><div class="chip chip-lend">LIVE · Shariah · UAE</div></td>
-        <td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-green">&#127891;</div> Tuition Financing <span class="badge badge-retail">Retail</span></td>
-        <td></td><td></td><td></td>
-        <td><div class="chip chip-dev">DEV</div></td>
-        <td></td><td></td>
-        <td><div class="chip chip-lend">LIVE · UAE</div></td>
-        <td></td>
-      </tr>
+  <!-- Phase 1: Plumbing (Jun) -->
+  <div class="rd-mktg rd-mktg-dark" style="left:0.5%;top:10px;width:140px;">
+    <div class="rd-mktg-date">Jun 2026 — Phase 1</div>
+    <div class="rd-mktg-title">Plumbing</div>
+    <div class="rd-mktg-desc">Internal QA, stress testing, end-to-end flows. No external comms.</div>
+  </div>
 
-      <!-- RETAIL AI -->
-      <tr class="section-row">
-        <td><div class="section-dot" style="background:#2563eb;"></div>RETAIL — AI AGENTS (3)</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-blue">&#10022;</div> PFM Agent <span class="badge badge-global">18 mkts</span></td>
-        <td><div class="chip chip-dev">DEV</div></td>
-        <td><div class="chip chip-ai">LIVE</div></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-blue">&#9992;</div> Travel Agent <span class="badge badge-global">18 mkts</span></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td><div class="chip chip-ai">LIVE · 2027</div></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-blue">&#128722;</div> Shopping Agent <span class="badge badge-global">18 mkts</span></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td><div class="chip chip-ai">LIVE · 2027</div></td>
-      </tr>
+  <!-- Phase 2: Waitlist Hype bar (Jun → Sep) -->
+  <div class="rd-hype-bar" style="left:0.5%;top:80px;width:48%;">
+    <strong>Phase 2: Waitlist Hype (Pre-Launch)</strong>
+    <div class="desc">5 Hype Wins: UI excellence · Authentically Islamic · Product speed &amp; suite · Referral + Founder Card + beta · Private community. 20-30 influencers (LI primary, explore IG/X). Isham + agency.</div>
+  </div>
 
-      <!-- SME BANKING -->
-      <tr class="section-row">
-        <td><div class="section-dot" style="background:#d97706;"></div>SME — BANKING (6)</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-amber">&#127974;</div> SME USD Account <span class="badge badge-sme">SME</span></td>
-        <td></td>
-        <td><div class="chip chip-sme">LIVE · PK, UAE, EG</div></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-amber">&#8599;</div> SME USD Payout <span class="badge badge-sme">SME</span></td>
-        <td></td>
-        <td><div class="chip chip-sme">LIVE · 18 mkts</div></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-amber">&#128179;</div> SME USD Card <span class="badge badge-sme">SME</span></td>
-        <td></td>
-        <td><div class="chip chip-sme">LIVE · PK, UAE</div></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-amber">&#127974;</div> SME AED Account <span class="badge badge-sme">SME</span></td>
-        <td></td><td></td><td></td><td></td>
-        <td><div class="chip chip-sme">LIVE · UAE</div></td>
-        <td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-amber">&#8599;</div> SME AED Payout <span class="badge badge-sme">SME</span></td>
-        <td></td><td></td><td></td>
-        <td><div class="chip chip-dev">DEV</div></td>
-        <td><div class="chip chip-sme">LIVE · UAE</div></td>
-        <td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-amber">&#128179;</div> SME AED Card <span class="badge badge-sme">SME</span></td>
-        <td></td><td></td><td></td>
-        <td><div class="chip chip-dev">DEV</div></td>
-        <td><div class="chip chip-sme">LIVE · MC · UAE</div></td>
-        <td></td><td></td><td></td>
-      </tr>
+  <!-- CBUAE License (Sep) -->
+  <div class="rd-mktg rd-mktg-red" style="left:38%;top:10px;width:145px;">
+    <div class="rd-mktg-date">Sep 2026</div>
+    <div class="rd-mktg-title">CBUAE License</div>
+    <div class="rd-mktg-desc">Expected. If delayed → launch moves to Nov 1 or event to Nov 11.</div>
+  </div>
 
-      <!-- SME LENDING -->
-      <tr class="section-row">
-        <td><div class="section-dot" style="background:#059669;"></div>SME — LENDING (2)</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-green">&#128196;</div> Invoice Factoring <span class="badge badge-sme">SME</span></td>
-        <td></td>
-        <td><div class="chip chip-dev">DEV</div></td>
-        <td><div class="chip chip-lend">LIVE · UAE</div></td>
-        <td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-green">&#128200;</div> SME Financing <span class="badge badge-sme">SME</span></td>
-        <td></td><td></td><td></td>
-        <td><div class="chip chip-dev">DEV</div></td>
-        <td><div class="chip chip-lend">LIVE · UAE</div></td>
-        <td></td><td></td><td></td>
-      </tr>
+  <!-- Grand Launch (Oct 10) -->
+  <div class="rd-mktg rd-mktg-amber" style="left:50.5%;top:10px;width:145px;">
+    <div class="rd-mktg-date">Oct 10, 2026</div>
+    <div class="rd-mktg-title">Grand Launch</div>
+    <div class="rd-mktg-desc">Contingency: Nov 11 if license delayed past Sep 1.</div>
+  </div>
 
-      <!-- SME AI -->
-      <tr class="section-row">
-        <td><div class="section-dot" style="background:#2563eb;"></div>SME — AI AGENTS (3)</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-blue">%</div> Tax Agent <span class="badge badge-sme">SME</span></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td><div class="chip chip-ai">LIVE · UAE · 2027</div></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-blue">&#128202;</div> CFO Agent <span class="badge badge-sme">SME</span></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td><div class="chip chip-ai">LIVE · UAE · 2027</div></td>
-      </tr>
-      <tr>
-        <td><div class="icon-dot id-blue">&#128210;</div> Accounting Agent <span class="badge badge-sme">SME</span></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td><div class="chip chip-ai">LIVE · UAE · 2027</div></td>
-      </tr>
+  <!-- Phase 3: ACH Launch Comms bar (Jul → onward) -->
+  <div class="rd-hype-bar" style="left:13%;top:130px;width:50%;background:#ecfdf5;border-color:#d1fae5;color:#059669;">
+    <strong>Phase 3: ACH Launch Comms</strong>
+    <div class="desc" style="color:#059669;">"You have Mal — never need SWIFT again" · EG, TR, IN, PK · Convenience is the message</div>
+  </div>
 
-    </tbody>
-  </table>
-</div>
+  <!-- CFO Summit (TBD) -->
+  <div class="rd-mktg rd-mktg-amber" style="left:64%;top:10px;width:155px;opacity:0.7;">
+    <div class="rd-mktg-date">TBD — Within first year</div>
+    <div class="rd-mktg-title">CFO Summit (50 pax)</div>
+    <div class="rd-mktg-desc">Private round table · Top CFOs in ME</div>
+  </div>
 
-<!-- WAVE SUMMARY -->
-<div style="display:flex;gap:10px;margin-bottom:14px;font-size:8.5px;color:#6b7280;">
-  <div style="padding:5px 10px;background:#f3f0ff;border-radius:6px;border:1px solid #e9e2ff;"><strong style="color:#6c3ce0;">WAVE 1 (Jul '26):</strong> 7 USD products + PFM Agent = 8 live · 18 markets</div>
-  <div style="padding:5px 10px;background:#ecfdf5;border-radius:6px;border:1px solid #d1fae5;"><strong style="color:#059669;">WAVE 2 (Oct '26):</strong> 6 AED products + 4 financing = 10 live · UAE</div>
-  <div style="padding:5px 10px;background:#ecfdf5;border-radius:6px;border:1px solid #d1fae5;"><strong style="color:#059669;">WAVE 3 (Nov–Dec '26):</strong> IVF + Credit Card + Tuition = 3 live · UAE</div>
-  <div style="padding:5px 10px;background:#eff6ff;border-radius:6px;border:1px solid #dbeafe;"><strong style="color:#2563eb;">WAVE 4 (2027):</strong> 5 AI Agents · Retail + SME</div>
+  <!-- ===== PRODUCT CARDS — ABOVE TIMELINE ===== -->
+
+  <!-- Jun: USD products (above) -->
+  <div class="rd-card" style="left:1%;top:182px;">
+    <div class="rd-card-icon" style="background:#6c3ce0;">&#127974;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">USD Account</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-r">Retail</span><span class="rd-flags">&#127477;&#127472; &#127462;&#127466; &#127466;&#127468;</span></div>
+    </div>
+  </div>
+
+  <div class="rd-card" style="left:1%;top:232px;">
+    <div class="rd-card-icon" style="background:#6c3ce0;">&#128179;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">USD Card</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-r">Retail</span><span class="rd-flags">&#127477;&#127472; &#127462;&#127466; &#127466;&#127468;</span></div>
+    </div>
+  </div>
+
+  <div class="rd-card" style="left:1%;top:282px;">
+    <div class="rd-card-icon" style="background:#d97706;">&#127974;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">SME USD Account</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-s">SME</span><span class="rd-flags">&#127477;&#127472; &#127462;&#127466; &#127466;&#127468;</span></div>
+    </div>
+  </div>
+
+  <div class="rd-card" style="left:1%;top:332px;">
+    <div class="rd-card-icon" style="background:#d97706;">&#128179;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">SME USD Card</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-s">SME</span></div>
+    </div>
+  </div>
+
+  <!-- Jul-Aug: Invoice Factoring (above, dev Jul) -->
+  <div class="rd-card" style="left:24%;top:322px;">
+    <div class="rd-card-icon" style="background:#059669;">&#128196;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">Invoice Factoring</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-s">SME</span><span class="rd-dev">&#128295; Jul 2026</span></div>
+    </div>
+  </div>
+
+  <!-- Sep: AED + Financing products (above) -->
+  <div class="rd-card" style="left:38%;top:182px;">
+    <div class="rd-card-icon" style="background:#6c3ce0;">&#127974;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">AED Account</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-r">Retail</span><span class="rd-dev">&#128295; Sep 2026</span></div>
+    </div>
+  </div>
+
+  <div class="rd-card" style="left:38%;top:232px;">
+    <div class="rd-card-icon" style="background:#6c3ce0;">&#128179;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">AED Card</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-r">Retail</span><span class="rd-dev">&#128295; Sep 2026</span></div>
+    </div>
+  </div>
+
+  <div class="rd-card" style="left:38%;top:282px;">
+    <div class="rd-card-icon" style="background:#059669;">&#128181;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">Personal Financing</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-r">Retail</span><span class="rd-dev">&#128295; Sep 2026</span></div>
+    </div>
+  </div>
+
+  <div class="rd-card" style="left:52%;top:282px;">
+    <div class="rd-card-icon" style="background:#d97706;">&#127974;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">SME AED Account</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-s">SME</span></div>
+    </div>
+  </div>
+
+  <!-- Nov: IVF + Tuition (above) -->
+  <div class="rd-card" style="left:62%;top:282px;">
+    <div class="rd-card-icon" style="background:#059669;">&#129329;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">IVF Financing</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-r">Retail</span><span class="rd-dev">&#128295; Aug 2026</span></div>
+    </div>
+  </div>
+
+  <div class="rd-card" style="left:73%;top:282px;">
+    <div class="rd-card-icon" style="background:#059669;">&#127891;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">Tuition Financing</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-r">Retail</span><span class="rd-dev">&#128295; Sep 2026</span></div>
+    </div>
+  </div>
+
+  <!-- 2027: AI Agents (above) -->
+  <div class="rd-card" style="left:85%;top:182px;">
+    <div class="rd-card-icon" style="background:#0d9488;">&#9992;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">Travel Agent</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-r">Retail</span></div>
+    </div>
+  </div>
+
+  <div class="rd-card" style="left:85%;top:232px;">
+    <div class="rd-card-icon" style="background:#0d9488;">%</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">Tax Agent</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-s">SME</span></div>
+    </div>
+  </div>
+
+  <div class="rd-card" style="left:85%;top:282px;">
+    <div class="rd-card-icon" style="background:#0d9488;">&#128210;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">Accounting Agent</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-s">SME</span></div>
+    </div>
+  </div>
+
+  <!-- ===== PRODUCT CARDS — BELOW TIMELINE ===== -->
+
+  <!-- Jun: below -->
+  <div class="rd-card" style="left:1%;top:410px;">
+    <div class="rd-card-icon" style="background:#6c3ce0;">&#8599;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">USD Payout</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-r">Retail</span><span class="rd-flags">&#127466;&#127468; &#127477;&#127472;</span></div>
+    </div>
+  </div>
+
+  <div class="rd-card" style="left:1%;top:460px;">
+    <div class="rd-card-icon" style="background:#0d9488;">&#10022;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">PFM Agent</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-r">Retail</span><span class="rd-dev">&#128295; Jun 2026</span></div>
+    </div>
+  </div>
+
+  <div class="rd-card" style="left:1%;top:510px;">
+    <div class="rd-card-icon" style="background:#d97706;">&#8599;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">SME USD Payout</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-s">SME</span><span class="rd-flags">&#127462;&#127466; &#127477;&#127472;</span></div>
+    </div>
+  </div>
+
+  <!-- Oct: below (Sep dev products going live) -->
+  <div class="rd-card" style="left:50.5%;top:410px;">
+    <div class="rd-card-icon" style="background:#6c3ce0;">&#8599;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">AED Payout</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-r">Retail</span><span class="rd-dev">&#128295; Sep 2026</span></div>
+    </div>
+  </div>
+
+  <div class="rd-card" style="left:50.5%;top:460px;">
+    <div class="rd-card-icon" style="background:#059669;">&#128663;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">Auto Financing</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-r">Retail</span><span class="rd-dev">&#128295; Sep 2026</span></div>
+    </div>
+  </div>
+
+  <div class="rd-card" style="left:50.5%;top:510px;">
+    <div class="rd-card-icon" style="background:#059669;">&#128200;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">SME Financing</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-s">SME</span><span class="rd-dev">&#128295; Sep 2026</span></div>
+    </div>
+  </div>
+
+  <div class="rd-card" style="left:50.5%;top:560px;">
+    <div class="rd-card-icon" style="background:#d97706;">&#8599;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">SME AED Payout</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-s">SME</span><span class="rd-dev">&#128295; Sep 2026</span></div>
+    </div>
+  </div>
+
+  <div class="rd-card" style="left:50.5%;top:610px;">
+    <div class="rd-card-icon" style="background:#d97706;">&#128179;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">SME AED Card</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-s">SME</span><span class="rd-dev">&#128295; Sep 2026</span></div>
+    </div>
+  </div>
+
+  <!-- Nov: below -->
+  <div class="rd-card" style="left:64%;top:410px;">
+    <div class="rd-card-icon" style="background:#059669;">&#128179;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">Credit Card</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-r">Retail</span></div>
+    </div>
+  </div>
+
+  <!-- 2027: below -->
+  <div class="rd-card" style="left:85%;top:410px;">
+    <div class="rd-card-icon" style="background:#0d9488;">&#128722;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">Shopping Agent</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-r">Retail</span></div>
+    </div>
+  </div>
+
+  <div class="rd-card" style="left:85%;top:460px;">
+    <div class="rd-card-icon" style="background:#0d9488;">&#128202;</div>
+    <div class="rd-card-body">
+      <div class="rd-card-name">CFO Agent</div>
+      <div class="rd-card-meta"><span class="rd-seg rd-seg-s">SME</span></div>
+    </div>
+  </div>
+
+  <!-- Wave labels -->
+  <div style="position:absolute;left:10%;top:670px;display:flex;gap:10px;font-size:8px;color:#6b7280;">
+    <div style="padding:4px 8px;background:#f3f0ff;border-radius:5px;border:1px solid #e9e2ff;"><strong style="color:#6c3ce0;">WAVE 1 (Jul '26):</strong> 8 products · 18 mkts</div>
+    <div style="padding:4px 8px;background:#ecfdf5;border-radius:5px;border:1px solid #d1fae5;"><strong style="color:#059669;">WAVE 2 (Oct '26):</strong> 10 products · UAE</div>
+    <div style="padding:4px 8px;background:#ecfdf5;border-radius:5px;border:1px solid #d1fae5;"><strong style="color:#059669;">WAVE 3 (Nov–Dec '26):</strong> 3 products · UAE</div>
+    <div style="padding:4px 8px;background:#eff6ff;border-radius:5px;border:1px solid #dbeafe;"><strong style="color:#2563eb;">WAVE 4 (2027):</strong> 5 AI Agents</div>
+  </div>
+
 </div>
 
 <!-- ===== LOWER SECTIONS ===== -->
@@ -600,8 +602,8 @@
 <div class="lower-grid">
   <div class="card">
     <div class="card-h card-h-b">Ownership Matrix</div>
-    <div style="margin-bottom:6px;">
-      <div style="font-size:8px;font-weight:600;margin-bottom:2px;">BUDGET ALLOCATION</div>
+    <div style="margin-bottom:4px;">
+      <div style="font-size:7px;font-weight:600;margin-bottom:2px;">BUDGET ALLOCATION</div>
       <div class="ob">
         <div style="width:80%;background:#6c3ce0;">GROWTH — 80%</div>
         <div style="width:20%;background:#2563eb;">BRAND &amp; MKTG — 20%</div>
@@ -611,9 +613,9 @@
     <table class="info">
       <thead><tr><th>Domain</th><th>Owner</th><th>Scope</th></tr></thead>
       <tbody>
-        <tr><td><span class="b b-p">Growth</span></td><td>Mukund</td><td>Userbase, retention, referral economics, acquisition (80%)</td></tr>
+        <tr><td><span class="b b-p">Growth</span></td><td>Mukund</td><td>Userbase, retention, referral, acquisition (80%)</td></tr>
         <tr><td><span class="b b-b">Marketing</span></td><td>Manar, Yasmeen, Isham</td><td>Brand, PR, influencers, events, social, TOV, content</td></tr>
-        <tr><td><span class="b b-o">Sales / SME</span></td><td>SME Team + Isham</td><td>Offline onboarding, CFO Summit, distribution, pipeline</td></tr>
+        <tr><td><span class="b b-o">Sales / SME</span></td><td>SME Team + Isham</td><td>Offline onboarding, CFO Summit, distribution</td></tr>
         <tr><td><span class="b b-g">Product</span></td><td>David, VK, Manar</td><td>Demos, tech comms, launches</td></tr>
         <tr><td><span class="b b-k">Public Affairs</span></td><td>AAS</td><td>CBUAE comms (UAE-only)</td></tr>
         <tr><td><span class="b b-r">Compliance</span></td><td>Maen + Walid</td><td>Risk, regulatory readiness</td></tr>
@@ -621,7 +623,7 @@
         <tr><td><span class="b b-k">Budgets</span></td><td>Amine</td><td>Budget allocation &amp; approval</td></tr>
       </tbody>
     </table>
-    <div class="co" style="margin-top:6px;">
+    <div class="co" style="margin-top:4px;">
       <strong>Rule:</strong> Mktg does NOT own growth metrics but must contribute 20%+. Referral program owned by Growth.
     </div>
   </div>
@@ -633,106 +635,96 @@
       <tbody>
         <tr><td><span class="b b-k">Window Shoppers</span></td><td>"Join waitlist, get paid"</td><td>Cash for signup; share LI/IG/X → $X</td><td>Waitlist virality</td><td>Social, Paid LI</td></tr>
         <tr><td><span class="b b-b">Adopters</span></td><td>"Try the tech first"</td><td>Founder Card + 1-yr sub + beta + community</td><td>UI, speed, process</td><td>LI Thought Leaders</td></tr>
-        <tr><td><span class="b b-p">Retail</span></td><td>"Never need SWIFT again"</td><td>Global Accounts first (USD/ACH); 4x salary on opening</td><td>Expats EG/TR/IN/PK; lending products come later (Wave 2–3)</td><td>Partnerships, Digital</td></tr>
-        <tr><td><span class="b b-o">SMEs</span></td><td>"Upload paperwork — eligible in seconds"</td><td>AED 300K at 5%; Mal pays your bills</td><td>Bank + Lender one-stop vs FAB/WIO/EFG</td><td>CFO Summit, Offline (Isham)</td></tr>
+        <tr><td><span class="b b-p">Retail</span></td><td>"Never need SWIFT again"</td><td>Global Accounts first (USD/ACH); 4x salary</td><td>Expats EG/TR/IN/PK; lending later (Wave 2–3)</td><td>Partnerships, Digital</td></tr>
+        <tr><td><span class="b b-o">SMEs</span></td><td>"Upload paperwork — eligible in seconds"</td><td>AED 300K at 5%; Mal pays your bills</td><td>Bank + Lender one-stop</td><td>CFO Summit, Offline</td></tr>
       </tbody>
     </table>
     <div class="co">
-      <strong>Competitive Stack:</strong> FAB = large SMEs, no lending. WIO = tiny SMEs. EFG = lender not bank. <strong>Mal = Bank + Lender. One-stop. Retail + SME.</strong>
+      <strong>Competitive Stack:</strong> FAB = large SMEs, no lending. WIO = tiny SMEs. EFG = lender not bank. <strong>Mal = Bank + Lender. One-stop.</strong>
     </div>
   </div>
 </div>
 
-<!-- ROW 2: FUNNEL + HYPE PLAYBOOK + EVENTS -->
+<!-- ROW 2: FUNNEL + HYPE + EVENTS -->
 <div class="lower-grid-3">
   <div class="card">
     <div class="card-h card-h-o">Waitlist Funnel &amp; Guardrails</div>
-    <div class="fun" style="margin-bottom:8px;">
+    <div class="fun" style="margin-bottom:6px;">
       <div class="fun-s" style="width:100%;background:#9ca3af;">Email Only <span class="fun-sub">— Weak intent</span></div>
       <div class="fun-a">&#9660;</div>
-      <div class="fun-s" style="width:85%;background:#6366f1;">Email + KYC Complete <span class="fun-sub">— Interest</span></div>
+      <div class="fun-s" style="width:85%;background:#6366f1;">Email + KYC <span class="fun-sub">— Interest</span></div>
       <div class="fun-a">&#9660;</div>
       <div class="fun-s" style="width:70%;background:#6c3ce0;">KYC + Referrals <span class="fun-sub">— Engagement</span></div>
       <div class="fun-a">&#9660;</div>
-      <div class="fun-s" style="width:55%;background:#059669;">Completes Loans <span class="fun-sub">— IDEAL (full financial data)</span></div>
+      <div class="fun-s" style="width:55%;background:#059669;">Completes Loans <span class="fun-sub">— IDEAL</span></div>
     </div>
-    <div class="co-r" style="margin-bottom:6px;">
-      <strong>KYC may not be live at waitlist launch.</strong> Until KYC is active, the waitlist is hype-only: position what Mal WILL be. Focus on the vision (licensed bank, AI-native, Shariah-compliant). Funnel depth kicks in once product is live.
+    <div class="co-r" style="margin-bottom:4px;">
+      <strong>KYC may not be live at waitlist launch.</strong> Until active, waitlist is hype-only. Focus on positioning: licensed bank, AI-native, Shariah-compliant.
     </div>
     <table class="info">
       <thead><tr><th>Guardrail</th><th>Rationale</th></tr></thead>
       <tbody>
         <tr><td>Clients ≠ Partners</td><td>Closes doors (ADNOC = client)</td></tr>
         <tr><td>No generic claims</td><td>Be quantitative or stay quiet</td></tr>
-        <tr><td>Mal (global) ≠ Mal Bank (UAE)</td><td>CBUAE only cares about UAE</td></tr>
-        <tr><td>Only flex real experiences</td><td>"Transferred in 2 seconds" not "we're fast"</td></tr>
-        <tr><td>90% revenue = lending</td><td>Banking acquires → lending generates</td></tr>
+        <tr><td>Mal ≠ Mal Bank</td><td>CBUAE only cares about UAE</td></tr>
+        <tr><td>Only real experiences</td><td>"2 seconds" not "we're fast"</td></tr>
+        <tr><td>90% revenue = lending</td><td>Banking acquires, lending generates</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="card">
     <div class="card-h card-h-p">Waitlist Hype Playbook</div>
-    <div style="font-size:9px;">
-      <div style="padding:2px 0;">&#9656; 10-20 influencers paid (LI primary, explore IG/X/other platforms)</div>
+    <div style="font-size:8.5px;">
+      <div style="padding:2px 0;">&#9656; 10-20 influencers (LI primary, explore IG/X/other platforms)</div>
       <div style="padding:2px 0;">&#9656; Isham identifies influencers &amp; groups per platform with 3rd-party agency</div>
       <div style="padding:2px 0;">&#9656; "UI is great, credit limit in 30 seconds"</div>
-      <div style="padding:2px 0;">&#9656; "Once they get their license they will kill it"</div>
       <div style="padding:2px 0;">&#9656; CTA: "I just joined the Mal waitlist and I have 5 slots to give"</div>
       <div style="padding:2px 0;">&#9656; Share to LI/IG/X → get $X free (package TBD)</div>
       <div style="padding:2px 0;">&#9656; Benchmarks: Revolut, Clubhouse waitlist models</div>
-      <div style="font-weight:700;margin:6px 0 4px;">5 Hype Pillars</div>
-      <div style="display:flex;flex-wrap:wrap;gap:4px;">
-        <div style="background:#f9fafb;padding:5px 8px;border-radius:5px;font-size:8px;font-weight:600;border:1px solid #e5e7eb;">UI excellence</div>
-        <div style="background:#f9fafb;padding:5px 8px;border-radius:5px;font-size:8px;font-weight:600;border:1px solid #e5e7eb;">Authentically Islamic</div>
-        <div style="background:#f9fafb;padding:5px 8px;border-radius:5px;font-size:8px;font-weight:600;border:1px solid #e5e7eb;">Product speed &amp; suite</div>
-        <div style="background:#f9fafb;padding:5px 8px;border-radius:5px;font-size:8px;font-weight:600;border:1px solid #e5e7eb;">Referral + Founder Card</div>
-        <div style="background:#f9fafb;padding:5px 8px;border-radius:5px;font-size:8px;font-weight:600;border:1px solid #e5e7eb;">Private community</div>
+      <div style="font-weight:700;margin:5px 0 3px;">5 Hype Pillars</div>
+      <div style="display:flex;flex-wrap:wrap;gap:3px;">
+        <div style="background:#f9fafb;padding:4px 6px;border-radius:4px;font-size:7px;font-weight:600;border:1px solid #e5e7eb;">UI excellence</div>
+        <div style="background:#f9fafb;padding:4px 6px;border-radius:4px;font-size:7px;font-weight:600;border:1px solid #e5e7eb;">Authentically Islamic</div>
+        <div style="background:#f9fafb;padding:4px 6px;border-radius:4px;font-size:7px;font-weight:600;border:1px solid #e5e7eb;">Product speed</div>
+        <div style="background:#f9fafb;padding:4px 6px;border-radius:4px;font-size:7px;font-weight:600;border:1px solid #e5e7eb;">Referral + Founder Card</div>
+        <div style="background:#f9fafb;padding:4px 6px;border-radius:4px;font-size:7px;font-weight:600;border:1px solid #e5e7eb;">Private community</div>
       </div>
     </div>
   </div>
 
   <div class="card">
     <div class="card-h card-h-r">CFO Summit &amp; Launch Event</div>
-    <div style="font-size:9px;">
-      <div style="font-weight:700;margin-bottom:4px;">CFO Summit</div>
-      <div style="padding:2px 0;">&#9656; Top CFOs in ME, 50 max, private round table</div>
-      <div style="padding:2px 0;">&#9656; 2-3 VIP speakers CFOs want to meet (e.g., Hazem)</div>
-      <div style="padding:2px 0;">&#9656; "Where are you facing issues with your existing bank?"</div>
-      <div style="padding:2px 0;">&#9656; Capture: company info, employees, distribution channel</div>
-      <div style="padding:2px 0;">&#9656; "Mal pays your bills — onboard your vendors"</div>
-      <div style="padding:2px 0;">&#9656; Tone: "You are lucky to be a Mal partner"</div>
-      <div style="font-weight:700;margin:6px 0 4px;">Media Training Required</div>
+    <div style="font-size:8.5px;">
+      <div style="font-weight:700;margin-bottom:3px;">CFO Summit</div>
+      <div style="padding:1px 0;">&#9656; Top CFOs in ME, 50 max, private round table</div>
+      <div style="padding:1px 0;">&#9656; 2-3 VIP speakers (e.g., Hazem)</div>
+      <div style="padding:1px 0;">&#9656; "Where are you facing issues with your existing bank?"</div>
+      <div style="padding:1px 0;">&#9656; Capture: company info, employees, distribution</div>
+      <div style="padding:1px 0;">&#9656; "Mal pays your bills — onboard your vendors"</div>
+      <div style="font-weight:700;margin:4px 0 2px;">Media Training</div>
       <div>
-        <span class="b b-p">Amine (media)</span> <span class="b b-b">David (product)</span> <span class="b b-g">VK (SME)</span>
-        <span class="b b-o">Zigor (security)</span> <span class="b b-r">Maen+Walid (compliance)</span> <span class="b b-k">Youssef Salem (CIO)</span>
+        <span class="b b-p">Amine</span> <span class="b b-b">David</span> <span class="b b-g">VK</span>
+        <span class="b b-o">Zigor</span> <span class="b b-r">Maen+Walid</span> <span class="b b-k">Youssef</span>
       </div>
-      <div class="sm" style="margin-top:3px;"><strong>2nd line:</strong> Talga, Rideu, Izz</div>
+      <div class="sm" style="margin-top:2px;"><strong>2nd line:</strong> Talga, Rideu, Izz</div>
     </div>
   </div>
 </div>
 
-<!-- ROW 3: BRAND DNA + ACTION ITEMS -->
+<!-- ROW 3: BRAND + ACTION ITEMS -->
 <div class="lower-grid">
-  <div class="card" style="flex:0.4;">
+  <div class="card" style="flex:0.35;">
     <div class="card-h card-h-d">Brand DNA (To Define)</div>
-    <div style="font-size:9px;">
-      <div style="font-weight:700;margin-bottom:3px;">Brand Foundation</div>
-      <div style="padding:1px 0;">&#9656; Tone of Voice (TOV)</div>
-      <div style="padding:1px 0;">&#9656; Brand Architecture</div>
-      <div style="padding:1px 0;">&#9656; Targets (NOT personas — serve everyone)</div>
-      <div style="padding:1px 0;">&#9656; Assets: decks, attire, gifting/giveaway</div>
-      <div style="padding:1px 0;">&#9656; Internal AI-agents for corporate comms</div>
-      <div style="font-weight:700;margin:6px 0 3px;">Owned Media</div>
-      <div style="padding:1px 0;">&#9656; LinkedIn (primary), IG, X</div>
-      <div style="padding:1px 0;">&#9656; Events: CFO Summit, Launch, sponsorships</div>
-      <div style="padding:1px 0;">&#9656; PR coverage / outlets</div>
-      <div style="padding:1px 0;">&#9656; McKinsey papers / partnership ecosystem</div>
-      <div style="padding:1px 0;">&#9656; Private community forum (beta)</div>
+    <div style="font-size:8.5px;">
+      <div style="font-weight:700;margin-bottom:2px;">Foundation</div>
+      <div>&#9656; TOV · Brand Architecture · Targets (not personas) · Assets (decks, attire, gifting) · Internal AI for corporate comms</div>
+      <div style="font-weight:700;margin:4px 0 2px;">Owned Media</div>
+      <div>&#9656; LI (primary), IG, X · Events · PR · McKinsey papers · Private community (beta)</div>
     </div>
   </div>
 
-  <div class="card" style="flex:0.6;">
+  <div class="card" style="flex:0.65;">
     <div class="card-h card-h-d">Immediate Action Items</div>
     <table class="info">
       <thead><tr><th>#</th><th>Owner(s)</th><th>Action</th><th>Priority</th><th>Status</th></tr></thead>
@@ -741,12 +733,12 @@
         <tr><td>2</td><td><strong>Manar + Yasmeen + Isham</strong></td><td>Brainstorm marketing strategy, roles &amp; incentive strategy</td><td><span class="b b-r">URGENT</span></td><td><span class="b b-o">PENDING</span></td></tr>
         <tr><td>3</td><td><strong>Manar + Yasmeen + Isham</strong></td><td>Brainstorm CFO Summit + Launch Event (Oct 10 / contingency Nov 11)</td><td><span class="b b-r">URGENT</span></td><td><span class="b b-o">PENDING</span></td></tr>
         <tr><td>4</td><td><strong>Manar</strong></td><td>Budget allocations: marketing, brand, sales, growth (Amine approves)</td><td><span class="b b-p">HIGH</span></td><td><span class="b b-o">PENDING</span></td></tr>
-        <tr><td>5</td><td><strong>Yasmeen + Walid</strong></td><td>Meet GA team — Yasmeen booked GA, Walid to schedule remaining product leads</td><td><span class="b b-p">HIGH</span></td><td><span class="b b-b">IN PROGRESS</span></td></tr>
+        <tr><td>5</td><td><strong>Yasmeen + Walid</strong></td><td>Schedule calls between Manar and GA team vs other product leads</td><td><span class="b b-p">HIGH</span></td><td><span class="b b-b">IN PROGRESS</span></td></tr>
         <tr><td>6</td><td><strong>Isham (lead) + Yasmeen (content)</strong></td><td>Define waitlist referral package (share to LI/IG/X → $X reward)</td><td><span class="b b-p">HIGH</span></td><td><span class="b b-o">PENDING</span></td></tr>
-        <tr><td>7</td><td><strong>Isham + 3rd-party agency</strong></td><td>Identify 10-20 influencers &amp; groups per platform for paid hype campaign</td><td><span class="b b-p">HIGH</span></td><td><span class="b b-o">PENDING</span></td></tr>
-        <tr><td>8</td><td><strong>Marketing Team</strong></td><td>Get to 1M waitlist users (incentive strategy + ACH/USD — excl. sanctioned markets)</td><td><span class="b b-p">HIGH</span></td><td><span class="b b-o">PENDING</span></td></tr>
-        <tr><td>9</td><td><strong>Marketing Team</strong></td><td>Internal corporate comms + marketing assets (brand DNA, gifting, decks, attire)</td><td><span class="b b-b">MEDIUM</span></td><td><span class="b b-o">PENDING</span></td></tr>
-        <tr><td>10</td><td><strong>Mukund</strong></td><td>Develop growth budget request strategy (Amine = budget holder)</td><td><span class="b b-b">MEDIUM</span></td><td><span class="b b-o">PENDING</span></td></tr>
+        <tr><td>7</td><td><strong>Isham + 3rd-party agency</strong></td><td>Identify 10-20 influencers &amp; groups per platform for paid hype</td><td><span class="b b-p">HIGH</span></td><td><span class="b b-o">PENDING</span></td></tr>
+        <tr><td>8</td><td><strong>Marketing Team</strong></td><td>Get to 1M waitlist users (incentive + ACH/USD — excl. sanctioned markets)</td><td><span class="b b-p">HIGH</span></td><td><span class="b b-o">PENDING</span></td></tr>
+        <tr><td>9</td><td><strong>Marketing Team</strong></td><td>Internal corporate comms + assets (brand DNA, gifting, decks, attire)</td><td><span class="b b-b">MEDIUM</span></td><td><span class="b b-o">PENDING</span></td></tr>
+        <tr><td>10</td><td><strong>Mukund</strong></td><td>Growth budget request strategy (Amine = budget holder)</td><td><span class="b b-b">MEDIUM</span></td><td><span class="b b-o">PENDING</span></td></tr>
         <tr><td>11</td><td><strong>Walid</strong></td><td>Draft and document marketing roadmap, then meet to align</td><td><span class="b b-b">MEDIUM</span></td><td><span class="b b-o">PENDING</span></td></tr>
         <tr><td>12</td><td><strong>Sama / Amine</strong></td><td>Hiring plan for marketing team (Sama = hiring, Amine = budget)</td><td><span class="b b-b">MEDIUM</span></td><td><span class="b b-o">PENDING</span></td></tr>
       </tbody>
@@ -757,12 +749,12 @@
 <!-- FOOTER -->
 <div class="footer">
   <div>
-    <div style="font-size:9px;font-weight:700;color:#1a1a2e;">CRITICAL PATH</div>
-    <div style="font-size:10px;color:#374151;">Plumbing (Now) → Waitlist Hype → Wave 1 USD (Jul '26) → Invoice Factoring (Aug '26) → License (Sep '26) → Launch Event + Wave 2 (Oct '26) → Wave 3 (Nov–Dec '26) → AI Agents (2027)</div>
+    <div style="font-size:8px;font-weight:700;color:#1a1a2e;">CRITICAL PATH</div>
+    <div style="font-size:9px;color:#374151;">Plumbing (Jun) → Waitlist Hype → Wave 1 USD (Jul) → Invoice Factoring (Aug) → License (Sep) → Launch Event + Wave 2 (Oct) → Wave 3 (Nov–Dec) → AI Agents (2027)</div>
   </div>
   <div style="text-align:right;">
-    <div style="font-size:8px;color:#9ca3af;">25 products · 4 waves · 18 markets</div>
-    <div style="font-size:8px;color:#9ca3af;">Confidential · Internal use only</div>
+    <div style="font-size:7px;color:#9ca3af;">25 products · 4 waves · 18 markets</div>
+    <div style="font-size:7px;color:#9ca3af;">Confidential · Internal use only</div>
   </div>
 </div>
 
