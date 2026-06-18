@@ -201,6 +201,44 @@
   .flag-in { background: #FF9933; } /* India saffron */
   .flag-globe { background: #2563eb; } /* Blue for global */
 
+  /* TIMELINE PRODUCT ROADMAP */
+  .tl-card {
+    display: flex; align-items: flex-start; gap: 6px;
+    padding: 7px 10px; border: 1px solid #e5e7eb; border-radius: 8px;
+    background: white; margin-bottom: 5px; font-size: 12px;
+  }
+  .tl-icon {
+    width: 26px; height: 26px; border-radius: 6px; flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .tl-icon-bank { background: #0d9488; }
+  .tl-icon-sme { background: #6c3ce0; }
+  .tl-icon-lend { background: #059669; }
+  .tl-icon-ai { background: #0d9488; }
+  .tl-name { font-size: 13px; font-weight: 700; color: #1a1a2e; line-height: 1.3; }
+  .tl-seg { font-size: 10px; font-weight: 700; border-radius: 3px; padding: 1px 5px; display: inline-block; margin-top: 2px; }
+  .tl-retail { background: #ecfdf5; color: #059669; }
+  .tl-sme { background: #f3f0ff; color: #6c3ce0; }
+  .tl-dev { font-size: 10px; color: #9ca3af; margin-top: 2px; }
+  .tl-dev::before { content: "⚙ "; }
+  .tl-flags { margin-top: 3px; }
+
+  .tl-bar {
+    text-align: center; font-size: 13px; font-weight: 700;
+    padding: 10px 4px; border-right: 1px solid #e5e7eb;
+    position: relative; color: #374151; line-height: 1.3;
+  }
+  .tl-bar-now { background: linear-gradient(135deg, #6c3ce0, #8b5cf6); color: white; border-radius: 6px 0 0 6px; }
+  .tl-bar-launch { background: linear-gradient(135deg, #6c3ce0, #8b5cf6); color: white; }
+  .tl-bar-future { background: #f9fafb; }
+  .tl-bar-scale { background: #f9fafb; border-radius: 0 6px 6px 0; border-right: none; }
+  .tl-bar-sub { font-size: 10px; font-weight: 400; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.5px; }
+  .tl-dot {
+    width: 10px; height: 10px; border-radius: 50%; border: 2px solid #d1d5db;
+    background: white; position: absolute; top: -5px; left: 50%; margin-left: -5px;
+  }
+  .tl-bar-now .tl-dot, .tl-bar-launch .tl-dot { border-color: #6c3ce0; }
+
   .footer {
     margin-top: 10px; padding: 8px 14px;
     background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px;
@@ -465,123 +503,84 @@
 
 
 <!-- ===== 3. PRODUCT ROADMAP (from Mal Product Suite Roadmap) ===== -->
-<div class="roadmap-section" style="page-break-before:always;padding-top:10px;">
-  <div class="roadmap-title">Product Suite Roadmap</div>
-  <table class="roadmap">
-    <thead>
-      <tr>
-        <th class="lane-label"></th>
-        <th class="time-now" style="width:14%;">Jun 2026<br><span style="font-size:13px;font-weight:400;opacity:0.8;">NOW</span></th>
-        <th class="time-next" style="width:14%;">Jul 2026<br><span style="font-size:13px;font-weight:400;opacity:0.8;">NEXT · WAVE 1</span></th>
-        <th class="time-future" style="width:10%;">Aug 2026</th>
-        <th class="time-future" style="width:12%;">Sep 2026</th>
-        <th class="time-future" style="width:12%;">Oct 2026<br><span style="font-size:11px;font-weight:400;">WAVE 2</span></th>
-        <th class="time-future" style="width:12%;">Nov–Dec 2026<br><span style="font-size:11px;font-weight:400;">WAVE 3</span></th>
-        <th class="time-future" style="width:12%;">2027<br><span style="font-size:11px;font-weight:400;">WAVE 4</span></th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Retail Banking -->
-      <tr>
-        <th class="lane-label" style="border-left:3px solid #6c3ce0;">Retail<br>Banking</th>
-        <td>
-          <div class="rm-item rm-item-bank">USD Account</div><br>
-          <div class="rm-item rm-item-bank">USD Card</div><br>
-          <div class="rm-item rm-item-bank">USD Payout</div><br>
-          <span style="font-size:13px;color:#6b7280;"><span class="flag flag-pk">PK</span> Pakistan <span class="flag flag-ae">AE</span> UAE <span class="flag flag-eg">EG</span> Egypt</span>
-        </td>
-        <td style="background:#f8f6ff;">
-          <span style="font-size:12px;color:#6c3ce0;font-weight:700;">WAVE 1 LIVE</span><br>
-          <span style="font-size:13px;color:#6b7280;">18 markets · Global Accounts</span>
-        </td>
-        <td></td>
-        <td>
-          <div class="rm-item rm-item-bank">AED Account</div><br>
-          <div class="rm-item rm-item-bank">AED Card</div><br>
-          <div class="rm-item rm-item-bank">AED Payout</div><br>
-          <span style="font-size:13px;color:#6b7280;"><span class="flag flag-ae">AE</span> UAE only</span>
-        </td>
-        <td style="background:#f8f6ff;">
-          <span style="font-size:12px;color:#6c3ce0;font-weight:700;">WAVE 2 LIVE</span><br>
-          <span style="font-size:13px;color:#6b7280;"><span class="flag flag-ae">AE</span> UAE (post-license)</span>
-        </td>
-        <td>
-          <div class="rm-item rm-item-bank">Credit Card</div>
-        </td>
-        <td></td>
-      </tr>
-      <!-- SME Banking -->
-      <tr>
-        <th class="lane-label" style="border-left:3px solid #d97706;">SME<br>Banking</th>
-        <td>
-          <div class="rm-item rm-item-sme">SME USD Account</div><br>
-          <div class="rm-item rm-item-sme">SME USD Card</div><br>
-          <div class="rm-item rm-item-sme">SME USD Payout</div><br>
-          <span style="font-size:13px;color:#6b7280;"><span class="flag flag-pk">PK</span> Pakistan <span class="flag flag-ae">AE</span> UAE <span class="flag flag-eg">EG</span> Egypt</span>
-        </td>
-        <td></td>
-        <td></td>
-        <td>
-          <div class="rm-item rm-item-sme">SME AED Account</div><br>
-          <div class="rm-item rm-item-sme">SME AED Card</div><br>
-          <div class="rm-item rm-item-sme">SME AED Payout</div><br>
-          <span style="font-size:13px;color:#6b7280;"><span class="flag flag-ae">AE</span> UAE only</span>
-        </td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <!-- Lending / Financing -->
-      <tr>
-        <th class="lane-label" style="border-left:3px solid #059669;">Lending &amp;<br>Financing</th>
-        <td></td>
-        <td></td>
-        <td>
-          <div class="rm-item rm-item-lend">Invoice Factoring</div><br>
-          <span style="font-size:13px;color:#6b7280;"><span class="flag flag-ae">AE</span> UAE · SME · dev Jul</span>
-        </td>
-        <td>
-          <div class="rm-item rm-item-lend">Personal Financing</div><br>
-          <div class="rm-item rm-item-lend">Auto Financing</div><br>
-          <div class="rm-item rm-item-lend">SME Financing</div><br>
-          <span style="font-size:13px;color:#6b7280;"><span class="flag flag-ae">AE</span> UAE · dev Sep</span>
-        </td>
-        <td></td>
-        <td>
-          <div class="rm-item rm-item-lend">IVF Financing</div><br>
-          <div class="rm-item rm-item-lend">Tuition Financing</div><br>
-          <span style="font-size:13px;color:#6b7280;"><span class="flag flag-ae">AE</span> UAE · dev Aug–Sep</span>
-        </td>
-        <td></td>
-      </tr>
-      <!-- AI Agents -->
-      <tr>
-        <th class="lane-label" style="border-left:3px solid #0d9488;">AI<br>Agents</th>
-        <td>
-          <div class="rm-item rm-item-ai">PFM Agent</div><br>
-          <span style="font-size:13px;color:#6b7280;">dev Jun</span>
-        </td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>
-          <div class="rm-item rm-item-ai">Travel Agent</div>
-          <div class="rm-item rm-item-ai">Tax Agent</div><br>
-          <div class="rm-item rm-item-ai">Accounting Agent</div>
-          <div class="rm-item rm-item-ai">Shopping Agent</div><br>
-          <div class="rm-item rm-item-ai">CFO Agent</div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="wave-legend">
-    <div><strong style="color:#6c3ce0;">Wave 1 (Jul '26):</strong> 8 products · <span class="flag flag-globe">GLOBAL</span> 18 markets (<span class="flag flag-pk">PK</span> <span class="flag flag-ae">AE</span> <span class="flag flag-eg">EG</span> <span class="flag flag-tr">TR</span> <span class="flag flag-in">IN</span> + 13 more)</div>
-    <div><strong style="color:#059669;">Wave 2 (Oct '26):</strong> 10 products · <span class="flag flag-ae">AE</span> UAE only</div>
-    <div><strong style="color:#059669;">Wave 3 (Nov–Dec '26):</strong> 3 products · <span class="flag flag-ae">AE</span> UAE</div>
-    <div><strong style="color:#2563eb;">Wave 4 (2027):</strong> 5 AI Agents</div>
+<div style="page-break-before:always;padding-top:10px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+    <div style="font-size:22px;font-weight:800;color:#1a1a2e;">Mal &nbsp;·&nbsp; Product Suite — Roadmap</div>
+    <div style="font-size:13px;color:#9ca3af;">Confidential, internal use only &nbsp;·&nbsp; June 2026</div>
   </div>
+
+  <table style="width:100%;border-collapse:collapse;table-layout:fixed;">
+    <!-- ABOVE TIMELINE -->
+    <tr>
+      <td style="width:12.5%;vertical-align:bottom;padding:6px 4px;">
+        <div class="tl-card"><div class="tl-icon tl-icon-bank"></div><div><div class="tl-name">USD Account</div><div class="tl-seg tl-retail">Retail</div><div class="tl-flags"><span class="flag flag-pk">PK</span> <span class="flag flag-ae">AE</span> <span class="flag flag-eg">EG</span></div></div></div>
+        <div class="tl-card"><div class="tl-icon tl-icon-bank"></div><div><div class="tl-name">USD Card</div><div class="tl-seg tl-retail">Retail</div><div class="tl-flags"><span class="flag flag-pk">PK</span> <span class="flag flag-ae">AE</span> <span class="flag flag-eg">EG</span></div></div></div>
+        <div class="tl-card"><div class="tl-icon tl-icon-sme"></div><div><div class="tl-name">SME USD Account</div><div class="tl-seg tl-sme">SME</div><div class="tl-flags"><span class="flag flag-pk">PK</span> <span class="flag flag-ae">AE</span> <span class="flag flag-eg">EG</span></div></div></div>
+        <div class="tl-card"><div class="tl-icon tl-icon-sme"></div><div><div class="tl-name">SME USD Card</div><div class="tl-seg tl-sme">SME</div></div></div>
+      </td>
+      <td style="width:12.5%;vertical-align:bottom;padding:6px 4px;">
+        <div class="tl-card"><div class="tl-icon tl-icon-lend"></div><div><div class="tl-name">Invoice Factoring</div><div class="tl-seg tl-sme">SME</div><div class="tl-dev">dev Jul 2026</div></div></div>
+      </td>
+      <td style="width:12.5%;vertical-align:bottom;padding:6px 4px;"></td>
+      <td style="width:12.5%;vertical-align:bottom;padding:6px 4px;">
+        <div class="tl-card"><div class="tl-icon tl-icon-bank"></div><div><div class="tl-name">AED Account</div><div class="tl-seg tl-retail">Retail</div><div class="tl-dev">Sep 2026</div></div></div>
+        <div class="tl-card"><div class="tl-icon tl-icon-bank"></div><div><div class="tl-name">AED Card</div><div class="tl-seg tl-retail">Retail</div><div class="tl-dev">Sep 2026</div></div></div>
+        <div class="tl-card"><div class="tl-icon tl-icon-lend"></div><div><div class="tl-name">Personal Financing</div><div class="tl-seg tl-retail">Retail</div><div class="tl-dev">Sep 2026</div></div></div>
+        <div class="tl-card"><div class="tl-icon tl-icon-sme"></div><div><div class="tl-name">SME AED Account</div><div class="tl-seg tl-sme">SME</div></div></div>
+        <div class="tl-card"><div class="tl-icon tl-icon-sme"></div><div><div class="tl-name">SME AED Card</div><div class="tl-seg tl-sme">SME</div><div class="tl-dev">Sep 2026</div></div></div>
+      </td>
+      <td style="width:12.5%;vertical-align:bottom;padding:6px 4px;"></td>
+      <td style="width:12.5%;vertical-align:bottom;padding:6px 4px;">
+        <div class="tl-card"><div class="tl-icon tl-icon-lend"></div><div><div class="tl-name">IVF Financing</div><div class="tl-seg tl-retail">Retail</div><div class="tl-dev">Aug 2026</div></div></div>
+      </td>
+      <td style="width:12.5%;vertical-align:bottom;padding:6px 4px;">
+        <div class="tl-card"><div class="tl-icon tl-icon-lend"></div><div><div class="tl-name">Tuition Financing</div><div class="tl-seg tl-retail">Retail</div><div class="tl-dev">Sep 2026</div></div></div>
+      </td>
+      <td style="width:12.5%;vertical-align:bottom;padding:6px 4px;">
+        <div class="tl-card"><div class="tl-icon tl-icon-ai"></div><div><div class="tl-name">Travel Agent</div><div class="tl-seg tl-retail">Retail</div></div></div>
+        <div class="tl-card"><div class="tl-icon tl-icon-ai"></div><div><div class="tl-name">Tax Agent</div><div class="tl-seg tl-sme">SME</div></div></div>
+        <div class="tl-card"><div class="tl-icon tl-icon-ai"></div><div><div class="tl-name">Accounting Agent</div><div class="tl-seg tl-sme">SME</div></div></div>
+      </td>
+    </tr>
+
+    <!-- TIMELINE BAR -->
+    <tr>
+      <td class="tl-bar tl-bar-now"><div class="tl-dot"></div>Jun 2026<br><span class="tl-bar-sub">INTERNAL</span></td>
+      <td class="tl-bar tl-bar-launch"><div class="tl-dot"></div>Jul 2026<br><span class="tl-bar-sub">LAUNCH</span></td>
+      <td class="tl-bar tl-bar-future"><div class="tl-dot"></div>Aug 2026</td>
+      <td class="tl-bar tl-bar-future"><div class="tl-dot"></div>Sep 2026</td>
+      <td class="tl-bar tl-bar-future"><div class="tl-dot"></div>Oct 2026</td>
+      <td class="tl-bar tl-bar-future"><div class="tl-dot"></div>Nov 2026</td>
+      <td class="tl-bar tl-bar-future"><div class="tl-dot"></div>Dec 2026</td>
+      <td class="tl-bar tl-bar-scale"><div class="tl-dot"></div>2027<br><span class="tl-bar-sub">SCALE</span></td>
+    </tr>
+
+    <!-- BELOW TIMELINE -->
+    <tr>
+      <td style="vertical-align:top;padding:6px 4px;">
+        <div class="tl-card"><div class="tl-icon tl-icon-bank"></div><div><div class="tl-name">USD Payout</div><div class="tl-seg tl-retail">Retail</div><div class="tl-flags"><span class="flag flag-pk">PK</span> <span class="flag flag-ae">AE</span></div></div></div>
+        <div class="tl-card"><div class="tl-icon tl-icon-ai"></div><div><div class="tl-name">PFM Agent</div><div class="tl-seg tl-retail">Retail</div><div class="tl-dev">dev Jun 2026</div></div></div>
+        <div class="tl-card"><div class="tl-icon tl-icon-sme"></div><div><div class="tl-name">SME USD Payout</div><div class="tl-seg tl-sme">SME</div><div class="tl-flags"><span class="flag flag-pk">PK</span> <span class="flag flag-ae">AE</span> <span class="flag flag-eg">EG</span></div></div></div>
+      </td>
+      <td style="vertical-align:top;padding:6px 4px;"></td>
+      <td style="vertical-align:top;padding:6px 4px;"></td>
+      <td style="vertical-align:top;padding:6px 4px;"></td>
+      <td style="vertical-align:top;padding:6px 4px;">
+        <div class="tl-card"><div class="tl-icon tl-icon-bank"></div><div><div class="tl-name">AED Payout</div><div class="tl-seg tl-retail">Retail</div><div class="tl-dev">Sep 2026</div></div></div>
+        <div class="tl-card"><div class="tl-icon tl-icon-lend"></div><div><div class="tl-name">Auto Financing</div><div class="tl-seg tl-retail">Retail</div><div class="tl-dev">Sep 2026</div></div></div>
+        <div class="tl-card"><div class="tl-icon tl-icon-lend"></div><div><div class="tl-name">SME Financing</div><div class="tl-seg tl-sme">SME</div><div class="tl-dev">Sep 2026</div></div></div>
+        <div class="tl-card"><div class="tl-icon tl-icon-sme"></div><div><div class="tl-name">SME AED Payout</div><div class="tl-seg tl-sme">SME</div><div class="tl-dev">Sep 2026</div></div></div>
+      </td>
+      <td style="vertical-align:top;padding:6px 4px;">
+        <div class="tl-card"><div class="tl-icon tl-icon-bank"></div><div><div class="tl-name">Credit Card</div><div class="tl-seg tl-retail">Retail</div></div></div>
+      </td>
+      <td style="vertical-align:top;padding:6px 4px;"></td>
+      <td style="vertical-align:top;padding:6px 4px;">
+        <div class="tl-card"><div class="tl-icon tl-icon-ai"></div><div><div class="tl-name">Shopping Agent</div><div class="tl-seg tl-retail">Retail</div></div></div>
+        <div class="tl-card"><div class="tl-icon tl-icon-ai"></div><div><div class="tl-name">CFO Agent</div><div class="tl-seg tl-sme">SME</div></div></div>
+      </td>
+    </tr>
+  </table>
 </div>
 
 <!-- ===== 4. MARKETING ROADMAP (separate from product) ===== -->
