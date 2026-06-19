@@ -12,10 +12,25 @@ Abdallah is appearing on Shark Tank Dubai as a **personal investor**, not repres
 
 ## Guiding Principles
 
-- **Never pitch directly.** Reference Mal as something "we're building" or "I'm working on separately" — curiosity is the hook.
-- **Tie it to the entrepreneur's pain.** Only plug when it genuinely solves a problem the founder just described.
-- **Stay personal.** "This is something I care deeply about" > "Our company does this."
-- **Leave them wanting more.** One sentence, then move on. The best plug is the one that makes people Google you after the episode airs.
+- **Variety is everything.** Not every plug should name Mal. Some should just plant a frustration. Some should be a question. Some should be a personal story. The audience should never feel a pattern.
+- **Tie it to the entrepreneur's pain.** Only plug when it genuinely connects to a problem the founder just described.
+- **Earn the curiosity.** The best plug is the one that makes people Google Abdallah after the episode airs — not because he pitched, but because he said something that stuck.
+- **One per episode, max.** Restraint is what makes it powerful.
+
+---
+
+## Delivery Style Guide
+
+Each scenario uses a different approach. This is intentional.
+
+| Style | What it looks like | When to use |
+|---|---|---|
+| **The Question** | Ask the entrepreneur something that exposes a gap Mal fills — never answer it yourself | When you want the audience to sit with the problem |
+| **The Frustration** | Share a personal frustration as an investor/founder — no product mention at all | When the moment is too early for a name drop |
+| **The Aside** | Briefly mention something you're working on, then immediately pivot back to the deal | When a Shark or founder opens the door naturally |
+| **The Credential** | Reference a specific insight or stat that signals deep domain expertise | When you want to be seen as the financial infrastructure guy |
+| **The Offer Hook** | Tie your investment offer to a future resource you can personally connect them with | When you're actually investing in the deal |
+| **The Redirect** | Respond to another Shark's comment by reframing the real problem | When another Shark says something about banking/finance you can build on |
 
 ---
 
@@ -24,116 +39,119 @@ Abdallah is appearing on Shark Tank Dubai as a **personal investor**, not repres
 ---
 
 ### Scenario 1: The Freelancer / Cross-Border Hustler
-**Trigger:** An entrepreneur pitches a service-based business (design, dev, consulting, content) earning in USD or foreign currency, and mentions losing money on exchange rates, slow bank transfers, or SWIFT headaches.
+**Trigger:** An entrepreneur earning in USD or foreign currency mentions losing money on exchange rates, slow bank transfers, or SWIFT headaches.
 
-**The Plug (Global Accounts):**
+**Style: The Question**
 
-> *"I hear you — I've seen too many founders in this region lose 3-5% of their revenue just moving money across borders. That's why I'm personally building something on the side: a way for people like you to get paid in seconds at open-market rates, hold USD as long as you want, and convert on your own terms. It's called Mal. We're not live everywhere yet, but this is exactly the problem that keeps me up at night."*
+> *"Can I ask you something — when you receive a payment from a client abroad, how much of that actually lands in your account? ... Right. So you're losing, what, 3-5% every single time? And you're okay with that? Because I'm not. That's one of the things that made me start my own company — I just couldn't accept that moving your own money should cost you that much."*
 
-**Why it works:** Relatable pain point. Every entrepreneur in the room has dealt with costly cross-border payments. It positions Abdallah as a founder who builds solutions to real problems, and teases Mal's Global Accounts without overselling.
+**Why it works:** He never says "Mal." He never describes the product. He asks a question every freelancer in the audience is now doing the math on, then drops that this frustration is what made him start his own company. The curious viewer Googles him. That's the whole play.
 
 ---
 
 ### Scenario 2: The Struggling SME Seeking Capital
-**Trigger:** A small business owner talks about difficulty getting a bank loan, being rejected by traditional banks, or needing working capital to grow — especially if they mention invoices, cash flow gaps, or supplier payments.
+**Trigger:** A small business owner talks about being rejected by banks, needing working capital, or struggling with cash flow despite having real revenue and paying customers.
 
-**The Plug (SME Banking / Receivables Financing):**
+**Style: The Frustration + Redirect**
 
-> *"This is the story I hear from every SME founder in this region. Banks look at your spreadsheet, not your actual business. You sell every day, your customers pay you, your cash flow is real — but somehow you don't qualify. I'm building something called Mal that flips that completely: we look at your real revenue, your real invoices, and we say yes at the speed your business actually moves. No forms, no waiting weeks. If your invoices are real, your financing should be too."*
+> *"This is what breaks my heart about this region. You have a founder sitting here who sells every single day — real customers, real revenue — and a bank told them no because of a spreadsheet. The system is broken. Banks don't lend based on your business; they lend based on their own risk models that were built for a completely different world. That's actually why I left banking to build what I'm building now — but that's a conversation for another day. Right now, I want to talk about your margins..."*
 
-**Why it works:** This is the emotional core of Shark Tank — founders needing capital. Abdallah empathizes first, then positions Mal's SME lending and invoice financing as the antithesis of the broken banking system. Viewers who are SME owners will lean in.
+**Why it works:** He validates the founder, calls out the broken system (which resonates with every SME owner watching), hints that he's building the alternative, then deliberately cuts himself off and pivots back to the deal. The "conversation for another day" line is the hook — it signals there's a story without telling it.
 
 ---
 
 ### Scenario 3: The Young Founder Who Doesn't Know Their Numbers
-**Trigger:** An entrepreneur can't clearly articulate their margins, doesn't know where money is going, or admits they're flying blind on finances. Another Shark might even roast them for it.
+**Trigger:** An entrepreneur can't articulate their margins, doesn't know where their money goes, or admits they're flying blind on finances. Another Shark might roast them for it.
 
-**The Plug (PFM - Personal Finance Management):**
+**Style: The Credential**
 
-> *"Look, I'm not going to pile on — most people, even smart founders, don't have a clear picture of where their money actually goes. That's not a character flaw, it's a tools problem. I'm working on something at Mal — an AI-powered financial companion that connects all your accounts and actually tells you what's happening with your money in plain language. You ask it a question, it gives you the answer. No spreadsheets, no digging through statements. If something like that existed when you started, you'd probably know your numbers cold right now."*
+> *"I'm not going to roast you for that — honestly, I think the bigger question is why is it still so hard to know where your money is going in 2026? We all have AI that can write essays and generate images, but you still can't ask your bank 'where did my money go this month?' and get a straight answer. That's a design failure, not a you failure. My advice — and this has nothing to do with whether I invest — find a tool that actually talks to all your accounts and gives you answers in plain language. They're coming. Trust me."*
 
-**Why it works:** Instead of criticizing, Abdallah reframes the problem as systemic — bad tools, not bad founders. This is a brand-building moment: Mal is positioned as the company that makes finance accessible. The AI angle generates curiosity.
+**Why it works:** Zero product mention. Zero brand mention. But he just described Mal's PFM product on national television and told the audience "they're coming — trust me." The wink is subtle enough that it doesn't feel like a pitch, but anyone paying attention connects the dots when they see what his company does.
 
 ---
 
 ### Scenario 4: The Car / Mobility / Automotive Pitch
-**Trigger:** An entrepreneur pitches anything related to cars, mobility, car services, used car platforms, or automotive tech. Or a fellow Shark invests in an auto-related business.
+**Trigger:** An entrepreneur pitches anything related to cars, mobility, car services, used car platforms, or automotive tech.
 
-**The Plug (Auto Financing):**
+**Style: The Aside**
 
-> *"I love this space. One thing I'll say — the biggest friction in car buying in the UAE isn't finding the car, it's financing it. We're building something at Mal where you get a binding, personalized car financing offer in under 10 minutes, fully digital, fully Sharia-compliant, from your phone. No branch visit, no paper file. We're already in discussions with some of the biggest names — Al-Futtaim, Dubizzle, Cars24. If your platform ever needs a financing layer, that conversation might be worth having down the road."*
+> *"I love this space. I'll tell you one thing I've learned — the pain in car buying isn't finding the car. Everyone's solved discovery. The pain is what happens after: the financing. You go to a bank, they take a week, maybe they say no, mountains of paperwork. We're actually working on something in this exact space — fully digital, Sharia-compliant, offer in under 10 minutes from your phone. But look, that's my world — let's talk about yours. Walk me through your unit economics."*
 
-**Why it works:** Specific, credible, and forward-looking. Dropping partner names (Al-Futtaim, Dubizzle) signals traction without overpromising. The "down the road" framing keeps it casual.
+**Why it works:** This is the only scenario where he describes the product in some detail — but he does it in one breath and immediately pivots back. It feels like a founder who can't help but geek out about his space for a second, not someone running a commercial. The specificity ("10 minutes from your phone") is what sticks.
 
 ---
 
 ### Scenario 5: The Family-Focused or Education Business
-**Trigger:** An entrepreneur pitches a product or service related to families, children, education, school management, tutoring, edtech, or childcare. Or the conversation turns to the cost of raising kids in the UAE.
+**Trigger:** An entrepreneur pitches something related to families, children, education, school fees, edtech, or childcare. Or the conversation turns to the cost of raising kids in the UAE.
 
-**The Plug (Retail Banking - MalTuition / Mal Family):**
+**Style: The Personal Story**
 
-> *"As a parent in this region, I can tell you — school fees are one of the biggest financial stressors families face here. That's actually one of the reasons I started Mal. We're building a way for families to finance tuition — Sharia-compliant, arranged directly with the school, no awkward conversations, no compromise on values. And beyond that, we're building family banking where parents and kids share one view — goals, allowances, rewards that grow together. Banking shouldn't be something you do alone; it should be something your family does together."*
+> *"I'll tell you, as a father — the day I saw my first school fee invoice in this country, I thought it was a typo. And you look at the financing options and they either don't exist or they don't align with how you want to live your life. That moment is actually one of the reasons I do what I do outside of this show. I believe families in this region deserve better financial tools — not just accounts, but something that actually understands that your kid's tuition is due in September and helps you get there. Anyway — I love what you're building. Let's talk numbers."*
 
-**Why it works:** Highly emotional and relatable for the UAE audience. School fees are a universal pain point for expat and local families. Connecting it to family values and Islamic finance principles resonates deeply on a show watched by families.
+**Why it works:** Pure emotion and personal experience. He never says "Mal," never says "product," never says "Sharia-compliant." But every parent in the UAE watching just felt seen. And when they look up who Abdallah is and what he's building, the connection is instant.
 
 ---
 
 ### Scenario 6: The Health / Wellness / Medical Startup
-**Trigger:** An entrepreneur pitches a health, wellness, medical services, fertility, or healthcare platform. Or the conversation touches on the high cost of medical procedures in the UAE.
+**Trigger:** An entrepreneur pitches a health, wellness, fertility, or medical services platform. Or the conversation touches on the cost of healthcare in the UAE.
 
-**The Plug (Retail Banking - MalHealth):**
+**Style: The Redirect (responding to another Shark)**
 
-> *"Healthcare decisions shouldn't be financial decisions — but they are. I've seen people delay IVF treatments, surgeries, procedures they need because the financing options are either non-existent or not aligned with their values. We're working on something at Mal called MalHealth — Sharia-compliant financing for medical procedures, arranged right at the clinic, so the financial part disappears and people can focus on what actually matters: getting better, starting a family, taking care of themselves."*
+> *"[After another Shark comments on the healthcare market size or cost] You know what nobody talks about though? The financing side. I know couples who've delayed starting a family — not because the treatment isn't available, but because paying for it feels impossible or the options available don't sit right with their values. That gap between 'the treatment exists' and 'I can actually afford it the right way' — that's a massive, massive gap. And very few people are working on closing it."*
 
-**Why it works:** This hits hard emotionally. IVF and medical financing are deeply personal topics. Positioning Mal as the company removing financial barriers to healthcare decisions is powerful brand positioning — especially with the Sharia-compliant angle, which removes a real barrier for many families in the region.
+**Why it works:** He's responding to another Shark, not pitching. He's sharing something he's observed, not selling. He says "very few people are working on closing it" — and leaves the audience to figure out that he's one of them. This is the most indirect plug in the playbook, and probably the most powerful one because of it.
 
 ---
 
 ### Scenario 7: The Scaling Business That's Outgrowing Its Tools
-**Trigger:** An entrepreneur talks about operational chaos — juggling multiple platforms for payroll, accounting, payments, compliance. Or they mention they need to hire internationally, manage multiple currencies, or are drowning in admin.
+**Trigger:** An entrepreneur mentions operational chaos — juggling platforms for payroll, accounting, payments, compliance — or says they need to hire internationally and manage multiple currencies.
 
-**The Plug (SME Banking - Full OS):**
+**Style: The Offer Hook**
 
-> *"I see this with every founder who's past the scrappy stage — you're running your business on 10 different apps that don't talk to each other. Your bank doesn't know your payroll. Your accounting doesn't know your invoices. Your compliance is a nightmare. That's exactly what we're solving at Mal. One system: banking, credit, payroll, cards, compliance, AI agents that handle approvals and taxes — all built on Islamic finance from the ground up. Your business is unique; your bank should actually know that. We call it an SME operating system, and honestly, I wish it existed when I started my first company."*
+> *"Here's what I'll say — I want to invest, and here's why: your product is strong, your team is strong, but your back office is going to kill you at scale. You're running payroll on one system, banking on another, compliance somewhere else, and none of them talk to each other. That's not a you problem — every SME in this region hits that wall. Part of the reason I want to be in this deal is that I'm personally very deep in the financial infrastructure space, and I think I can connect you to tools and systems that will collapse all of that into one place. So my offer is [X] for [Y]%, and I'm not just writing a cheque — I'm bringing you infrastructure."*
 
-**Why it works:** This is the big vision plug. It positions Mal not as a bank but as an operating system — a concept Shark Tank audiences (who skew entrepreneurial) immediately understand. The "I wish it existed" line makes it personal and aspirational.
+**Why it works:** This is the boldest play — he's tying his investment offer to his expertise in Mal's exact space without naming Mal. "I'm personally very deep in the financial infrastructure space" and "I can connect you to tools and systems" is the kind of line that makes the other Sharks ask questions off-camera. And when they do, that's when the real conversation about Mal happens — not on the show, but after it.
 
 ---
 
 ## Quick Reference Card
 
-| # | Trigger | Product | Key Phrase |
-|---|---------|---------|------------|
-| 1 | Cross-border payments / FX loss | Global Accounts | "Get paid in seconds at open-market rates" |
-| 2 | Can't get a bank loan / cash flow gap | SME Banking + Invoice Finance | "We say yes at the speed your business moves" |
-| 3 | Founder doesn't know their numbers | PFM (AI Companion) | "Ask your money a question, get an answer" |
-| 4 | Cars / automotive / mobility | Auto Financing | "Binding offer in 10 minutes from your phone" |
-| 5 | Family / education / school fees | Retail Banking (Tuition + Family) | "Banking your family does together" |
-| 6 | Health / medical / fertility | Retail Banking (MalHealth) | "Healthcare decisions shouldn't be financial decisions" |
-| 7 | Scaling business / operational chaos | SME Banking (Full OS) | "One system that already knows your business" |
+| # | Trigger | Style | Mal Named? | Product Seeded | Key Line |
+|---|---------|-------|-----------|----------------|----------|
+| 1 | Cross-border payments / FX loss | The Question | No | Global Accounts | "How much actually lands in your account?" |
+| 2 | Can't get a bank loan | Frustration + Redirect | No (hints) | SME Lending | "That's why I left banking to build what I'm building now" |
+| 3 | Founder doesn't know their numbers | The Credential | No | PFM | "They're coming. Trust me." |
+| 4 | Cars / automotive / mobility | The Aside | No (describes it) | Auto Financing | "Offer in under 10 minutes from your phone" |
+| 5 | Family / education / school fees | Personal Story | No | Retail Banking (Tuition) | "One of the reasons I do what I do outside of this show" |
+| 6 | Health / medical / fertility | The Redirect | No | MalHealth | "Very few people are working on closing it" |
+| 7 | Scaling business / operational chaos | The Offer Hook | No | SME Banking (Full OS) | "I'm bringing you infrastructure" |
 
 ---
 
 ## Bonus: Universal Closer
 
-If any Shark or entrepreneur asks *"What is Mal?"* after a plug, Abdallah has one line:
+If any Shark, host, or entrepreneur asks *"What is it that you're building?"* or *"Tell us about your company"*, Abdallah has one line:
 
-> *"Mal is the digital bank I'm building for this region — Sharia-compliant from day one, AI-native, and designed for how people and businesses here actually live and work. We're not trying to copy what exists. We're building what should have existed all along."*
+> *"We're building the financial backbone for this region — for people and for businesses. Sharia-compliant, AI-native, and designed for how people here actually live. That's all I'll say for now."*
+
+Short. Mysterious. Moves on.
 
 ---
 
 ## Do's and Don'ts
 
 **Do:**
-- Wait for the natural moment — never force a plug
-- Use "I'm building" / "we're working on" language (founder energy, not corporate speak)
-- Make it about the entrepreneur's problem first, Mal second
-- Drop one specific detail (10 minutes, open-market rates, AI companion) to make it memorable
-- Smile when you say it — pride, not pressure
+- Mix up delivery styles — never use the same approach twice in a season
+- Let the silence do the work after a strong line — don't over-explain
+- Pivot back to the deal immediately after a plug — show you're there to invest, not advertise
+- Use "I" and "me" more than "we" — it's a personal appearance
+- Save the best plug for the episode with the highest emotional stakes
 
 **Don't:**
-- Promise anything to an entrepreneur on-air ("we'll give you a deal")
-- Say "Mal is a bank" on camera if licensing isn't finalized — use "digital financial platform" or "what we're building"
-- Plug more than once per episode — restraint is what makes it powerful
-- Compete with other Sharks' investments — complement, never conflict
+- Say "at Mal we're building" more than once across the entire season
+- Name the product (MalHealth, MalTuition, etc.) on camera — those are internal names
+- Promise any entrepreneur access to Mal's services as part of a deal
+- Plug in back-to-back episodes — skip at least one episode between plugs
 - Use jargon (Murabaha, open finance framework, receivables financing) — keep it human
+- React if another Shark asks what you're building — smile, say "let's talk after," and move on
