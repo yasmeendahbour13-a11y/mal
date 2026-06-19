@@ -87,9 +87,9 @@ Each scenario uses a different approach. This is intentional.
 
 **Style: The Personal Story**
 
-> *"I'll tell you, as a father — the day I saw my first school fee invoice in this country, I thought it was a typo. And you look at the financing options and they either don't exist or they don't align with how you want to live your life. That moment is actually one of the reasons I do what I do outside of this show. I believe families in this region deserve better financial tools — not just accounts, but something that actually understands that your kid's tuition is due in September and helps you get there. Anyway — I love what you're building. Let's talk numbers."*
+> *"Did you know that a huge number of families in this country are paying school tuition on credit cards? Just to get through the term. And it's not because they can't afford it — it's because nobody's given them a better option that actually fits how they want to manage their money. That really stuck with me as a father. It's one of the reasons I do what I do outside of this show — I believe families here deserve financial tools that understand their life. Your kid's fees are due in September, your bank should already know that and help you get there. Anyway — I love what you're building. Let's talk numbers."*
 
-**Why it works:** Pure emotion and personal experience. He never says "Mal," never says "product," never says "Sharia-compliant." But every parent in the UAE watching just felt seen. And when they look up who Abdallah is and what he's building, the connection is instant.
+**Why it works:** He leads with a real, relatable stat that every parent in the UAE recognizes — credit card tuition payments — which frames the problem as systemic, not a criticism of the country. He never says "Mal," never says "product," but every parent watching just felt seen. And when they look up who Abdallah is and what he's building, the connection is instant.
 
 ---
 
