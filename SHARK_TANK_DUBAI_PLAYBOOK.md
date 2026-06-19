@@ -98,9 +98,9 @@ Each scenario uses a different approach. This is intentional.
 
 **Style: The Redirect (responding to another Shark)**
 
-> *"[After another Shark comments on the healthcare market size or cost] You know what nobody talks about though? The financing side. I know couples who've delayed starting a family — not because the treatment isn't available, but because paying for it feels impossible or the options available don't sit right with their values. That gap between 'the treatment exists' and 'I can actually afford it the right way' — that's a massive, massive gap. And very few people are working on closing it."*
+> *"[After another Shark comments on the healthcare market size or cost] You know what nobody talks about though? The financing side. I know couples who've delayed starting a family — not because the treatment isn't available, but because paying for it feels impossible or the options available don't sit right with their values. That gap between 'the treatment exists' and 'I can actually afford it the right way' — that's a massive, massive gap. It's actually one of the things we're actively solving at my company — making sure the financial side disappears so people can focus on what actually matters. But that aside — tell me more about your patient acquisition costs."*
 
-**Why it works:** He's responding to another Shark, not pitching. He's sharing something he's observed, not selling. He says "very few people are working on closing it" — and leaves the audience to figure out that he's one of them. This is the most indirect plug in the playbook, and probably the most powerful one because of it.
+**Why it works:** He's responding to another Shark, not pitching. He names a real, emotional gap (couples delaying families), then connects it to "my company" in one line — enough for anyone to look him up — before pivoting right back to the deal. It lands because the personal weight of the topic does the selling, not the product description.
 
 ---
 
@@ -124,7 +124,7 @@ Each scenario uses a different approach. This is intentional.
 | 3 | Founder doesn't know their numbers | The Credential | No | PFM | "They're coming. Trust me." |
 | 4 | Cars / automotive / mobility | The Aside | No (describes it) | Auto Financing | "Offer in under 10 minutes from your phone" |
 | 5 | Family / education / school fees | Personal Story | No | Retail Banking (Tuition) | "One of the reasons I do what I do outside of this show" |
-| 6 | Health / medical / fertility | The Redirect | No | MalHealth | "Very few people are working on closing it" |
+| 6 | Health / medical / fertility | The Redirect | Yes ("my company") | MalHealth | "One of the things we're actively solving at my company" |
 | 7 | Scaling business / operational chaos | The Offer Hook | No | SME Banking (Full OS) | "I'm bringing you infrastructure" |
 
 ---
