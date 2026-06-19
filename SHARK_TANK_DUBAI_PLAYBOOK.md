@@ -34,7 +34,7 @@ Each scenario uses a different approach. This is intentional.
 
 ---
 
-## The 7 Scenarios
+## The 10 Scenarios
 
 ---
 
@@ -115,6 +115,39 @@ Each scenario uses a different approach. This is intentional.
 
 ---
 
+### Scenario 8: The Expat Founder
+**Trigger:** An entrepreneur mentions they moved to the UAE to start their business, or talks about the challenges of setting up as a newcomer — opening accounts, getting credit history, proving themselves to a bank that doesn't know them.
+
+**Style: The Shared Experience**
+
+> *"Can I ask — when you first moved here, how long did it take you to open a bank account? To get your first line of credit? ... Yeah. I hear this every single time. You leave a country where you had a credit history, relationships, a track record — and you land here and the system treats you like you don't exist. It's one of the biggest barriers to entrepreneurship in this region and nobody's really solved it yet. It's personal for me — I think if you're good enough to get a visa and start a business here, you're good enough to be trusted financially from day one."*
+
+**Why it works:** Half the entrepreneurs on Shark Tank Dubai are expats. Half the audience is too. This isn't a plug — it's a shared frustration that every newcomer to the UAE has lived through. He never mentions Mal or MalWelcome, but he's just described the exact problem it solves on national television. The "personal for me" line is the only breadcrumb needed — viewers will connect the dots when they look him up.
+
+---
+
+### Scenario 9: The Portfolio Pattern (Mid-to-Late Season)
+**Trigger:** This isn't tied to one pitch — it's a cumulative play. After Abdallah has invested in 2-3 companies on the show, a new entrepreneur comes in and mentions banking, payments, or operational challenges. This works best from episode 4-5 onwards.
+
+**Style: The Investor Pattern**
+
+> *"I'll be honest with you — every single company I've invested in on this show has hit the same wall. They outgrow their bank. Their payments are slow, their credit options are limited, their tools don't talk to each other. It's the one thing I keep seeing across every deal, every industry. That's actually why I'm so passionate about the financial infrastructure space — because it's not just your problem, it's everyone's problem. And the companies that fix it first are the ones that scale."*
+
+**Why it works:** This is the Amira Sajwani play — it only works after he's built a track record on the show. He's not pitching a product; he's sharing a pattern he's observed as an investor. It positions him as the Shark who sees the financial infrastructure layer underneath every business. The other Sharks will ask him off-camera what he means, and that's where the real Mal conversation happens. By the end of the season, "financial infrastructure" becomes associated with Abdallah the same way "real estate" is associated with Amira.
+
+---
+
+### Scenario 10: The E-commerce / D2C Founder
+**Trigger:** An entrepreneur runs an online business — selling on their own site, through Amazon, Noon, or social commerce — and mentions pain around multi-currency payouts, marketplace settlement delays, or needing to pay suppliers before getting paid by the platform.
+
+**Style: The Diagnosis**
+
+> *"Let me guess your biggest headache — it's not marketing, it's not product. It's cash. Amazon pays you in 30 days, Noon pays you in 14, but your supplier in China wants payment upfront. So you're profitable on paper but you're constantly chasing cash to stay alive. Am I right? ... That timing gap kills more e-commerce businesses than bad products ever will. If you solve that — if someone gives you access to your own money faster, based on what you've actually sold — that changes everything for a business like yours."*
+
+**Why it works:** He diagnoses the founder's problem before they even explain it — which instantly builds credibility and makes him look like the smartest person in the room on financial operations. He describes exactly what Mal's receivables financing and instant settlement solve, but frames it as advice ("if someone gives you access to your own money faster") rather than a pitch. The founder and the audience are left thinking: does he know someone who does this? Yes — himself.
+
+---
+
 ## Quick Reference Card
 
 | # | Trigger | Style | Mal Named? | Product Seeded | Key Line |
@@ -126,6 +159,9 @@ Each scenario uses a different approach. This is intentional.
 | 5 | Family / education / school fees | Personal Story | No | Retail Banking (Tuition) | "One of the reasons I do what I do outside of this show" |
 | 6 | Health / medical / fertility | The Redirect | Yes ("my company") | MalHealth | "One of the things we're actively solving at my company" |
 | 7 | Scaling business / operational chaos | The Offer Hook | No | SME Banking (Full OS) | "I'm bringing you infrastructure" |
+| 8 | Expat entrepreneur / new to UAE | Shared Experience | No | MalWelcome | "Good enough to start a business here, good enough to be trusted financially" |
+| 9 | Mid-to-late season / pattern across deals | Investor Pattern | No | Mal Ecosystem | "Every company I've invested in has hit the same wall" |
+| 10 | E-commerce / D2C / marketplace seller | The Diagnosis | No | SME Lending + Global Accounts | "That timing gap kills more e-commerce businesses than bad products" |
 
 ---
 
