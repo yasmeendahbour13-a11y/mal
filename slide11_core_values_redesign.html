@@ -6,719 +6,329 @@
 <title>Mal — Core Values: The Source of Everything</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
     background: #0a0e1a;
-    color: #e0e4ef;
+    color: #d0d4e4;
     font-family: 'Inter', -apple-system, sans-serif;
     width: 1920px;
-    min-height: 1080px;
-    padding: 48px 56px 40px;
-    overflow-x: hidden;
+    height: 1080px;
+    padding: 36px 48px 28px;
+    overflow: hidden;
   }
 
-  /* ── Header ── */
-  .slide-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 6px;
-  }
+  /* Header */
+  .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2px; }
+  .header h1 { font-size: 22px; font-weight: 700; color: #f0c040; }
+  .header .badge { background: linear-gradient(135deg,#a855f7,#7c3aed); color:#fff; font-size:10px; font-weight:600; padding:5px 14px; border-radius:16px; }
+  .sub { font-size: 11px; color: #5a6280; margin-bottom: 10px; }
 
-  .slide-header h1 {
-    font-size: 26px;
-    font-weight: 700;
-    color: #f0c040;
-    letter-spacing: -0.3px;
-  }
-
-  .slide-header .badge {
-    background: linear-gradient(135deg, #a855f7, #7c3aed);
-    color: #fff;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 6px 14px;
-    border-radius: 20px;
-    letter-spacing: 0.4px;
-    white-space: nowrap;
-  }
-
-  .subtitle {
-    font-size: 12.5px;
-    color: #7a82a0;
-    margin-bottom: 28px;
-    line-height: 1.5;
-  }
-
-  /* ── Foundation Banner ── */
-  .foundation-banner {
-    background: linear-gradient(135deg, rgba(240, 192, 64, 0.10), rgba(240, 192, 64, 0.04));
-    border: 1px solid rgba(240, 192, 64, 0.30);
-    border-radius: 10px;
-    padding: 16px 28px;
-    margin-bottom: 22px;
-    display: flex;
-    align-items: center;
-    gap: 32px;
-  }
-
-  .foundation-banner .label {
-    font-size: 11px;
-    font-weight: 600;
-    color: #f0c040;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    white-space: nowrap;
-  }
-
-  .foundation-banner .values-trio {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-  }
-
-  .foundation-banner .value-chip {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-  }
-
-  .foundation-banner .value-chip .name {
-    font-size: 16px;
-    font-weight: 700;
-    color: #f0c040;
-  }
-
-  .foundation-banner .value-chip .meaning {
-    font-size: 10px;
-    color: #c4a63a;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-  }
-
-  .foundation-banner .connector {
-    font-size: 18px;
-    color: rgba(240, 192, 64, 0.5);
-    font-weight: 300;
-  }
-
-  .foundation-banner .explanation {
-    font-size: 12.5px;
-    color: #b0a67a;
-    line-height: 1.55;
-    flex: 1;
-    border-left: 1px solid rgba(240, 192, 64, 0.2);
-    padding-left: 28px;
-  }
-
-  .foundation-banner .explanation em {
-    font-style: italic;
-    color: #f0c040;
-  }
-
-  /* ── Stage Grid ── */
-  .stage-grid {
+  /* Grid */
+  .grid {
     display: grid;
-    grid-template-columns: 170px repeat(5, 1fr);
-    gap: 0;
-    margin-bottom: 0;
+    grid-template-columns: 120px repeat(5, 1fr);
+    font-size: 10px;
+    line-height: 1.45;
   }
 
   /* Stage headers */
-  .stage-header-row {
-    display: contents;
+  .sh { text-align: center; padding: 6px 8px; border-bottom: 2px solid; }
+  .sh .num { font-size: 15px; font-weight: 800; }
+  .sh .nm { font-size: 10px; font-weight: 600; }
+  .sh .tl { font-size: 8px; color: #4a5070; margin-top: 1px; }
+  .s1 { border-color: #00d4aa; } .s1 .num, .s1 .nm { color: #00d4aa; }
+  .s2 { border-color: #3b82f6; } .s2 .num, .s2 .nm { color: #3b82f6; }
+  .s3 { border-color: #a855f7; } .s3 .num, .s3 .nm { color: #a855f7; }
+  .s4 { border-color: #f59e0b; } .s4 .num, .s4 .nm { color: #f59e0b; }
+  .s5 { border-color: #ef4444; } .s5 .num, .s5 .nm { color: #ef4444; }
+
+  /* Row label */
+  .rl { padding: 6px 8px 6px 0; display: flex; flex-direction: column; justify-content: center; }
+  .rl .t { font-size: 10px; font-weight: 700; color: #c8cde0; }
+  .rl .s { font-size: 8px; color: #4a5070; margin-top: 1px; }
+
+  /* Layer separator */
+  .lsep { grid-column: 1/-1; padding: 3px 0 1px; display: flex; align-items: center; gap: 8px; }
+  .lsep span { font-size: 8px; font-weight: 600; color: #3a4060; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
+  .lsep .line { flex: 1; height: 1px; background: rgba(255,255,255,0.05); }
+
+  /* Cell */
+  .c {
+    padding: 6px 9px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    border-right: 1px solid rgba(255,255,255,0.025);
+    display: flex; flex-direction: column; gap: 3px;
   }
+  .c .vt { font-size: 11px; font-weight: 700; }
+  .c .vt.c1 { color: #00d4aa; } .c .vt.c2 { color: #3b82f6; } .c .vt.c3 { color: #a855f7; } .c .vt.c4 { color: #f59e0b; } .c .vt.c5 { color: #ef4444; }
+  .c .tx { font-size: 9.5px; color: #8a90a8; }
+  .c .tx strong { color: #b8bdd0; font-weight: 600; }
+  .c .cs { font-size: 8px; color: #00d4aa; margin-top: auto; }
+  .c .dm { font-size: 8px; color: #4a5070; font-style: italic; }
 
-  .stage-header-row .row-label {
-    background: transparent;
-  }
-
-  .stage-header {
-    padding: 10px 14px;
-    text-align: center;
-    border-bottom: 2px solid;
-    position: relative;
-  }
-
-  .stage-header .number {
-    font-size: 18px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-  }
-
-  .stage-header .name {
-    font-size: 12px;
-    font-weight: 600;
-    margin-top: 1px;
-  }
-
-  .stage-header .timeline {
-    font-size: 9.5px;
-    color: #5a6280;
-    margin-top: 3px;
-  }
-
-  .stage-header.s1 { border-color: #00d4aa; }
-  .stage-header.s1 .number, .stage-header.s1 .name { color: #00d4aa; }
-  .stage-header.s2 { border-color: #3b82f6; }
-  .stage-header.s2 .number, .stage-header.s2 .name { color: #3b82f6; }
-  .stage-header.s3 { border-color: #a855f7; }
-  .stage-header.s3 .number, .stage-header.s3 .name { color: #a855f7; }
-  .stage-header.s4 { border-color: #f59e0b; }
-  .stage-header.s4 .number, .stage-header.s4 .name { color: #f59e0b; }
-  .stage-header.s5 { border-color: #ef4444; }
-  .stage-header.s5 .number, .stage-header.s5 .name { color: #ef4444; }
-
-  /* Row labels */
-  .row-label {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px 14px 10px 0;
-    border-right: 1px solid rgba(255,255,255,0.06);
-  }
-
-  .row-label .label-title {
-    font-size: 12px;
-    font-weight: 700;
-    color: #e0e4ef;
-  }
-
-  .row-label .label-sub {
-    font-size: 9.5px;
-    color: #5a6280;
-    margin-top: 2px;
-    line-height: 1.3;
-  }
-
-  /* Cells */
-  .cell {
-    padding: 10px 13px;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
-    border-right: 1px solid rgba(255,255,255,0.03);
-    min-height: 80px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    position: relative;
-  }
-
-  .cell .value-tag {
-    font-size: 12px;
-    font-weight: 700;
-    margin-bottom: 2px;
-  }
-
-  .cell .value-tag.uniqueness { color: #00d4aa; }
-  .cell .value-tag.excellence { color: #3b82f6; }
-  .cell .value-tag.ummah { color: #a855f7; }
-  .cell .value-tag.hifz { color: #f59e0b; }
-
-  .cell .content {
-    font-size: 11px;
-    color: #9aa0b8;
-    line-height: 1.5;
-  }
-
-  .cell .content strong {
-    color: #c8cde0;
-    font-weight: 600;
-  }
-
-  .cell .cornerstone {
-    font-size: 9.5px;
-    color: #5a6280;
-    margin-top: auto;
-    padding-top: 4px;
-    font-style: italic;
-  }
-
-  .cell .cornerstone span {
-    color: #7a82a0;
-  }
-
-  /* Value activation indicator */
-  .cell.active-uniqueness { background: rgba(0, 212, 170, 0.04); border-left: 2px solid rgba(0, 212, 170, 0.35); }
-  .cell.active-excellence { background: rgba(59, 130, 246, 0.04); border-left: 2px solid rgba(59, 130, 246, 0.35); }
-  .cell.active-ummah { background: rgba(168, 85, 247, 0.04); border-left: 2px solid rgba(168, 85, 247, 0.35); }
-  .cell.active-hifz { background: rgba(245, 158, 11, 0.04); border-left: 2px solid rgba(245, 158, 11, 0.35); }
-
-  /* Layer separator labels */
-  .layer-sep {
-    grid-column: 1 / -1;
-    padding: 6px 0 4px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .layer-sep .sep-label {
-    font-size: 9px;
-    font-weight: 600;
-    color: #4a5070;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    white-space: nowrap;
-  }
-
-  .layer-sep .sep-line {
-    flex: 1;
-    height: 1px;
-    background: rgba(255,255,255,0.06);
-  }
+  /* Active cell highlights */
+  .a1 { background: rgba(0,212,170,0.04); border-left: 2px solid rgba(0,212,170,0.3); }
+  .a2 { background: rgba(59,130,246,0.04); border-left: 2px solid rgba(59,130,246,0.3); }
+  .a3 { background: rgba(168,85,247,0.04); border-left: 2px solid rgba(168,85,247,0.3); }
+  .a4 { background: rgba(245,158,11,0.04); border-left: 2px solid rgba(245,158,11,0.3); }
+  .a5 { background: rgba(239,68,68,0.04); border-left: 2px solid rgba(239,68,68,0.3); }
 
   /* Track callout */
-  .track-callout {
-    grid-column: 1 / -1;
-    background: rgba(168, 85, 247, 0.06);
-    border: 1px solid rgba(168, 85, 247, 0.2);
-    border-radius: 6px;
-    padding: 10px 18px;
-    margin: 6px 0 4px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
+  .tcall { grid-column: 1/-1; display: flex; align-items: center; gap: 12px; padding: 5px 0; }
+  .tcall .badges { display: flex; flex-direction: column; gap: 3px; }
+  .tcall .tb { font-size: 8px; font-weight: 700; padding: 2px 8px; border-radius: 8px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+  .tcall .tb.ta { background: rgba(0,212,170,0.15); color: #00d4aa; }
+  .tcall .tb.tbp { background: rgba(168,85,247,0.15); color: #a855f7; }
+  .tcall .tt { font-size: 10px; font-weight: 700; color: #f0c040; }
+  .tcall .td { font-size: 9px; color: #6a70888; line-height: 1.5; max-width: 1500px; }
 
-  .track-callout .callout-badge {
-    background: rgba(168, 85, 247, 0.2);
-    color: #c084fc;
-    font-size: 9px;
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    white-space: nowrap;
-  }
+  /* Track subtext */
+  .c .ws { font-size: 8px; color: #a855f7; margin-top: auto; font-style: italic; }
+  .c .sig { font-size: 8px; color: #3a4060; margin-top: 1px; }
 
-  .track-callout .callout-text {
-    font-size: 11.5px;
-    color: #b8a0d8;
-    line-height: 1.5;
-  }
+  /* Timeline bar */
+  .timeline-bar { grid-column: 1/-1; display: grid; grid-template-columns: 120px repeat(5,1fr); padding: 4px 0 2px; border-top: 1px solid rgba(255,255,255,0.06); }
+  .timeline-bar .titem { text-align: center; font-size: 8px; color: #4a5070; }
+  .timeline-bar .titem strong { color: #6a7090; }
 
-  .track-callout .callout-text strong {
-    color: #d4b8f0;
-    font-weight: 600;
-  }
-
-  /* Bottom moat */
-  .moat-section {
-    margin-top: 18px;
-    background: rgba(168, 85, 247, 0.04);
-    border: 1px solid rgba(168, 85, 247, 0.15);
-    border-radius: 10px;
-    padding: 18px 28px;
-  }
-
-  .moat-section .moat-title {
-    font-size: 14px;
-    font-weight: 700;
-    color: #c084fc;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .moat-section .moat-title .icon {
-    width: 18px;
-    height: 18px;
-    background: rgba(168, 85, 247, 0.3);
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-  }
-
-  .moat-section .moat-body {
-    font-size: 12px;
-    color: #8a8faa;
-    line-height: 1.65;
-  }
-
-  .moat-section .moat-body em {
-    color: #c084fc;
-    font-style: normal;
-    font-weight: 600;
-  }
-
-  /* Value legend bar */
-  .value-legend {
-    display: flex;
-    gap: 28px;
-    margin-bottom: 20px;
-    padding: 0 4px;
-  }
-
-  .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .legend-item .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-  }
-
-  .legend-item .dot.uniqueness { background: #00d4aa; }
-  .legend-item .dot.excellence { background: #3b82f6; }
-  .legend-item .dot.ummah { background: #a855f7; }
-  .legend-item .dot.hifz { background: #f59e0b; }
-
-  .legend-item .legend-name {
-    font-size: 11.5px;
-    font-weight: 600;
-  }
-
-  .legend-item .legend-name.uniqueness { color: #00d4aa; }
-  .legend-item .legend-name.excellence { color: #3b82f6; }
-  .legend-item .legend-name.ummah { color: #a855f7; }
-  .legend-item .legend-name.hifz { color: #f59e0b; }
-
-  .legend-item .legend-desc {
-    font-size: 10px;
-    color: #5a6280;
-  }
-
-  /* Activation bar row */
-  .activation-row {
-    display: contents;
-  }
-
-  .activation-cell {
-    padding: 6px 13px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    align-items: center;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-  }
-
-  .activation-pip {
-    font-size: 9px;
-    font-weight: 700;
-    padding: 2px 8px;
+  /* Moat */
+  .moat {
+    grid-column: 1/-1;
+    background: rgba(168,85,247,0.04);
+    border: 1px solid rgba(168,85,247,0.12);
     border-radius: 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    padding: 10px 16px;
+    margin-top: 6px;
   }
-
-  .activation-pip.uniqueness { background: rgba(0,212,170,0.15); color: #00d4aa; }
-  .activation-pip.excellence { background: rgba(59,130,246,0.15); color: #3b82f6; }
-  .activation-pip.ummah { background: rgba(168,85,247,0.15); color: #a855f7; }
-  .activation-pip.hifz { background: rgba(245,158,11,0.15); color: #f59e0b; }
-  .activation-pip.foundation { background: rgba(240,192,64,0.12); color: #f0c040; }
-
-  .activation-pip.dim {
-    opacity: 0.35;
-  }
+  .moat .mt { font-size: 11px; font-weight: 700; color: #c084fc; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+  .moat .mt .ico { width: 14px; height: 14px; background: rgba(168,85,247,0.3); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 8px; }
+  .moat .mb { font-size: 9px; color: #6a7088; line-height: 1.55; }
+  .moat .mb em { color: #c084fc; font-style: normal; font-weight: 600; }
+  .moat .mb u { color: #f0c040; text-decoration: none; font-weight: 600; }
 </style>
 </head>
 <body>
 
-<!-- ═══ Header ═══ -->
-<div class="slide-header">
+<div class="header">
   <h1>Core values — the source of everything</h1>
   <div class="badge">↻ Endless trust loop</div>
 </div>
-<div class="subtitle">
-  Five values. One inseparable foundation. Four strategic drivers. The standard every decision is held against.
-</div>
+<div class="sub">Amanah · Adalah · Sidq · Uniqueness · Excellence · Ummah · Hifz al-Mal · Internal only · The standard every decision is held against</div>
 
-<!-- ═══ Foundation Banner: Amanah · Adalah · Sidq ═══ -->
-<div class="foundation-banner">
-  <div class="label">Foundation<br>Layer</div>
-  <div class="values-trio">
-    <div class="value-chip">
-      <div class="name">Amanah</div>
-      <div class="meaning">Trustworthiness</div>
-    </div>
-    <div class="connector">+</div>
-    <div class="value-chip">
-      <div class="name">Adalah</div>
-      <div class="meaning">Fairness</div>
-    </div>
-    <div class="connector">+</div>
-    <div class="value-chip">
-      <div class="name">Sidq</div>
-      <div class="meaning">Honesty</div>
-    </div>
-  </div>
-  <div class="explanation">
-    These three are <em>inseparable</em> — you cannot be trustworthy without being fair, and you cannot be fair without being honest. They are not three values; they are one integrity expressed three ways. This foundation <em>runs beneath every stage</em>, every layer, every decision. It is never stage-specific because it is never optional.
-  </div>
-</div>
-
-<!-- ═══ Value Legend ═══ -->
-<div class="value-legend">
-  <div class="legend-item">
-    <div class="dot uniqueness"></div>
-    <span class="legend-name uniqueness">Uniqueness</span>
-    <span class="legend-desc">— What makes Mal categorically different</span>
-  </div>
-  <div class="legend-item">
-    <div class="dot excellence"></div>
-    <span class="legend-name excellence">Excellence</span>
-    <span class="legend-desc">— The standard of execution that proves the promise</span>
-  </div>
-  <div class="legend-item">
-    <div class="dot ummah"></div>
-    <span class="legend-name ummah">Ummah</span>
-    <span class="legend-desc">— Community names the alignment</span>
-  </div>
-  <div class="legend-item">
-    <div class="dot hifz"></div>
-    <span class="legend-name hifz">Hifz al-Mal</span>
-    <span class="legend-desc">— Preserving &amp; growing wealth</span>
-  </div>
-</div>
-
-<!-- ═══ Stage Grid ═══ -->
-<div class="stage-grid">
+<div class="grid">
 
   <!-- Stage Headers -->
-  <div class="row-label"></div>
-  <div class="stage-header s1">
-    <div class="number">01</div>
-    <div class="name">Recognition</div>
-    <div class="timeline">Lent · Now</div>
+  <div class="rl"></div>
+  <div class="sh s1"><div class="num">01</div><div class="nm">Recognition</div><div class="tl">Lent · Now</div></div>
+  <div class="sh s2"><div class="num">02</div><div class="nm">Calculation</div><div class="tl">Tested · Jul 2026</div></div>
+  <div class="sh s3"><div class="num">03</div><div class="nm">Validation</div><div class="tl">Borrowed · Sep 2026</div></div>
+  <div class="sh s4"><div class="num">04</div><div class="nm">Commitment</div><div class="tl">Real · Nov 2026</div></div>
+  <div class="sh s5"><div class="num">05</div><div class="nm">Compounding</div><div class="tl">Earned · Feb 2027+</div></div>
+
+  <!-- Layer 1 — Brand Culture -->
+  <div class="lsep"><span>Layer 1 — Brand culture derives from core values. Internal only.</span><div class="line"></div></div>
+
+  <div class="rl"><div class="t">Brand culture</div><div class="s">Internal only.<br>Never public.</div></div>
+
+  <div class="c a1">
+    <div class="vt c1">Amanah · Adalah · Sidq</div>
+    <div class="tx"><strong>No claim that cannot be verified. No fee not exactly what was quoted.</strong> The fee quoted is the fee charged. Admit what cannot be done yet. When something fails, the response is immediate, honest and complete.</div>
+    <div class="cs">Credibility before proof</div>
+    <div class="dm">• Demands: integrity credible before first claim</div>
   </div>
-  <div class="stage-header s2">
-    <div class="number">02</div>
-    <div class="name">Calculation</div>
-    <div class="timeline">Tested · Jul 2026</div>
+  <div class="c a2">
+    <div class="vt c2">Uniqueness</div>
+    <div class="tx"><strong>Mal's architecture is what differentiates — not its messaging.</strong> The open corner is not a positioning claim; it is a structural fact. Every product is auditable against fairness before it launches.</div>
+    <div class="cs">Numbers, not claims</div>
+    <div class="dm">• Demands: product fee matches brand promise exactly</div>
   </div>
-  <div class="stage-header s3">
-    <div class="number">03</div>
-    <div class="name">Validation</div>
-    <div class="timeline">Borrowed · Sep 2026</div>
+  <div class="c a3">
+    <div class="vt c3">Excellence</div>
+    <div class="tx"><strong>Execution is flawless or it doesn't launch.</strong> Recovery handled honestly earns more than perfection. One real story worth ten claims.</div>
+    <div class="cs">Admitted limits build confidence</div>
+    <div class="dm">• Demands: brand promise and product reality identical</div>
   </div>
-  <div class="stage-header s4">
-    <div class="number">04</div>
-    <div class="name">Commitment</div>
-    <div class="timeline">Real · Nov 2026</div>
+  <div class="c a4">
+    <div class="vt c4">Ummah</div>
+    <div class="tx"><strong>Partners speak. Mal never names the alignment</strong> — the audience does. The trustee is not a transaction. The community names the values; Mal stays silent.</div>
+    <div class="cs">Audience names the values</div>
+    <div class="dm">• Demands: partner testimony drives story</div>
   </div>
-  <div class="stage-header s5">
-    <div class="number">05</div>
-    <div class="name">Compounding</div>
-    <div class="timeline">Earned · Feb 2027+</div>
+  <div class="c a5">
+    <div class="vt c5">Hifz al-Mal</div>
+    <div class="tx"><strong>Preserve and grow.</strong> AI anticipates before being asked. The trustee's growth is Mal's growth — the reason the Hajj programme, the scholarships and the AI layer exist.</div>
+    <div class="cs">AI works before asked</div>
+    <div class="dm">• Demands: brand grows with partner, never extracts</div>
   </div>
 
-  <!-- Value activation row -->
-  <div class="row-label">
-    <div class="label-title">Values active</div>
-    <div class="label-sub">Which value peaks<br>at each stage</div>
+  <!-- Layer 2 — The Brand -->
+  <div class="lsep"><span>Layer 2 — The brand expresses what the culture demands. Fair by design at every stage.</span><div class="line"></div></div>
+
+  <div class="rl"><div class="t">The brand</div><div class="s">Fair by design.<br>External.</div></div>
+
+  <div class="c a1">
+    <div class="vt c1">Lent trust</div>
+    <div class="tx">Identity locked. <strong>Founder stories live.</strong> States belief before proof exists.</div>
+    <div class="cs">Credibility borrowed</div>
+    <div class="dm">• Unlocks: agency brief, identity, founder stories, first PR</div>
   </div>
-  <div class="activation-cell">
-    <span class="activation-pip uniqueness">Uniqueness</span>
-    <span class="activation-pip foundation">Integrity</span>
+  <div class="c a2">
+    <div class="vt c2">Tested trust</div>
+    <div class="tx">Promise meets experience. <strong>Product either proves or breaks</strong> the brand claim here.</div>
+    <div class="cs">Proof or break moment</div>
+    <div class="dm">• Tested by: Global Accounts, SME live, real fees, real FX</div>
   </div>
-  <div class="activation-cell">
-    <span class="activation-pip excellence">Excellence</span>
-    <span class="activation-pip foundation">Integrity</span>
+  <div class="c a3">
+    <div class="vt c3">Borrowed truth</div>
+    <div class="tx">Third parties, influencers, comparisons. <strong>Others confirm Mal.</strong></div>
+    <div class="cs">Confirmed ≠ claimed</div>
+    <div class="dm">• Confirmed: 4 border proofs validated</div>
   </div>
-  <div class="activation-cell">
-    <span class="activation-pip ummah">Ummah</span>
-    <span class="activation-pip foundation">Integrity</span>
+  <div class="c a4">
+    <div class="vt c4">Real trust</div>
+    <div class="tx">Market commits at scale. Both licences operational. <strong>Corridor owned end-to-end.</strong></div>
+    <div class="cs">Institutional weight earned</div>
+    <div class="dm">• Scaled by: referral 3-tier, advocate programme, licence</div>
   </div>
-  <div class="activation-cell">
-    <span class="activation-pip hifz">Hifz al-Mal</span>
-    <span class="activation-pip foundation">Integrity</span>
-  </div>
-  <div class="activation-cell">
-    <span class="activation-pip uniqueness">Uniqueness</span>
-    <span class="activation-pip excellence">Excellence</span>
-    <span class="activation-pip ummah">Ummah</span>
-    <span class="activation-pip hifz">Hifz al-Mal</span>
-    <span class="activation-pip foundation">Integrity</span>
+  <div class="c a5">
+    <div class="vt c5">Earned trust</div>
+    <div class="tx"><strong>Self-sustaining.</strong> Every new person enters Stage 1 with Stage 5 trust already waiting.</div>
+    <div class="cs">The brand compounds</div>
+    <div class="dm">• Compounded by: lending, AI anticipates, loop closes</div>
   </div>
 
-  <!-- ── Layer 1: Brand Culture ── -->
-  <div class="layer-sep">
-    <span class="sep-label">Layer 1 — Brand Culture · Internal only · Derives from values</span>
-    <div class="sep-line"></div>
+  <!-- Layer 3 — Proof -->
+  <div class="lsep"><span>Layer 3 — Every product launch is simultaneously a proof event and a market test.</span><div class="line"></div></div>
+
+  <div class="rl"><div class="t">Proof +</div><div class="s">Active.<br>Products + tools.</div></div>
+
+  <div class="c">
+    <div class="vt c1">Build + lock</div>
+    <div class="tx">Brand identity. Agency brief. Founder stories. First PR layer. Media briefings.</div>
+    <div class="cs">Cornerstone: brand before product</div>
+  </div>
+  <div class="c">
+    <div class="vt c2">Launch + test</div>
+    <div class="tx">Global Accounts. SME banking. Licence filed. Avatar + home personalisation live.</div>
+    <div class="cs">Cornerstone: product proves promise</div>
+  </div>
+  <div class="c">
+    <div class="vt c3">Story + amplify</div>
+    <div class="tx">4 border proofs. Hajj + Umrah savings. Tuition instalment. Bi-monthly milestone content.</div>
+    <div class="cs">Cornerstone: real stories, real outcomes</div>
+  </div>
+  <div class="c">
+    <div class="vt c4">Scale + formalise</div>
+    <div class="tx">Referral programme. 3-tier rewards. Full licence. Corridor owned UAE + USA.</div>
+    <div class="cs">Cornerstone: referral amplifies trust</div>
+  </div>
+  <div class="c">
+    <div class="vt c5">Compound + expand</div>
+    <div class="tx">Lending live. AI-native tools at full depth. Advocates recruit advocates. No campaign needed.</div>
+    <div class="cs">Cornerstone: loop runs itself</div>
   </div>
 
-  <div class="row-label">
-    <div class="label-title">Brand culture</div>
-    <div class="label-sub">Internal only.<br>Never public.</div>
+  <!-- Track A — Layer 4 -->
+  <div class="lsep"><span>Track A — Mal speaks directly. Brand and product. Sequenced to what the proof at each stage can honestly support.</span><div class="line"></div></div>
+
+  <div class="rl"><div class="t">Track A</div><div class="s">Brand awareness.<br>MAL speaks.</div></div>
+
+  <div class="c">
+    <div class="vt" style="color:#8a90a8;">Brand awareness</div>
+    <div class="tx">Identity launch. Founder story as PR. <strong>The open corner claimed.</strong> No product yet — only honest belief.</div>
+    <div class="ws">What we say: who we are and why</div>
   </div>
-  <div class="cell active-uniqueness">
-    <div class="value-tag uniqueness">Uniqueness</div>
-    <div class="content"><strong>No claim that cannot be verified.</strong> Brand earns the right to speak first. Mal's architecture — not its marketing — is what differentiates.</div>
-    <div class="cornerstone"><span>Credibility before proof</span></div>
+  <div class="c">
+    <div class="vt" style="color:#8a90a8;">Product marketing</div>
+    <div class="tx">Global Accounts launched. <strong>Specific feature. Specific fee. Specific proof.</strong> Brand promise made tangible.</div>
+    <div class="ws">What we say: here is what we built</div>
   </div>
-  <div class="cell active-excellence">
-    <div class="value-tag excellence">Excellence</div>
-    <div class="content"><strong>The fee quoted is the fee charged.</strong> Every product auditable against fairness. Not a dirham more, not a word of small print. <strong>Execution is flawless or it doesn't launch.</strong></div>
-    <div class="cornerstone"><span>Numbers, not claims</span></div>
+  <div class="c">
+    <div class="vt" style="color:#8a90a8;">Story-led content</div>
+    <div class="tx">Real customer moments. <strong>Border proof stories.</strong> Bi-monthly milestones. Each launch with a human story.</div>
+    <div class="ws">What we say: here is the proof</div>
   </div>
-  <div class="cell active-ummah">
-    <div class="value-tag ummah">Ummah</div>
-    <div class="content"><strong>Partners speak. Mal never names the alignment</strong> — the audience does. The trustee is not a transaction. The community names the values; Mal stays silent.</div>
-    <div class="cornerstone"><span>Audience names the values</span></div>
+  <div class="c">
+    <div class="vt" style="color:#8a90a8;">Advocacy activation</div>
+    <div class="tx">Referral programme live. 3-tier rewards. Early access mechanic. <strong>Partners invited to recruit.</strong></div>
+    <div class="ws">What we say: bring someone like you</div>
   </div>
-  <div class="cell active-hifz">
-    <div class="value-tag hifz">Hifz al-Mal</div>
-    <div class="content"><strong>Preserve and grow.</strong> AI anticipates before being asked. The trustee's growth is Mal's growth — the reason the Hajj programme, scholarships and AI layer exist.</div>
-    <div class="cornerstone"><span>AI works before asked</span></div>
-  </div>
-  <div class="cell" style="background: rgba(255,255,255,0.02); border-left: 2px solid rgba(255,255,255,0.12);">
-    <div class="value-tag" style="color: #e0e4ef;">All values compound</div>
-    <div class="content"><strong>Self-sustaining.</strong> Every value is now proven, not promised. The culture no longer needs to be stated — it is visible in every decision, product and interaction.</div>
-    <div class="cornerstone"><span>The proof is the culture</span></div>
+  <div class="c">
+    <div class="vt" style="color:#8a90a8;">Compound content</div>
+    <div class="tx">Pattern of behaviour visible over time. AI capability stories. <strong>Institutional credibility.</strong> New markets.</div>
+    <div class="ws">What we say: this is who we became</div>
   </div>
 
-  <!-- ── Layer 2: The Brand ── -->
-  <div class="layer-sep">
-    <span class="sep-label">Layer 2 — The Brand · Fair by design at every stage</span>
-    <div class="sep-line"></div>
-  </div>
-
-  <div class="row-label">
-    <div class="label-title">The brand</div>
-    <div class="label-sub">Fair by design.<br>External.</div>
-  </div>
-  <div class="cell active-uniqueness">
-    <div class="value-tag uniqueness">Lent trust</div>
-    <div class="content">Identity locked. <strong>Founder stories live.</strong> States belief before proof exists.</div>
-    <div class="cornerstone"><span>Credibility borrowed</span></div>
-  </div>
-  <div class="cell active-excellence">
-    <div class="value-tag excellence">Tested trust</div>
-    <div class="content">Promise meets experience. <strong>Product either proves or breaks</strong> the brand claim here.</div>
-    <div class="cornerstone"><span>Proof or break moment</span></div>
-  </div>
-  <div class="cell active-ummah">
-    <div class="value-tag ummah">Borrowed truth</div>
-    <div class="content">Community figures, third parties, comparisons. <strong>Others confirm Mal.</strong> The audience validates — Mal doesn't claim.</div>
-    <div class="cornerstone"><span>Confirmed ≠ claimed</span></div>
-  </div>
-  <div class="cell active-hifz">
-    <div class="value-tag hifz">Real trust</div>
-    <div class="content">Market commits at scale. Both licences operational. <strong>Corridor owned end-to-end.</strong> Wealth preservation proven.</div>
-    <div class="cornerstone"><span>Institutional weight earned</span></div>
-  </div>
-  <div class="cell" style="background: rgba(255,255,255,0.02); border-left: 2px solid rgba(255,255,255,0.12);">
-    <div class="value-tag" style="color: #e0e4ef;">Earned trust</div>
-    <div class="content"><strong>Self-sustaining.</strong> Every new person enters Stage 1 with Stage 5 trust already waiting. The brand compounds without campaign spend.</div>
-    <div class="cornerstone"><span>The brand compounds</span></div>
-  </div>
-
-  <!-- ── Layer 3: Proof + Products ── -->
-  <div class="layer-sep">
-    <span class="sep-label">Layer 3 — Proof · Products + tools · Every product launch is a proof event and a market test</span>
-    <div class="sep-line"></div>
-  </div>
-
-  <div class="row-label">
-    <div class="label-title">Proof +</div>
-    <div class="label-sub">Active.<br>Products + tools.</div>
-  </div>
-  <div class="cell">
-    <div class="content"><strong>Build + lock.</strong> Brand identity. Agency brief. Founder stories. First PR layer. Media briefings.</div>
-    <div class="cornerstone"><span>Cornerstone: brand before product</span></div>
-  </div>
-  <div class="cell">
-    <div class="content"><strong>Launch + test.</strong> Global Accounts. SME banking. Licence filed. Avatar + home personalisation live.</div>
-    <div class="cornerstone"><span>Cornerstone: product proves promise</span></div>
-  </div>
-  <div class="cell">
-    <div class="content"><strong>Story + amplify.</strong> 4 border proofs. Hajj + Umrah savings. Tuition instalment. Bi-monthly milestone content.</div>
-    <div class="cornerstone"><span>Cornerstone: real stories, real outcomes</span></div>
-  </div>
-  <div class="cell">
-    <div class="content"><strong>Scale + formalise.</strong> Referral programme. 3-tier rewards. Full licence. Corridor owned UAE + USA.</div>
-    <div class="cornerstone"><span>Cornerstone: referral amplifies trust</span></div>
-  </div>
-  <div class="cell">
-    <div class="content"><strong>Compound + expand.</strong> Lending live. AI-native tools at full depth. Advocates recruit advocates. No campaign needed.</div>
-    <div class="cornerstone"><span>Cornerstone: loop runs itself</span></div>
-  </div>
-
-  <!-- ── Track callout ── -->
-  <div class="track-callout">
-    <div class="callout-badge">Track A + B</div>
-    <div class="callout-text">
-      <strong>Two tracks. One truth. Both must run simultaneously.</strong> Track A without Track B is a claim without evidence. Track B without Track A is a voice without a name. When both run together, the market hears the same truth twice — once from the brand, once from someone who has nothing to gain from saying it. That is when trust becomes the only possible conclusion.
+  <!-- Two tracks callout -->
+  <div class="tcall">
+    <div class="badges">
+      <div class="tb ta">Track A — MAL speaks</div>
+      <div class="tb tbp">Track B — Partners confirm</div>
+    </div>
+    <div>
+      <div class="tt">Two tracks. One truth. Both must run simultaneously.</div>
+      <div class="td">Track A without Track B is a claim without evidence. Track B without Track A is a voice without a home. When both run together, the market hears the same truth twice — once from the brand, once from someone who has nothing to gain from saying it. That is when trust becomes the only possible conclusion.</div>
     </div>
   </div>
 
-  <!-- ── Layer 4: Track A — Marketing ── -->
-  <div class="layer-sep">
-    <span class="sep-label">Track A — Mal speaks directly · Brand and product · Sequenced to what the proof at each stage can honestly support</span>
-    <div class="sep-line"></div>
+  <!-- Track B -->
+  <div class="lsep"><span>Track B — Partners speak. Mal does not claim — someone else confirms. This is the credibility that cannot be manufactured.</span><div class="line"></div></div>
+
+  <div class="rl"><div class="t">Track B</div><div class="s">Partners speak.<br>Partners confirm.</div></div>
+
+  <div class="c">
+    <div class="vt" style="color:#8a90a8;">Founders + board</div>
+    <div class="tx">Lived exclusion as proof. The way they hit is the market research. <strong>First indirect voice before any customer exists.</strong></div>
+    <div class="ws">Who speaks: founders with lived proof</div>
+    <div class="sig">↑ Signal: does the identity feel like us?</div>
+  </div>
+  <div class="c">
+    <div class="vt" style="color:#8a90a8;">First real customers</div>
+    <div class="tx">Supported before being asked to speak. <strong>Their story describes a genuine experience.</strong> Earned, not paid.</div>
+    <div class="ws">Who speaks: people the product served</div>
+    <div class="sig">↑ Signal: which customer story travels farthest?</div>
+  </div>
+  <div class="c">
+    <div class="vt" style="color:#8a90a8;">Community figures</div>
+    <div class="tx">Amplifiers who point at real stories. <strong>Mal is the backdrop.</strong> The advisor is the voice. Trusted voices in the community.</div>
+    <div class="ws">Who speaks: trusted voices in the community</div>
+    <div class="sig">↑ Signal: which community figure amplifies most?</div>
+  </div>
+  <div class="c">
+    <div class="vt" style="color:#8a90a8;">Advocates formalised</div>
+    <div class="tx">Referral structure active. <strong>Partners recruit from within their own community.</strong> Shared border = shared trust.</div>
+    <div class="ws">Who speaks: every advocate = a proof point</div>
+    <div class="sig">↑ Signal: when does every advocate = a proof point</div>
+  </div>
+  <div class="c">
+    <div class="vt" style="color:#8a90a8;">Peer-lent trust</div>
+    <div class="tx">The loop runs without Mal orchestrating it. <strong>Every new person enters Stage 1 with Stage 5 proof already waiting.</strong></div>
+    <div class="ws">Who speaks: everyone who came before</div>
+    <div class="sig">↑ Signal: the loop runs itself</div>
   </div>
 
-  <div class="row-label">
-    <div class="label-title">Track A</div>
-    <div class="label-sub">Brand awareness.<br>Product marketing.</div>
-  </div>
-  <div class="cell">
-    <div class="content">Brand identity story as PR. <strong>The open corner claimed.</strong> No product yet — only honest belief.</div>
-  </div>
-  <div class="cell">
-    <div class="content"><strong>Product marketing.</strong> Specific features. Specific fee. Specific benefit. Brand promise made tangible.</div>
-  </div>
-  <div class="cell">
-    <div class="content"><strong>Story-led content.</strong> Border proof stories. 8+ real milestones. Each launch with a human story.</div>
-  </div>
-  <div class="cell">
-    <div class="content"><strong>Advocacy activation.</strong> Advocate stories live. Referrals. Early access communicated. Partners invited to speak.</div>
-  </div>
-  <div class="cell">
-    <div class="content"><strong>Compound-channel content.</strong> Long-term real-time stories. AI capability stories. Institutional credibility. New markets.</div>
+  <!-- Timeline -->
+  <div class="timeline-bar">
+    <div></div>
+    <div class="titem"><strong>Now · Lent</strong></div>
+    <div class="titem"><strong>Jul 2026 · Tested</strong></div>
+    <div class="titem"><strong>Sep 2026 · Validated</strong></div>
+    <div class="titem"><strong>Nov 2026 · Committed</strong></div>
+    <div class="titem"><strong>Feb 2027+ · Compounding</strong></div>
   </div>
 
-  <!-- ── Layer 5: Track B — Partners ── -->
-  <div class="layer-sep">
-    <span class="sep-label">Track B — Partners confirm · The real stage does not open until all four layers carry enough weight to hold it</span>
-    <div class="sep-line"></div>
+  <!-- Moat -->
+  <div class="moat">
+    <div class="mt"><span class="ico">⚙</span> The competitive moat — stated plainly</div>
+    <div class="mb">
+      The technology can be copied. The product features can be matched. The campaigns can be outspent. <em>The advocate network cannot be retrofitted.</em>
+      It requires years of genuine behaviour across all four layers — culture lived, brand expressed, proof delivered, marketing run in both tracks simultaneously. No competitor can build this in 12 months.
+      The UAE Central Bank stopped issuing full banking licences twenty years ago. Mal holds one. Through the US banking partnership Mal operates at both ends of the corridor simultaneously — the only bank in the market to do so. <u>These licences cannot be replicated on any timeline a competitor controls.</u>
+      It is not built. It is grown. From the values down through every layer, out through both tracks, into the trust, into the partnership, into the advocacy, and back to Stage 1 with the floor raised higher than before.
+      The core values at the top are not decoration. They are the only thing that makes the endless loop at the bottom possible. Remove them and every layer above them collapses. Keep them — genuinely, operationally, in every decision — and the moat builds itself. Deeper with every stage. Wider with every corridor.
+    </div>
   </div>
 
-  <div class="row-label">
-    <div class="label-title">Track B</div>
-    <div class="label-sub">Partners confirm.<br>Community validates.</div>
-  </div>
-  <div class="cell">
-    <div class="content"><strong>Founders + board.</strong> Lived exclusion as proof. First PR. First values before any customer exists.</div>
-    <div class="cornerstone"><span>Now · Lent</span></div>
-  </div>
-  <div class="cell">
-    <div class="content"><strong>First real customers.</strong> Surprised before being asked to speak. Their story describes a genuine experience. Earned, not paid.</div>
-    <div class="cornerstone"><span>Jul 2026 · Tested</span></div>
-  </div>
-  <div class="cell">
-    <div class="content"><strong>Community figures.</strong> Amplifies who point at real stories. Mal is the backdrop. The advisor is the voice.</div>
-    <div class="cornerstone"><span>Sep 2026 · Validated</span></div>
-  </div>
-  <div class="cell">
-    <div class="content"><strong>Advocates formalised.</strong> Referral architecture active. Partners recruit from within their own community. <strong>Ummah, self-sustaining.</strong></div>
-    <div class="cornerstone"><span>Nov 2026 · Committed</span></div>
-  </div>
-  <div class="cell">
-    <div class="content"><strong>Peer-lent trust.</strong> The role where advocacy leads. Every new person enters with Stage 5 trust. Everyone who advocates a proof point.</div>
-    <div class="cornerstone"><span>Feb 2027+ · Compounding</span></div>
-  </div>
-
-</div>
-
-<!-- ═══ Competitive Moat ═══ -->
-<div class="moat-section">
-  <div class="moat-title"><span class="icon">⚙</span> The competitive moat — stated plainly</div>
-  <div class="moat-body">
-    The technology can be copied. The campaigns can be outspent. <em>The advocate network cannot be retrofitted.</em>
-    It requires years of genuine behaviour across all five values — integrity, uniqueness, excellence, community and wealth preservation — charting on both tracks simultaneously. No competitor can build this in 12 months.<br><br>
-    The core values at the top are not decoration. They are the only thing that makes the endless loop at the bottom possible. Remove them and every layer above collapses. Keep them — genuinely, operationally, in every decision — and the moat builds itself. Deeper with every stage. Wider with every corridor.
-  </div>
 </div>
 
 </body>
