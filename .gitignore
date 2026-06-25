@@ -1,0 +1,6 @@
+node_modules/
+package.json
+package-lock.json
+s11_*.png
+slide11_top.png
+slide11_mid.png
