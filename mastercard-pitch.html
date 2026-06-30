@@ -6,7 +6,6 @@
 <title>The Mal Show — Performance Report</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   @page { size: A4 landscape; margin: 0; }
 
   body {
@@ -21,142 +20,133 @@
   .page {
     width: 297mm;
     height: 210mm;
-    padding: 14mm 20mm 12mm 20mm;
+    padding: 12mm 18mm 10mm 18mm;
     display: flex;
     flex-direction: column;
   }
 
-  /* ---- Header ---- */
+  /* Header */
   .header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
     border-bottom: 2px solid #1d1d1f;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
-  .header-left h1 {
-    font-size: 22px;
+  .header h1 {
+    font-size: 21px;
     font-weight: 800;
     letter-spacing: -0.4px;
   }
 
-  .header-left .sub {
-    font-size: 10px;
+  .header .sub {
+    font-size: 9.5px;
     color: #666;
-    margin-top: 2px;
+    margin-top: 1px;
   }
 
   .header-right {
     text-align: right;
-    font-size: 9.5px;
+    font-size: 9px;
     color: #888;
     line-height: 1.5;
   }
 
-  .header-right strong {
-    color: #1d1d1f;
-  }
+  .header-right strong { color: #1d1d1f; }
 
-  /* ---- Hero row ---- */
+  /* Hero row */
   .hero-row {
     display: flex;
-    gap: 10px;
-    margin-bottom: 12px;
+    gap: 8px;
+    margin-bottom: 10px;
   }
 
   .hero-card {
     flex: 1;
     background: #f5f5f7;
-    border-radius: 8px;
-    padding: 11px 14px;
+    border-radius: 7px;
+    padding: 9px 10px;
     text-align: center;
   }
 
   .hero-card .num {
-    font-size: 26px;
+    font-size: 23px;
     font-weight: 800;
-    letter-spacing: -1px;
-    color: #1d1d1f;
+    letter-spacing: -0.8px;
   }
 
   .hero-card .num small {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
   }
 
   .hero-card .lbl {
-    font-size: 8.5px;
+    font-size: 7.5px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     color: #888;
-    margin-top: 2px;
+    margin-top: 1px;
   }
 
   .hero-card.dark {
     background: #1d1d1f;
   }
 
-  .hero-card.dark .num {
-    color: #fff;
-  }
-
-  .hero-card.dark .lbl {
-    color: rgba(255,255,255,0.5);
-  }
+  .hero-card.dark .num { color: #fff; }
+  .hero-card.dark .lbl { color: rgba(255,255,255,0.5); }
 
   .hero-card .note {
-    font-size: 8px;
+    font-size: 7.5px;
     color: #2eac6a;
     font-weight: 600;
     margin-top: 1px;
   }
 
-  .hero-card.dark .note {
-    color: #5dd99a;
-  }
+  .hero-card.dark .note { color: #5dd99a; }
 
-  /* ---- Main 3-col grid ---- */
+  /* Main grid */
   .grid {
     display: grid;
-    grid-template-columns: 1.1fr 1fr 1fr;
-    gap: 12px;
+    grid-template-columns: 1.15fr 0.95fr 0.95fr;
+    gap: 10px;
     flex: 1;
+    min-height: 0;
   }
 
-  .col { display: flex; flex-direction: column; gap: 10px; }
+  .col { display: flex; flex-direction: column; gap: 7px; }
 
   .section-title {
-    font-size: 8.5px;
+    font-size: 8px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1.4px;
+    letter-spacing: 1.3px;
     color: #1d1d1f;
-    margin-bottom: 4px;
-    padding-bottom: 4px;
+    margin-bottom: 3px;
+    padding-bottom: 3px;
     border-bottom: 1px solid #ddd;
   }
 
-  /* ---- Platform table ---- */
+  /* Platform table */
   .ptable { width: 100%; border-collapse: collapse; }
 
   .ptable th {
-    font-size: 7.5px;
+    font-size: 7px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.7px;
     color: #999;
     text-align: left;
-    padding: 0 0 4px 0;
+    padding: 0 0 3px 0;
   }
 
   .ptable th:not(:first-child) { text-align: right; }
 
   .ptable td {
-    font-size: 9.5px;
-    padding: 4px 0;
+    font-size: 9px;
+    padding: 3px 0;
     border-top: 1px solid #f0f0f0;
   }
 
@@ -165,13 +155,13 @@
     font-variant-numeric: tabular-nums;
   }
 
-  .ptable .pname {
+  .pname {
     font-weight: 600;
     color: #1d1d1f;
   }
 
-  .ptable .lang {
-    font-size: 8px;
+  .lang {
+    font-size: 7.5px;
     color: #999;
     font-weight: 400;
   }
@@ -181,36 +171,36 @@
   .ptable .total-row td {
     border-top: 2px solid #1d1d1f;
     font-weight: 800;
-    padding-top: 5px;
-    font-size: 10px;
+    padding-top: 4px;
+    font-size: 9.5px;
   }
 
-  /* ---- Country rows ---- */
+  /* Geo rows */
   .geo-row {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
 
   .geo-flag {
-    font-size: 14px;
-    width: 20px;
-    margin-right: 6px;
+    font-size: 12px;
+    width: 18px;
+    margin-right: 5px;
   }
 
   .geo-name {
-    font-size: 9.5px;
+    font-size: 9px;
     font-weight: 600;
     flex: 1;
   }
 
   .geo-bar-wrap {
-    width: 80px;
-    height: 6px;
+    width: 65px;
+    height: 5px;
     background: #eee;
     border-radius: 3px;
     overflow: hidden;
-    margin-right: 6px;
+    margin-right: 5px;
   }
 
   .geo-bar {
@@ -220,130 +210,206 @@
   }
 
   .geo-pct {
-    font-size: 9px;
+    font-size: 8.5px;
     font-weight: 700;
     width: 28px;
     text-align: right;
   }
 
-  .geo-note {
-    font-size: 8px;
-    color: #888;
-    margin-left: 26px;
+  .geo-sub {
+    font-size: 7.5px;
+    color: #999;
+    margin-left: 23px;
     margin-top: -2px;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
 
-  /* ---- Demo bars ---- */
+  /* Demo bars */
   .demo-row {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
 
   .demo-label {
-    font-size: 9px;
+    font-size: 8.5px;
     font-weight: 500;
-    width: 36px;
+    width: 34px;
     color: #555;
   }
 
   .demo-bar-bg {
     flex: 1;
-    height: 8px;
+    height: 6px;
     background: #f0f0f0;
-    border-radius: 4px;
+    border-radius: 3px;
     overflow: hidden;
-    margin-right: 6px;
+    margin-right: 5px;
   }
 
   .demo-bar {
     height: 100%;
     background: #1d1d1f;
-    border-radius: 4px;
+    border-radius: 3px;
   }
 
   .demo-val {
-    font-size: 9px;
+    font-size: 8.5px;
     font-weight: 700;
-    width: 28px;
+    width: 26px;
     text-align: right;
   }
 
-  /* ---- Growth sparklines (text-based) ---- */
+  /* Growth rows */
   .growth-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0;
+    padding: 3.5px 0;
     border-bottom: 1px solid #f0f0f0;
   }
 
   .growth-row:last-child { border-bottom: none; }
 
   .growth-label {
-    font-size: 9px;
+    font-size: 8.5px;
     color: #555;
     flex: 1;
   }
 
   .growth-val {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 800;
     color: #2eac6a;
     text-align: right;
   }
 
   .growth-period {
-    font-size: 7.5px;
+    font-size: 7px;
     color: #aaa;
     text-align: right;
-    width: 40px;
-    margin-left: 4px;
+    width: 38px;
+    margin-left: 3px;
   }
 
-  /* ---- Callout box ---- */
+  /* Callout */
   .callout {
     background: #f5f5f7;
-    border-radius: 6px;
-    padding: 10px 12px;
+    border-radius: 5px;
+    padding: 8px 10px;
   }
 
   .callout p {
-    font-size: 9px;
-    line-height: 1.5;
+    font-size: 8.5px;
+    line-height: 1.45;
     color: #444;
   }
 
   .callout strong { color: #1d1d1f; }
 
+  .callout.dark {
+    background: #1d1d1f;
+  }
+
+  .callout.dark p { color: rgba(255,255,255,0.85); }
+  .callout.dark strong { color: #fff; }
+
+  /* YouTube highlight */
+  .yt-stat-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .yt-stat {
+    flex: 1;
+    text-align: center;
+    background: #f5f5f7;
+    border-radius: 5px;
+    padding: 6px 4px;
+  }
+
+  .yt-stat .num {
+    font-size: 14px;
+    font-weight: 800;
+    color: #1d1d1f;
+  }
+
+  .yt-stat .num small {
+    font-size: 9px;
+    font-weight: 600;
+  }
+
+  .yt-stat .lbl {
+    font-size: 7px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #999;
+    margin-top: 1px;
+  }
+
   .gender-row {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     margin-top: 2px;
   }
 
   .gender-item {
-    font-size: 9.5px;
+    font-size: 9px;
     font-weight: 600;
   }
 
   .gender-item span {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 800;
     color: #1d1d1f;
-    margin-right: 2px;
+    margin-right: 1px;
   }
 
-  /* ---- Footer ---- */
+  /* Footer */
   .footer {
-    margin-top: 8px;
-    padding-top: 6px;
+    margin-top: 6px;
+    padding-top: 5px;
     border-top: 1px solid #eee;
     display: flex;
     justify-content: space-between;
-    font-size: 8px;
+    font-size: 7.5px;
     color: #bbb;
+  }
+
+  .ep-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 2.5px 0;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 8.5px;
+  }
+
+  .ep-row:last-child { border-bottom: none; }
+
+  .ep-title {
+    flex: 1;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 6px;
+  }
+
+  .ep-views {
+    font-weight: 700;
+    color: #1d1d1f;
+    white-space: nowrap;
+  }
+
+  .ep-hours {
+    font-size: 7.5px;
+    color: #888;
+    width: 42px;
+    text-align: right;
+    white-space: nowrap;
   }
 </style>
 </head>
@@ -352,170 +418,193 @@
 
   <!-- Header -->
   <div class="header">
-    <div class="header-left">
+    <div>
       <h1>The Mal Show &mdash; Performance Report</h1>
-      <div class="sub">Bilingual Podcast &nbsp;|&nbsp; Arabic Channel + English Channel &nbsp;|&nbsp; 6 Social Platforms</div>
+      <div class="sub">Bilingual Podcast &nbsp;|&nbsp; Arabic + English &nbsp;|&nbsp; 7 Platforms incl. YouTube</div>
     </div>
     <div class="header-right">
       <strong>Reporting Period:</strong> Launch &rarr; June 30, 2026<br>
-      Arabic launched Apr 6 &nbsp;|&nbsp; English launched Feb 23
+      Arabic launched Apr 6 &nbsp;|&nbsp; English launched Feb 23 &nbsp;|&nbsp; $0 ad spend
     </div>
   </div>
 
   <!-- Hero Stats -->
   <div class="hero-row">
     <div class="hero-card dark">
-      <div class="num">15.9<small>M+</small></div>
+      <div class="num">17.2<small>M+</small></div>
       <div class="lbl">Total Views</div>
-      <div class="note">all organic &mdash; $0 ad spend</div>
+      <div class="note">all organic</div>
     </div>
     <div class="hero-card">
-      <div class="num">118<small>K+</small></div>
-      <div class="lbl">Total Followers</div>
-      <div class="note">from zero across all platforms</div>
+      <div class="num">142<small>K+</small></div>
+      <div class="lbl">Followers / Subscribers</div>
+      <div class="note">from zero</div>
+    </div>
+    <div class="hero-card">
+      <div class="num">171<small>K hrs</small></div>
+      <div class="lbl">YouTube Watch Time</div>
+      <div class="note">~19.5 years of viewing</div>
+    </div>
+    <div class="hero-card dark">
+      <div class="num">8:36</div>
+      <div class="lbl">Avg. View Duration (YT AR)</div>
+      <div class="note">deep attention, not scroll-past</div>
     </div>
     <div class="hero-card">
       <div class="num">670<small>K+</small></div>
-      <div class="lbl">Total Engagements</div>
-      <div class="note">likes, comments, saves, shares, reposts</div>
-    </div>
-    <div class="hero-card">
-      <div class="num">8.4<small>M</small></div>
-      <div class="lbl">Facebook Views Alone</div>
-      <div class="note">strongest single platform</div>
+      <div class="lbl">Social Engagements</div>
+      <div class="note">likes, comments, saves, shares</div>
     </div>
   </div>
 
   <!-- Main Grid -->
   <div class="grid">
 
-    <!-- Col 1: Platform Breakdown + Growth -->
+    <!-- Col 1: Platform Breakdown + Top Episodes -->
     <div class="col">
       <div>
-        <div class="section-title">Views & Followers by Platform</div>
+        <div class="section-title">Views, Followers & Watch Time by Platform</div>
         <table class="ptable">
           <tr>
             <th>Platform</th>
             <th>Views</th>
             <th>Followers</th>
-            <th>Engagements</th>
+            <th>Watch (hrs)</th>
+          </tr>
+          <tr>
+            <td class="pname">YouTube <span class="lang">AR</span></td>
+            <td class="views">1,109,503</td>
+            <td>20,972</td>
+            <td>111,471</td>
+          </tr>
+          <tr>
+            <td class="pname">YouTube <span class="lang">EN</span></td>
+            <td class="views">150,564</td>
+            <td>3,201</td>
+            <td>59,500</td>
           </tr>
           <tr>
             <td class="pname">Facebook <span class="lang">AR</span></td>
             <td class="views">8,384,478</td>
             <td>67,572</td>
-            <td>214,607</td>
+            <td>&mdash;</td>
           </tr>
           <tr>
             <td class="pname">TikTok <span class="lang">AR</span></td>
             <td class="views">3,367,000</td>
             <td>24,600</td>
-            <td>173,507</td>
+            <td>&mdash;</td>
           </tr>
           <tr>
             <td class="pname">Instagram <span class="lang">AR</span></td>
             <td class="views">2,779,160</td>
             <td>12,106</td>
-            <td>169,049</td>
+            <td>&mdash;</td>
           </tr>
           <tr>
             <td class="pname">Instagram <span class="lang">EN</span></td>
             <td class="views">874,709</td>
             <td>2,875</td>
-            <td>87,675</td>
+            <td>&mdash;</td>
           </tr>
           <tr>
             <td class="pname">TikTok <span class="lang">EN</span></td>
             <td class="views">248,200</td>
             <td>2,391</td>
-            <td>21,484</td>
+            <td>&mdash;</td>
           </tr>
           <tr>
             <td class="pname">LinkedIn <span class="lang">EN/AR</span></td>
             <td class="views">236,239</td>
             <td>8,818</td>
-            <td>2,722</td>
+            <td>&mdash;</td>
           </tr>
           <tr class="total-row">
             <td>Total</td>
-            <td>15,889,786</td>
-            <td>118,362</td>
-            <td>669,044</td>
+            <td>17,149,853</td>
+            <td>142,535</td>
+            <td>170,971</td>
           </tr>
         </table>
       </div>
 
       <div>
-        <div class="section-title">Month-over-Month Growth</div>
-        <div class="growth-row">
-          <div class="growth-label">IG Accounts Reached <span class="lang">AR</span></div>
-          <div class="growth-val">+218%</div>
-          <div class="growth-period">Month 2</div>
+        <div class="section-title">Top YouTube Episodes (AR) — by Views</div>
+        <div class="ep-row">
+          <div class="ep-title">Sharia & Modern Law — @ba...</div>
+          <div class="ep-views">296K</div>
+          <div class="ep-hours">2,116 hrs</div>
         </div>
-        <div class="growth-row">
-          <div class="growth-label">IG Views <span class="lang">EN</span></div>
-          <div class="growth-val">+570%</div>
-          <div class="growth-period">Month 2</div>
+        <div class="ep-row">
+          <div class="ep-title">7 June 2026 Episode</div>
+          <div class="ep-views">207K</div>
+          <div class="ep-hours">1,382 hrs</div>
         </div>
-        <div class="growth-row">
-          <div class="growth-label">TikTok Views <span class="lang">EN</span></div>
-          <div class="growth-val">+916%</div>
-          <div class="growth-period">Month 3</div>
+        <div class="ep-row">
+          <div class="ep-title">How Money Works — Dr. Omar El-Sheneity</div>
+          <div class="ep-views">126K</div>
+          <div class="ep-hours">27,579 hrs</div>
         </div>
-        <div class="growth-row">
-          <div class="growth-label">TikTok Followers <span class="lang">EN</span></div>
-          <div class="growth-val">+1,000%</div>
-          <div class="growth-period">Month 3</div>
+        <div class="ep-row">
+          <div class="ep-title">Entrepreneurship — Mohamed Abu El-Naga</div>
+          <div class="ep-views">94K</div>
+          <div class="ep-hours">23,852 hrs</div>
         </div>
-        <div class="growth-row">
-          <div class="growth-label">LinkedIn Impressions</div>
-          <div class="growth-val">+573%</div>
-          <div class="growth-period">Month 1</div>
+        <div class="ep-row">
+          <div class="ep-title">Islamic Economics — Dr. Basem Elewa</div>
+          <div class="ep-views">64K</div>
+          <div class="ep-hours">18,048 hrs</div>
+        </div>
+        <div class="ep-row">
+          <div class="ep-title">Iraq: Oil & Wars — Shwan T. Ibrahim</div>
+          <div class="ep-views">47K</div>
+          <div class="ep-hours">11,704 hrs</div>
+        </div>
+        <div class="ep-row" style="border-bottom: none;">
+          <div class="ep-title" style="color: #888; font-style: italic;">+ 10 more episodes</div>
+          <div class="ep-views" style="color: #888;">270K</div>
+          <div class="ep-hours" style="color: #888;">26,790 hrs</div>
         </div>
       </div>
     </div>
 
-    <!-- Col 2: Geography -->
+    <!-- Col 2: Geography + Growth -->
     <div class="col">
       <div>
-        <div class="section-title">Top Countries &mdash; Arabic Channels</div>
+        <div class="section-title">Top Countries — Arabic (all platforms + YouTube)</div>
         <div class="geo-row">
           <div class="geo-flag">&#127466;&#127468;</div>
           <div class="geo-name">Egypt</div>
           <div class="geo-bar-wrap"><div class="geo-bar" style="width:90%"></div></div>
-          <div class="geo-pct">~50%</div>
+          <div class="geo-pct">#1</div>
         </div>
-        <div class="geo-note">Cairo & Alexandria dominate</div>
+        <div class="geo-sub">33.8% of YT views &nbsp;|&nbsp; 50K hrs watch time &nbsp;|&nbsp; avg 10:28 per view</div>
         <div class="geo-row">
           <div class="geo-flag">&#127480;&#127462;</div>
           <div class="geo-name">Saudi Arabia</div>
-          <div class="geo-bar-wrap"><div class="geo-bar" style="width:24%"></div></div>
-          <div class="geo-pct">~12%</div>
+          <div class="geo-bar-wrap"><div class="geo-bar" style="width:50%"></div></div>
+          <div class="geo-pct">#2</div>
         </div>
-        <div class="geo-note">Riyadh, Jeddah</div>
+        <div class="geo-sub">17.8% of YT views &nbsp;|&nbsp; 14.5K hrs watch time</div>
+        <div class="geo-row">
+          <div class="geo-flag">&#127470;&#127478;</div>
+          <div class="geo-name">Iraq</div>
+          <div class="geo-bar-wrap"><div class="geo-bar" style="width:20%"></div></div>
+          <div class="geo-pct">#3</div>
+        </div>
+        <div class="geo-sub">6.3% of YT views &nbsp;|&nbsp; avg 8:26 per view</div>
         <div class="geo-row">
           <div class="geo-flag">&#127462;&#127466;</div>
           <div class="geo-name">UAE</div>
           <div class="geo-bar-wrap"><div class="geo-bar" style="width:16%"></div></div>
-          <div class="geo-pct">~7%</div>
+          <div class="geo-pct">#4</div>
         </div>
-        <div class="geo-note">Dubai, Abu Dhabi</div>
-        <div class="geo-row">
-          <div class="geo-flag">&#127465;&#127487;</div>
-          <div class="geo-name">Algeria</div>
-          <div class="geo-bar-wrap"><div class="geo-bar" style="width:10%"></div></div>
-          <div class="geo-pct">~5%</div>
-        </div>
-        <div class="geo-row" style="margin-top: 2px;">
-          <div class="geo-flag">&#127471;&#127476;</div>
-          <div class="geo-name">Jordan</div>
-          <div class="geo-bar-wrap"><div class="geo-bar" style="width:8%"></div></div>
-          <div class="geo-pct">~4%</div>
-        </div>
+        <div class="geo-sub">4.9% of YT views &nbsp;|&nbsp; avg 9:10 per view</div>
+        <div style="font-size: 7.5px; color: #888; margin-top: 2px; margin-left: 23px;">Also: Jordan, Algeria, Kuwait, Morocco, Germany, Syria + 12 more countries</div>
       </div>
 
       <div>
-        <div class="section-title">Top Countries &mdash; English Channels</div>
+        <div class="section-title">Top Countries — English (all platforms + YouTube)</div>
         <div class="geo-row">
           <div class="geo-flag">&#127482;&#127480;</div>
           <div class="geo-name">United States</div>
@@ -531,32 +620,46 @@
         <div class="geo-row">
           <div class="geo-flag">&#127462;&#127466;</div>
           <div class="geo-name">UAE</div>
-          <div class="geo-bar-wrap"><div class="geo-bar" style="width:24%"></div></div>
+          <div class="geo-bar-wrap"><div class="geo-bar" style="width:22%"></div></div>
           <div class="geo-pct">~8%</div>
         </div>
         <div class="geo-row">
           <div class="geo-flag">&#127468;&#127463;</div>
-          <div class="geo-name">United Kingdom</div>
-          <div class="geo-bar-wrap"><div class="geo-bar" style="width:18%"></div></div>
-          <div class="geo-pct">~6%</div>
-        </div>
-        <div class="geo-row">
-          <div class="geo-flag">&#127464;&#127462;</div>
-          <div class="geo-name">Canada</div>
-          <div class="geo-bar-wrap"><div class="geo-bar" style="width:14%"></div></div>
-          <div class="geo-pct">~5%</div>
+          <div class="geo-name">UK / Canada</div>
+          <div class="geo-bar-wrap"><div class="geo-bar" style="width:16%"></div></div>
+          <div class="geo-pct">~10%</div>
         </div>
       </div>
 
-      <div class="callout">
-        <p>The Arabic channel captures the <strong>MENA heartland</strong> (Egypt, KSA, UAE, Algeria, Jordan). The English channel reaches the <strong>global diaspora + Western markets</strong> (US, UK, Canada). Together, they cover 15+ countries with meaningful audience share.</p>
+      <div>
+        <div class="section-title">Month-over-Month Growth</div>
+        <div class="growth-row">
+          <div class="growth-label">TikTok EN Views</div>
+          <div class="growth-val">+916%</div>
+          <div class="growth-period">Month 3</div>
+        </div>
+        <div class="growth-row">
+          <div class="growth-label">Instagram EN Views</div>
+          <div class="growth-val">+570%</div>
+          <div class="growth-period">Month 2</div>
+        </div>
+        <div class="growth-row">
+          <div class="growth-label">LinkedIn Impressions</div>
+          <div class="growth-val">+573%</div>
+          <div class="growth-period">Month 1</div>
+        </div>
+        <div class="growth-row">
+          <div class="growth-label">IG AR Accounts Reached</div>
+          <div class="growth-val">+218%</div>
+          <div class="growth-period">Month 2</div>
+        </div>
       </div>
     </div>
 
-    <!-- Col 3: Demographics + What it means -->
+    <!-- Col 3: Demographics + YouTube EN + Summary -->
     <div class="col">
       <div>
-        <div class="section-title">Age Distribution (All Platforms)</div>
+        <div class="section-title">Audience Demographics (All Platforms)</div>
         <div class="demo-row">
           <div class="demo-label">25-34</div>
           <div class="demo-bar-bg"><div class="demo-bar" style="width:42%"></div></div>
@@ -577,12 +680,7 @@
           <div class="demo-bar-bg"><div class="demo-bar" style="width:10%"></div></div>
           <div class="demo-val">~10%</div>
         </div>
-        <div class="demo-row">
-          <div class="demo-label">55+</div>
-          <div class="demo-bar-bg"><div class="demo-bar" style="width:5%"></div></div>
-          <div class="demo-val">~5%</div>
-        </div>
-        <div style="margin-top: 8px;">
+        <div style="margin-top: 4px;">
           <div class="gender-row">
             <div class="gender-item"><span>76%</span> Male</div>
             <div class="gender-item"><span>24%</span> Female</div>
@@ -591,16 +689,39 @@
       </div>
 
       <div>
-        <div class="section-title">Top-Performing Guest Content</div>
-        <div style="font-size: 9px; line-height: 1.6; color: #444;">
-          <div style="margin-bottom: 5px;"><strong>AR:</strong> Mohamad Nagaty reel (IG), Sheikh Khaled teaser 255K organic views (TikTok), Dr. Basem Elewa (FB)</div>
-          <div style="margin-bottom: 5px;"><strong>EN:</strong> Dr. Roy Casagranda on Xenophobia &amp; Nationalism (182K views), Dr. Angel Wesley on Islam (483K views on IG, 107K on TikTok)</div>
-          <div><strong>LinkedIn:</strong> 8,818 followers with +423% new follower growth, 236K impressions</div>
+        <div class="section-title">YouTube English — Highlights</div>
+        <div class="yt-stat-row">
+          <div class="yt-stat">
+            <div class="num">150.6<small>K</small></div>
+            <div class="lbl">Views</div>
+          </div>
+          <div class="yt-stat">
+            <div class="num">59.5<small>K</small></div>
+            <div class="lbl">Watch Hrs</div>
+          </div>
+          <div class="yt-stat">
+            <div class="num">3.2<small>K</small></div>
+            <div class="lbl">Subs</div>
+          </div>
+        </div>
+        <div style="font-size: 8.5px; color: #444; line-height: 1.45;">
+          <strong>Top:</strong> "Why Civilizations Fall?" — 88.5K views<br>
+          <strong>Audience:</strong> 77.5% new viewers &nbsp;|&nbsp; 18.3K monthly active<br>
+          <strong>Shorts:</strong> 43.2K views, 57.4% stayed to watch
         </div>
       </div>
 
-      <div class="callout" style="background: #1d1d1f; border-radius: 6px;">
-        <p style="color: rgba(255,255,255,0.85);"><strong style="color: #fff;">The bottom line:</strong> In under 4 months, with zero paid promotion, The Mal Show built a bilingual media property reaching <strong style="color: #fff;">15.9 million views</strong> and <strong style="color: #fff;">118K followers</strong> across 6 platforms. The audience is <strong style="color: #fff;">72% aged 25&ndash;44</strong>, concentrated in high-value MENA and Western markets. The growth curve is still accelerating.</p>
+      <div>
+        <div class="section-title">Top Guest Episodes (EN — Social)</div>
+        <div style="font-size: 8.5px; line-height: 1.5; color: #444;">
+          <div style="margin-bottom: 2px;">Dr. Angel Wesley on Islam — <strong>483K views</strong> (IG) + 107K (TikTok)</div>
+          <div style="margin-bottom: 2px;">Dr. Roy Casagranda — Xenophobia — <strong>182K views</strong></div>
+          <div>Jad Antoun "Unicorns" — <strong>10K views</strong> (TikTok)</div>
+        </div>
+      </div>
+
+      <div class="callout dark">
+        <p>In <strong>under 4 months</strong>, with <strong>zero paid promotion</strong>, The Mal Show built a bilingual media property reaching <strong>17.2M views</strong>, <strong>142K followers</strong>, and <strong>171,000 hours of watch time</strong> across 8 channels on 7 platforms. <strong>72% of the audience is aged 25&ndash;44</strong>, concentrated across 22+ countries led by Egypt, Saudi Arabia, Iraq, UAE, and the US. The growth curve is still accelerating.</p>
       </div>
     </div>
 
@@ -609,7 +730,7 @@
   <!-- Footer -->
   <div class="footer">
     <div>The Mal Show &copy; 2026 &nbsp;|&nbsp; Confidential</div>
-    <div>All metrics organic (zero paid promotion) &nbsp;|&nbsp; Source: Native platform analytics (Instagram, Facebook, TikTok, LinkedIn)</div>
+    <div>All metrics organic ($0 ad spend) &nbsp;|&nbsp; Source: YouTube Studio, Instagram, Facebook, TikTok & LinkedIn native analytics</div>
   </div>
 
 </div>
