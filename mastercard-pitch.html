@@ -3,602 +3,604 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Mal Show — Sponsorship Deck</title>
+<title>The Mal Show — Performance Report</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  @page {
-    size: A4 landscape;
-    margin: 0;
-  }
+  @page { size: A4 landscape; margin: 0; }
 
   body {
-    font-family: 'Inter', -apple-system, sans-serif;
+    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
     background: #fff;
-    color: #1a1a2e;
+    color: #1d1d1f;
     width: 297mm;
     height: 210mm;
     overflow: hidden;
-    position: relative;
   }
 
   .page {
     width: 297mm;
     height: 210mm;
-    padding: 18mm 22mm 14mm 22mm;
-    position: relative;
+    padding: 14mm 20mm 12mm 20mm;
     display: flex;
     flex-direction: column;
   }
 
-  /* Top bar accent */
-  .accent-bar {
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #EB001B 0%, #FF5F00 50%, #F79E1B 100%);
-  }
-
-  /* Header */
+  /* ---- Header ---- */
   .header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #1d1d1f;
     margin-bottom: 12px;
   }
 
-  .brand h1 {
-    font-size: 26px;
-    font-weight: 900;
-    letter-spacing: -0.5px;
-    color: #0f0f23;
+  .header-left h1 {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.4px;
   }
 
-  .brand .tagline {
-    font-size: 11px;
-    font-weight: 500;
+  .header-left .sub {
+    font-size: 10px;
     color: #666;
     margin-top: 2px;
-    letter-spacing: 0.3px;
   }
 
   .header-right {
     text-align: right;
+    font-size: 9.5px;
+    color: #888;
+    line-height: 1.5;
   }
 
-  .header-right .period {
-    font-size: 10px;
-    font-weight: 600;
-    color: #EB001B;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+  .header-right strong {
+    color: #1d1d1f;
   }
 
-  .header-right .date {
-    font-size: 10px;
-    color: #999;
-    margin-top: 1px;
-  }
-
-  /* Hero stat banner */
-  .hero {
-    background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%);
-    border-radius: 10px;
-    padding: 14px 24px;
+  /* ---- Hero row ---- */
+  .hero-row {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 14px;
+    gap: 10px;
+    margin-bottom: 12px;
   }
 
-  .hero-stat {
-    text-align: center;
+  .hero-card {
     flex: 1;
+    background: #f5f5f7;
+    border-radius: 8px;
+    padding: 11px 14px;
+    text-align: center;
   }
 
-  .hero-stat .number {
-    font-size: 30px;
+  .hero-card .num {
+    font-size: 26px;
     font-weight: 800;
-    color: #fff;
     letter-spacing: -1px;
+    color: #1d1d1f;
   }
 
-  .hero-stat .number span {
-    color: #F79E1B;
+  .hero-card .num small {
+    font-size: 14px;
+    font-weight: 700;
   }
 
-  .hero-stat .label {
-    font-size: 9px;
+  .hero-card .lbl {
+    font-size: 8.5px;
     font-weight: 600;
-    color: rgba(255,255,255,0.55);
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
+    color: #888;
     margin-top: 2px;
   }
 
-  .hero-divider {
-    width: 1px;
-    height: 40px;
-    background: rgba(255,255,255,0.15);
-    margin: 0 8px;
+  .hero-card.dark {
+    background: #1d1d1f;
   }
 
-  /* Main grid */
-  .content-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 14px;
-    flex: 1;
+  .hero-card.dark .num {
+    color: #fff;
   }
 
-  .card {
-    background: #fafafa;
-    border-radius: 8px;
-    padding: 14px 16px;
-    border: 1px solid #eee;
+  .hero-card.dark .lbl {
+    color: rgba(255,255,255,0.5);
   }
 
-  .card h3 {
-    font-size: 9px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #EB001B;
-    margin-bottom: 10px;
-  }
-
-  /* Audience card */
-  .country-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 7px;
-  }
-
-  .country-flag {
-    font-size: 16px;
-    margin-right: 8px;
-    width: 22px;
-    text-align: center;
-  }
-
-  .country-info {
-    flex: 1;
-  }
-
-  .country-name {
-    font-size: 11px;
+  .hero-card .note {
+    font-size: 8px;
+    color: #2eac6a;
     font-weight: 600;
-    color: #1a1a2e;
-  }
-
-  .country-detail {
-    font-size: 8.5px;
-    color: #888;
     margin-top: 1px;
   }
 
-  .country-pct {
-    font-size: 13px;
-    font-weight: 700;
-    color: #0f0f23;
+  .hero-card.dark .note {
+    color: #5dd99a;
   }
 
-  /* Demographics */
+  /* ---- Main 3-col grid ---- */
+  .grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr;
+    gap: 12px;
+    flex: 1;
+  }
+
+  .col { display: flex; flex-direction: column; gap: 10px; }
+
+  .section-title {
+    font-size: 8.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: #1d1d1f;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* ---- Platform table ---- */
+  .ptable { width: 100%; border-collapse: collapse; }
+
+  .ptable th {
+    font-size: 7.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #999;
+    text-align: left;
+    padding: 0 0 4px 0;
+  }
+
+  .ptable th:not(:first-child) { text-align: right; }
+
+  .ptable td {
+    font-size: 9.5px;
+    padding: 4px 0;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .ptable td:not(:first-child) {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .ptable .pname {
+    font-weight: 600;
+    color: #1d1d1f;
+  }
+
+  .ptable .lang {
+    font-size: 8px;
+    color: #999;
+    font-weight: 400;
+  }
+
+  .ptable .views { font-weight: 700; }
+
+  .ptable .total-row td {
+    border-top: 2px solid #1d1d1f;
+    font-weight: 800;
+    padding-top: 5px;
+    font-size: 10px;
+  }
+
+  /* ---- Country rows ---- */
+  .geo-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .geo-flag {
+    font-size: 14px;
+    width: 20px;
+    margin-right: 6px;
+  }
+
+  .geo-name {
+    font-size: 9.5px;
+    font-weight: 600;
+    flex: 1;
+  }
+
+  .geo-bar-wrap {
+    width: 80px;
+    height: 6px;
+    background: #eee;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-right: 6px;
+  }
+
+  .geo-bar {
+    height: 100%;
+    background: #1d1d1f;
+    border-radius: 3px;
+  }
+
+  .geo-pct {
+    font-size: 9px;
+    font-weight: 700;
+    width: 28px;
+    text-align: right;
+  }
+
+  .geo-note {
+    font-size: 8px;
+    color: #888;
+    margin-left: 26px;
+    margin-top: -2px;
+    margin-bottom: 4px;
+  }
+
+  /* ---- Demo bars ---- */
   .demo-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
   }
 
   .demo-label {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 500;
+    width: 36px;
     color: #555;
   }
 
-  .demo-bar-container {
+  .demo-bar-bg {
     flex: 1;
-    height: 7px;
-    background: #e8e8e8;
+    height: 8px;
+    background: #f0f0f0;
     border-radius: 4px;
-    margin: 0 10px;
     overflow: hidden;
+    margin-right: 6px;
   }
 
   .demo-bar {
     height: 100%;
+    background: #1d1d1f;
     border-radius: 4px;
-    background: linear-gradient(90deg, #EB001B, #F79E1B);
   }
 
-  .demo-value {
-    font-size: 10px;
+  .demo-val {
+    font-size: 9px;
     font-weight: 700;
-    color: #1a1a2e;
-    min-width: 30px;
+    width: 28px;
     text-align: right;
   }
 
-  /* Platform breakdown */
-  .platform-row {
+  /* ---- Growth sparklines (text-based) ---- */
+  .growth-row {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 5px 0;
     border-bottom: 1px solid #f0f0f0;
   }
 
-  .platform-row:last-child {
-    border-bottom: none;
-  }
+  .growth-row:last-child { border-bottom: none; }
 
-  .platform-name {
-    font-size: 10px;
-    font-weight: 600;
-    color: #1a1a2e;
-    width: 75px;
-  }
-
-  .platform-views {
-    font-size: 10px;
-    font-weight: 700;
-    color: #0f0f23;
-    text-align: right;
-    width: 55px;
-  }
-
-  .platform-followers {
-    font-size: 10px;
-    color: #666;
-    text-align: right;
-    width: 55px;
-  }
-
-  .platform-header {
-    font-size: 8px;
-    font-weight: 600;
-    color: #999;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  /* Growth card */
-  .growth-item {
-    margin-bottom: 9px;
-  }
-
-  .growth-metric {
-    font-size: 10px;
-    font-weight: 500;
-    color: #555;
-    margin-bottom: 2px;
-  }
-
-  .growth-value {
-    font-size: 18px;
-    font-weight: 800;
-    color: #0f0f23;
-  }
-
-  .growth-value .up {
-    color: #00a651;
-    font-size: 12px;
-    font-weight: 600;
-  }
-
-  /* The ask */
-  .the-ask {
-    margin-top: 3px;
-  }
-
-  .the-ask h3 {
-    color: #EB001B;
-  }
-
-  .ask-text {
-    font-size: 10px;
-    line-height: 1.55;
-    color: #333;
-  }
-
-  .ask-text strong {
-    color: #0f0f23;
-  }
-
-  /* Value prop */
-  .value-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 7px;
-  }
-
-  .value-icon {
-    width: 18px;
-    height: 18px;
-    background: linear-gradient(135deg, #EB001B, #F79E1B);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .growth-label {
     font-size: 9px;
-    color: #fff;
-    margin-right: 8px;
-    flex-shrink: 0;
-    margin-top: 1px;
+    color: #555;
+    flex: 1;
   }
 
-  .value-text {
-    font-size: 9.5px;
-    line-height: 1.45;
+  .growth-val {
+    font-size: 13px;
+    font-weight: 800;
+    color: #2eac6a;
+    text-align: right;
+  }
+
+  .growth-period {
+    font-size: 7.5px;
+    color: #aaa;
+    text-align: right;
+    width: 40px;
+    margin-left: 4px;
+  }
+
+  /* ---- Callout box ---- */
+  .callout {
+    background: #f5f5f7;
+    border-radius: 6px;
+    padding: 10px 12px;
+  }
+
+  .callout p {
+    font-size: 9px;
+    line-height: 1.5;
     color: #444;
   }
 
-  .value-text strong {
-    color: #0f0f23;
-    font-weight: 700;
-  }
+  .callout strong { color: #1d1d1f; }
 
-  /* Footer */
-  .footer {
+  .gender-row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    padding-top: 8px;
-    border-top: 1px solid #eee;
+    gap: 12px;
+    margin-top: 2px;
   }
 
-  .footer-left {
-    font-size: 8.5px;
-    color: #aaa;
-  }
-
-  .footer-right {
-    font-size: 8.5px;
-    color: #aaa;
-  }
-
-  .footer-right a {
-    color: #EB001B;
-    text-decoration: none;
+  .gender-item {
+    font-size: 9.5px;
     font-weight: 600;
   }
 
-  .highlight-box {
-    background: linear-gradient(135deg, rgba(235,0,27,0.06), rgba(247,158,27,0.06));
-    border-left: 3px solid #EB001B;
-    border-radius: 0 6px 6px 0;
-    padding: 10px 12px;
+  .gender-item span {
+    font-size: 15px;
+    font-weight: 800;
+    color: #1d1d1f;
+    margin-right: 2px;
+  }
+
+  /* ---- Footer ---- */
+  .footer {
     margin-top: 8px;
-  }
-
-  .highlight-box p {
-    font-size: 9.5px;
-    line-height: 1.5;
-    color: #333;
-  }
-
-  .highlight-box strong {
-    color: #EB001B;
-  }
-
-  .col-span-2 {
-    grid-column: span 1;
-  }
-
-  .section-subtitle {
+    padding-top: 6px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
     font-size: 8px;
-    color: #aaa;
-    font-weight: 500;
-    margin-bottom: 8px;
-    letter-spacing: 0.3px;
+    color: #bbb;
   }
-
 </style>
 </head>
 <body>
 <div class="page">
-  <div class="accent-bar"></div>
 
   <!-- Header -->
   <div class="header">
-    <div class="brand">
-      <h1>The Mal Show</h1>
-      <div class="tagline">Bilingual Podcast (Arabic + English) &nbsp;|&nbsp; Social-First Media Brand</div>
+    <div class="header-left">
+      <h1>The Mal Show &mdash; Performance Report</h1>
+      <div class="sub">Bilingual Podcast &nbsp;|&nbsp; Arabic Channel + English Channel &nbsp;|&nbsp; 6 Social Platforms</div>
     </div>
     <div class="header-right">
-      <div class="period">Partnership Opportunity</div>
-      <div class="date">Data as of June 30, 2026 &nbsp;|&nbsp; Launched Feb–Apr 2026</div>
+      <strong>Reporting Period:</strong> Launch &rarr; June 30, 2026<br>
+      Arabic launched Apr 6 &nbsp;|&nbsp; English launched Feb 23
     </div>
   </div>
 
   <!-- Hero Stats -->
-  <div class="hero">
-    <div class="hero-stat">
-      <div class="number">15.9<span>M+</span></div>
-      <div class="label">Total Views</div>
+  <div class="hero-row">
+    <div class="hero-card dark">
+      <div class="num">15.9<small>M+</small></div>
+      <div class="lbl">Total Views</div>
+      <div class="note">all organic &mdash; $0 ad spend</div>
     </div>
-    <div class="hero-divider"></div>
-    <div class="hero-stat">
-      <div class="number">118<span>K+</span></div>
-      <div class="label">Followers</div>
+    <div class="hero-card">
+      <div class="num">118<small>K+</small></div>
+      <div class="lbl">Total Followers</div>
+      <div class="note">from zero across all platforms</div>
     </div>
-    <div class="hero-divider"></div>
-    <div class="hero-stat">
-      <div class="number">670<span>K+</span></div>
-      <div class="label">Engagements</div>
+    <div class="hero-card">
+      <div class="num">670<small>K+</small></div>
+      <div class="lbl">Total Engagements</div>
+      <div class="note">likes, comments, saves, shares, reposts</div>
     </div>
-    <div class="hero-divider"></div>
-    <div class="hero-stat">
-      <div class="number">&lt;4 <span>months</span></div>
-      <div class="label">Since Launch</div>
-    </div>
-    <div class="hero-divider"></div>
-    <div class="hero-stat">
-      <div class="number">6 <span>platforms</span></div>
-      <div class="label">Instagram · Facebook · TikTok · LinkedIn</div>
+    <div class="hero-card">
+      <div class="num">8.4<small>M</small></div>
+      <div class="lbl">Facebook Views Alone</div>
+      <div class="note">strongest single platform</div>
     </div>
   </div>
 
-  <!-- Content Grid -->
-  <div class="content-grid">
+  <!-- Main Grid -->
+  <div class="grid">
 
-    <!-- Column 1: Audience & Geography -->
-    <div class="card">
-      <h3>Where Your Cardholders Are</h3>
-      <p class="section-subtitle">Top audience by country — all platforms combined</p>
-
-      <div class="country-row">
-        <div class="country-flag">&#127466;&#127468;</div>
-        <div class="country-info">
-          <div class="country-name">Egypt</div>
-          <div class="country-detail">Cairo, Alexandria — largest Arab market</div>
-        </div>
-        <div class="country-pct">#1</div>
+    <!-- Col 1: Platform Breakdown + Growth -->
+    <div class="col">
+      <div>
+        <div class="section-title">Views & Followers by Platform</div>
+        <table class="ptable">
+          <tr>
+            <th>Platform</th>
+            <th>Views</th>
+            <th>Followers</th>
+            <th>Engagements</th>
+          </tr>
+          <tr>
+            <td class="pname">Facebook <span class="lang">AR</span></td>
+            <td class="views">8,384,478</td>
+            <td>67,572</td>
+            <td>214,607</td>
+          </tr>
+          <tr>
+            <td class="pname">TikTok <span class="lang">AR</span></td>
+            <td class="views">3,367,000</td>
+            <td>24,600</td>
+            <td>173,507</td>
+          </tr>
+          <tr>
+            <td class="pname">Instagram <span class="lang">AR</span></td>
+            <td class="views">2,779,160</td>
+            <td>12,106</td>
+            <td>169,049</td>
+          </tr>
+          <tr>
+            <td class="pname">Instagram <span class="lang">EN</span></td>
+            <td class="views">874,709</td>
+            <td>2,875</td>
+            <td>87,675</td>
+          </tr>
+          <tr>
+            <td class="pname">TikTok <span class="lang">EN</span></td>
+            <td class="views">248,200</td>
+            <td>2,391</td>
+            <td>21,484</td>
+          </tr>
+          <tr>
+            <td class="pname">LinkedIn <span class="lang">EN/AR</span></td>
+            <td class="views">236,239</td>
+            <td>8,818</td>
+            <td>2,722</td>
+          </tr>
+          <tr class="total-row">
+            <td>Total</td>
+            <td>15,889,786</td>
+            <td>118,362</td>
+            <td>669,044</td>
+          </tr>
+        </table>
       </div>
 
-      <div class="country-row">
-        <div class="country-flag">&#127480;&#127462;</div>
-        <div class="country-info">
-          <div class="country-name">Saudi Arabia</div>
-          <div class="country-detail">Riyadh, Jeddah — highest digital spend per capita</div>
+      <div>
+        <div class="section-title">Month-over-Month Growth</div>
+        <div class="growth-row">
+          <div class="growth-label">IG Accounts Reached <span class="lang">AR</span></div>
+          <div class="growth-val">+218%</div>
+          <div class="growth-period">Month 2</div>
         </div>
-        <div class="country-pct">#2</div>
-      </div>
-
-      <div class="country-row">
-        <div class="country-flag">&#127462;&#127466;</div>
-        <div class="country-info">
-          <div class="country-name">UAE</div>
-          <div class="country-detail">Dubai, Abu Dhabi — premium consumer hub</div>
+        <div class="growth-row">
+          <div class="growth-label">IG Views <span class="lang">EN</span></div>
+          <div class="growth-val">+570%</div>
+          <div class="growth-period">Month 2</div>
         </div>
-        <div class="country-pct">#3</div>
-      </div>
-
-      <div class="country-row">
-        <div class="country-flag">&#127482;&#127480;</div>
-        <div class="country-info">
-          <div class="country-name">USA</div>
-          <div class="country-detail">MENA diaspora + English-first audience</div>
+        <div class="growth-row">
+          <div class="growth-label">TikTok Views <span class="lang">EN</span></div>
+          <div class="growth-val">+916%</div>
+          <div class="growth-period">Month 3</div>
         </div>
-        <div class="country-pct">#4</div>
-      </div>
-
-      <div class="highlight-box">
-        <p><strong>Mastercard alignment:</strong> KSA and UAE are top-3 markets for contactless payment adoption in the Middle East. Our audience lives where Mastercard is growing fastest.</p>
-      </div>
-    </div>
-
-    <!-- Column 2: Demographics + Platforms -->
-    <div class="card">
-      <h3>Audience Profile</h3>
-      <p class="section-subtitle">The spending demographic — across all channels</p>
-
-      <div class="demo-row">
-        <div class="demo-label">25–34</div>
-        <div class="demo-bar-container"><div class="demo-bar" style="width: 42%"></div></div>
-        <div class="demo-value">~42%</div>
-      </div>
-      <div class="demo-row">
-        <div class="demo-label">35–44</div>
-        <div class="demo-bar-container"><div class="demo-bar" style="width: 30%"></div></div>
-        <div class="demo-value">~30%</div>
-      </div>
-      <div class="demo-row">
-        <div class="demo-label">45–54</div>
-        <div class="demo-bar-container"><div class="demo-bar" style="width: 13%"></div></div>
-        <div class="demo-value">~13%</div>
-      </div>
-      <div class="demo-row">
-        <div class="demo-label">18–24</div>
-        <div class="demo-bar-container"><div class="demo-bar" style="width: 10%"></div></div>
-        <div class="demo-value">~10%</div>
-      </div>
-
-      <div style="margin: 10px 0 6px; border-top: 1px solid #eee; padding-top: 8px;">
-        <div style="font-size: 8px; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Platform Breakdown</div>
-        <div class="platform-row" style="border-bottom: 1px solid #eee; padding-bottom: 4px; margin-bottom: 2px;">
-          <div class="platform-header" style="width: 75px;">Platform</div>
-          <div class="platform-header" style="width: 55px; text-align: right;">Views</div>
-          <div class="platform-header" style="width: 55px; text-align: right;">Followers</div>
+        <div class="growth-row">
+          <div class="growth-label">TikTok Followers <span class="lang">EN</span></div>
+          <div class="growth-val">+1,000%</div>
+          <div class="growth-period">Month 3</div>
         </div>
-        <div class="platform-row">
-          <div class="platform-name">Facebook AR</div>
-          <div class="platform-views">8.4M</div>
-          <div class="platform-followers">67.6K</div>
-        </div>
-        <div class="platform-row">
-          <div class="platform-name">TikTok AR</div>
-          <div class="platform-views">3.4M</div>
-          <div class="platform-followers">24.6K</div>
-        </div>
-        <div class="platform-row">
-          <div class="platform-name">Instagram AR</div>
-          <div class="platform-views">2.8M</div>
-          <div class="platform-followers">12.1K</div>
-        </div>
-        <div class="platform-row">
-          <div class="platform-name">Instagram EN</div>
-          <div class="platform-views">875K</div>
-          <div class="platform-followers">2.9K</div>
-        </div>
-        <div class="platform-row">
-          <div class="platform-name">TikTok EN</div>
-          <div class="platform-views">248K</div>
-          <div class="platform-followers">2.4K</div>
-        </div>
-        <div class="platform-row">
-          <div class="platform-name">LinkedIn</div>
-          <div class="platform-views">236K</div>
-          <div class="platform-followers">8.8K</div>
+        <div class="growth-row">
+          <div class="growth-label">LinkedIn Impressions</div>
+          <div class="growth-val">+573%</div>
+          <div class="growth-period">Month 1</div>
         </div>
       </div>
     </div>
 
-    <!-- Column 3: Growth + The Ask -->
-    <div class="card the-ask">
-      <h3>Explosive Growth Trajectory</h3>
-      <p class="section-subtitle">Month-over-month acceleration</p>
+    <!-- Col 2: Geography -->
+    <div class="col">
+      <div>
+        <div class="section-title">Top Countries &mdash; Arabic Channels</div>
+        <div class="geo-row">
+          <div class="geo-flag">&#127466;&#127468;</div>
+          <div class="geo-name">Egypt</div>
+          <div class="geo-bar-wrap"><div class="geo-bar" style="width:90%"></div></div>
+          <div class="geo-pct">~50%</div>
+        </div>
+        <div class="geo-note">Cairo & Alexandria dominate</div>
+        <div class="geo-row">
+          <div class="geo-flag">&#127480;&#127462;</div>
+          <div class="geo-name">Saudi Arabia</div>
+          <div class="geo-bar-wrap"><div class="geo-bar" style="width:24%"></div></div>
+          <div class="geo-pct">~12%</div>
+        </div>
+        <div class="geo-note">Riyadh, Jeddah</div>
+        <div class="geo-row">
+          <div class="geo-flag">&#127462;&#127466;</div>
+          <div class="geo-name">UAE</div>
+          <div class="geo-bar-wrap"><div class="geo-bar" style="width:16%"></div></div>
+          <div class="geo-pct">~7%</div>
+        </div>
+        <div class="geo-note">Dubai, Abu Dhabi</div>
+        <div class="geo-row">
+          <div class="geo-flag">&#127465;&#127487;</div>
+          <div class="geo-name">Algeria</div>
+          <div class="geo-bar-wrap"><div class="geo-bar" style="width:10%"></div></div>
+          <div class="geo-pct">~5%</div>
+        </div>
+        <div class="geo-row" style="margin-top: 2px;">
+          <div class="geo-flag">&#127471;&#127476;</div>
+          <div class="geo-name">Jordan</div>
+          <div class="geo-bar-wrap"><div class="geo-bar" style="width:8%"></div></div>
+          <div class="geo-pct">~4%</div>
+        </div>
+      </div>
 
-      <div class="growth-item">
-        <div class="growth-metric">Instagram AR — Accounts Reached (Month 2)</div>
-        <div class="growth-value">+218% <span class="up">&#9650;</span></div>
-      </div>
-      <div class="growth-item">
-        <div class="growth-metric">Instagram EN — Views (Month 2)</div>
-        <div class="growth-value">+570% <span class="up">&#9650;</span></div>
-      </div>
-      <div class="growth-item">
-        <div class="growth-metric">TikTok EN — Views (Month 3)</div>
-        <div class="growth-value">+916% <span class="up">&#9650;</span></div>
-      </div>
-      <div class="growth-item">
-        <div class="growth-metric">LinkedIn — Impressions (Month 1)</div>
-        <div class="growth-value">+573% <span class="up">&#9650;</span></div>
+      <div>
+        <div class="section-title">Top Countries &mdash; English Channels</div>
+        <div class="geo-row">
+          <div class="geo-flag">&#127482;&#127480;</div>
+          <div class="geo-name">United States</div>
+          <div class="geo-bar-wrap"><div class="geo-bar" style="width:70%"></div></div>
+          <div class="geo-pct">~25%</div>
+        </div>
+        <div class="geo-row">
+          <div class="geo-flag">&#127466;&#127468;</div>
+          <div class="geo-name">Egypt</div>
+          <div class="geo-bar-wrap"><div class="geo-bar" style="width:40%"></div></div>
+          <div class="geo-pct">~15%</div>
+        </div>
+        <div class="geo-row">
+          <div class="geo-flag">&#127462;&#127466;</div>
+          <div class="geo-name">UAE</div>
+          <div class="geo-bar-wrap"><div class="geo-bar" style="width:24%"></div></div>
+          <div class="geo-pct">~8%</div>
+        </div>
+        <div class="geo-row">
+          <div class="geo-flag">&#127468;&#127463;</div>
+          <div class="geo-name">United Kingdom</div>
+          <div class="geo-bar-wrap"><div class="geo-bar" style="width:18%"></div></div>
+          <div class="geo-pct">~6%</div>
+        </div>
+        <div class="geo-row">
+          <div class="geo-flag">&#127464;&#127462;</div>
+          <div class="geo-name">Canada</div>
+          <div class="geo-bar-wrap"><div class="geo-bar" style="width:14%"></div></div>
+          <div class="geo-pct">~5%</div>
+        </div>
       </div>
 
-      <div style="margin-top: 8px; border-top: 1px solid #eee; padding-top: 10px;">
-        <h3 style="margin-bottom: 6px;">Why Mastercard</h3>
+      <div class="callout">
+        <p>The Arabic channel captures the <strong>MENA heartland</strong> (Egypt, KSA, UAE, Algeria, Jordan). The English channel reaches the <strong>global diaspora + Western markets</strong> (US, UK, Canada). Together, they cover 15+ countries with meaningful audience share.</p>
+      </div>
+    </div>
 
-        <div class="value-item">
-          <div class="value-icon">1</div>
-          <div class="value-text"><strong>72% aged 25–44</strong> — peak earning, spending, and card-adoption years across MENA + US markets</div>
+    <!-- Col 3: Demographics + What it means -->
+    <div class="col">
+      <div>
+        <div class="section-title">Age Distribution (All Platforms)</div>
+        <div class="demo-row">
+          <div class="demo-label">25-34</div>
+          <div class="demo-bar-bg"><div class="demo-bar" style="width:42%"></div></div>
+          <div class="demo-val">~42%</div>
         </div>
-        <div class="value-item">
-          <div class="value-icon">2</div>
-          <div class="value-text"><strong>Bilingual reach</strong> — one brand, two languages; penetrate both Arabic-native and English-speaking diaspora audiences</div>
+        <div class="demo-row">
+          <div class="demo-label">35-44</div>
+          <div class="demo-bar-bg"><div class="demo-bar" style="width:30%"></div></div>
+          <div class="demo-val">~30%</div>
         </div>
-        <div class="value-item">
-          <div class="value-icon">3</div>
-          <div class="value-text"><strong>GCC + Egypt dominance</strong> — our top 3 markets match Mastercard's highest-growth corridors for digital payments</div>
+        <div class="demo-row">
+          <div class="demo-label">45-54</div>
+          <div class="demo-bar-bg"><div class="demo-bar" style="width:13%"></div></div>
+          <div class="demo-val">~13%</div>
         </div>
-        <div class="value-item">
-          <div class="value-icon">4</div>
-          <div class="value-text"><strong>Organic, engaged community</strong> — 670K+ interactions with zero paid media; authentic influence, not bought reach</div>
+        <div class="demo-row">
+          <div class="demo-label">18-24</div>
+          <div class="demo-bar-bg"><div class="demo-bar" style="width:10%"></div></div>
+          <div class="demo-val">~10%</div>
         </div>
+        <div class="demo-row">
+          <div class="demo-label">55+</div>
+          <div class="demo-bar-bg"><div class="demo-bar" style="width:5%"></div></div>
+          <div class="demo-val">~5%</div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div class="gender-row">
+            <div class="gender-item"><span>76%</span> Male</div>
+            <div class="gender-item"><span>24%</span> Female</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-title">Top-Performing Guest Content</div>
+        <div style="font-size: 9px; line-height: 1.6; color: #444;">
+          <div style="margin-bottom: 5px;"><strong>AR:</strong> Mohamad Nagaty reel (IG), Sheikh Khaled teaser 255K organic views (TikTok), Dr. Basem Elewa (FB)</div>
+          <div style="margin-bottom: 5px;"><strong>EN:</strong> Dr. Roy Casagranda on Xenophobia &amp; Nationalism (182K views), Dr. Angel Wesley on Islam (483K views on IG, 107K on TikTok)</div>
+          <div><strong>LinkedIn:</strong> 8,818 followers with +423% new follower growth, 236K impressions</div>
+        </div>
+      </div>
+
+      <div class="callout" style="background: #1d1d1f; border-radius: 6px;">
+        <p style="color: rgba(255,255,255,0.85);"><strong style="color: #fff;">The bottom line:</strong> In under 4 months, with zero paid promotion, The Mal Show built a bilingual media property reaching <strong style="color: #fff;">15.9 million views</strong> and <strong style="color: #fff;">118K followers</strong> across 6 platforms. The audience is <strong style="color: #fff;">72% aged 25&ndash;44</strong>, concentrated in high-value MENA and Western markets. The growth curve is still accelerating.</p>
       </div>
     </div>
 
@@ -606,8 +608,8 @@
 
   <!-- Footer -->
   <div class="footer">
-    <div class="footer-left">Confidential — prepared for Mastercard MENA &nbsp;|&nbsp; The Mal Show &copy; 2026</div>
-    <div class="footer-right">All metrics are organic (zero paid promotion) &nbsp;|&nbsp; Source: Native platform analytics</div>
+    <div>The Mal Show &copy; 2026 &nbsp;|&nbsp; Confidential</div>
+    <div>All metrics organic (zero paid promotion) &nbsp;|&nbsp; Source: Native platform analytics (Instagram, Facebook, TikTok, LinkedIn)</div>
   </div>
 
 </div>
