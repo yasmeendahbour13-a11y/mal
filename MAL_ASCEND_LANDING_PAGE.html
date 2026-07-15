@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mal Ascend — Fund Your Master's, Not Your Future Debt</title>
+<style>
+  :root {
+    --navy: #1a1a2e;
+    --purple: #6c3ce0;
+    --purple-light: #8b5cf6;
+    --green: #059669;
+    --grey-bg: #f9fafb;
+    --border: #e5e7eb;
+    --text-muted: #6b7280;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--navy);
+    line-height: 1.5;
+    background: #fff;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  img.uni-logo { max-width: 100%; max-height: 100%; }
+
+  /* ANNOUNCEMENT BAR */
+  .announce {
+    background: var(--navy); color: #fff; text-align: center;
+    font-size: 13px; font-weight: 600; padding: 9px 16px; letter-spacing: 0.2px;
+  }
+  .announce span { color: #b79bff; }
+
+  /* NAV */
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 0; border-bottom: 1px solid var(--border);
+  }
+  .logo { font-size: 20px; font-weight: 800; }
+  .logo span { color: var(--purple); }
+  .nav-links { display: flex; gap: 28px; font-size: 14px; font-weight: 600; color: var(--text-muted); }
+  .nav-links a:hover { color: var(--navy); }
+  .btn {
+    display: inline-block; background: var(--purple); color: #fff !important;
+    font-weight: 700; font-size: 14px; padding: 11px 20px; border-radius: 8px;
+    text-decoration: none; border: none; cursor: pointer;
+  }
+  .btn-outline {
+    background: transparent; color: var(--navy) !important; border: 1.5px solid var(--navy);
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(160deg, var(--navy) 0%, #26264a 100%);
+    color: #fff; padding: 64px 0 56px;
+  }
+  .hero-grid { display: flex; gap: 56px; align-items: flex-start; flex-wrap: wrap; }
+  .hero-copy { flex: 1 1 480px; }
+  .eyebrow {
+    display: inline-block; background: rgba(139,92,246,0.18); color: #c4b5fd;
+    font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+    padding: 6px 12px; border-radius: 20px; margin-bottom: 18px;
+  }
+  h1 { font-size: 42px; font-weight: 800; line-height: 1.15; margin-bottom: 18px; }
+  h1 .accent { color: #b79bff; }
+  .hero-sub { font-size: 17px; color: #cbd0e0; max-width: 520px; margin-bottom: 22px; }
+  .hero-trust { display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; color: #9ea3c0; margin-top: 22px; }
+  .hero-trust div { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: #8b5cf6; }
+
+  /* FORM CARD */
+  .form-card {
+    flex: 1 1 360px; background: #fff; border-radius: 16px; padding: 28px;
+    color: var(--navy); box-shadow: 0 20px 50px rgba(0,0,0,0.3); max-width: 400px;
+  }
+  .form-card h3 { font-size: 19px; font-weight: 800; margin-bottom: 4px; }
+  .form-card .sub { font-size: 13px; color: var(--text-muted); margin-bottom: 18px; }
+  .field { margin-bottom: 12px; }
+  .field label { display: block; font-size: 12px; font-weight: 700; margin-bottom: 5px; color: #374151; }
+  .field input {
+    width: 100%; padding: 11px 12px; border: 1.5px solid var(--border); border-radius: 8px;
+    font-size: 14px; font-family: inherit;
+  }
+  .field input:focus { outline: none; border-color: var(--purple); }
+  .form-card .btn { width: 100%; text-align: center; padding: 13px; font-size: 15px; margin-top: 6px; }
+  .form-note { font-size: 11px; color: #9ca3af; margin-top: 10px; text-align: center; }
+
+  /* STAT BAR */
+  .stat-bar {
+    background: var(--grey-bg); border-bottom: 1px solid var(--border);
+    padding: 30px 0;
+  }
+  .stat-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .stat { flex: 1 1 180px; text-align: center; }
+  .stat .num { font-size: 30px; font-weight: 800; color: var(--purple); }
+  .stat .lbl { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+
+  /* SECTIONS */
+  section { padding: 64px 0; }
+  .section-head { text-align: center; max-width: 640px; margin: 0 auto 44px; }
+  .section-eyebrow {
+    font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px;
+    color: var(--purple); margin-bottom: 10px;
+  }
+  h2 { font-size: 30px; font-weight: 800; margin-bottom: 10px; }
+  .section-sub { font-size: 15px; color: var(--text-muted); }
+
+  /* HOW IT WORKS */
+  .steps { display: flex; gap: 16px; flex-wrap: wrap; }
+  .step {
+    flex: 1 1 190px; background: #fff; border: 1px solid var(--border); border-radius: 12px;
+    padding: 20px 18px; position: relative;
+  }
+  .step-num {
+    width: 30px; height: 30px; border-radius: 50%; background: var(--navy); color: #fff;
+    display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;
+    margin-bottom: 14px;
+  }
+  .step h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+  .step p { font-size: 13px; color: var(--text-muted); }
+
+  /* USP GRID */
+  .usp-section { background: var(--grey-bg); }
+  .usp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .usp-card {
+    background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 22px 20px;
+  }
+  .usp-icon {
+    width: 40px; height: 40px; border-radius: 10px; background: rgba(108,60,224,0.1);
+    display: flex; align-items: center; justify-content: center; font-size: 19px; margin-bottom: 14px;
+  }
+  .usp-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+  .usp-card p { font-size: 13px; color: var(--text-muted); }
+
+  /* COMPARISON TABLE */
+  table.compare { width: 100%; border-collapse: collapse; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  table.compare th, table.compare td { padding: 14px 16px; text-align: left; font-size: 14px; border-bottom: 1px solid var(--border); }
+  table.compare th { background: var(--grey-bg); font-weight: 700; font-size: 13px; }
+  table.compare th:nth-child(2) { color: var(--purple); }
+  table.compare td:first-child { font-weight: 600; color: #374151; }
+  table.compare tr:last-child td { border-bottom: none; }
+  .yes { color: var(--green); font-weight: 700; }
+  .no { color: #9ca3af; }
+
+  /* UNIVERSITIES */
+  .uni-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+  .uni-card {
+    border: 1px solid var(--border); border-radius: 10px; padding: 18px 10px; text-align: center;
+    font-size: 13px; font-weight: 700; color: var(--navy); background: #fff;
+  }
+  .uni-card .prog { display: block; font-size: 11px; font-weight: 500; color: var(--text-muted); margin-top: 4px; }
+
+  /* ELIGIBILITY */
+  .elig-box {
+    background: var(--navy); color: #fff; border-radius: 16px; padding: 34px 36px;
+    display: flex; gap: 40px; flex-wrap: wrap;
+  }
+  .elig-box .col { flex: 1 1 320px; }
+  .elig-box h3 { font-size: 18px; font-weight: 800; margin-bottom: 14px; }
+  .elig-box ul { list-style: none; }
+  .elig-box li { font-size: 14px; color: #cbd0e0; margin-bottom: 10px; padding-left: 22px; position: relative; }
+  .elig-box li::before { content: "✓"; position: absolute; left: 0; color: #8b5cf6; font-weight: 800; }
+  .corridor-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+  .corridor-tags span {
+    background: rgba(139,92,246,0.18); color: #c4b5fd; font-size: 12px; font-weight: 600;
+    padding: 5px 10px; border-radius: 6px;
+  }
+
+  /* FAQ */
+  .faq-item { border-bottom: 1px solid var(--border); padding: 18px 0; }
+  .faq-item h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+  .faq-item p { font-size: 14px; color: var(--text-muted); }
+
+  /* FINAL CTA */
+  .final-cta {
+    background: linear-gradient(135deg, var(--purple) 0%, #4c2ba0 100%);
+    color: #fff; text-align: center; border-radius: 20px; padding: 52px 30px; margin: 0 24px;
+  }
+  .final-cta h2 { color: #fff; }
+  .final-cta .section-sub { color: #e0d6ff; margin-bottom: 26px; }
+  .final-cta .btn { background: #fff; color: var(--purple) !important; font-size: 16px; padding: 14px 30px; }
+
+  /* FOOTER */
+  footer { padding: 40px 0 30px; }
+  .footer-grid { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; }
+  .footer-disclaimer { font-size: 12px; color: #9ca3af; max-width: 640px; line-height: 1.6; }
+  .footer-copy { font-size: 12px; color: #9ca3af; }
+
+  @media (max-width: 860px) {
+    .usp-grid { grid-template-columns: repeat(2, 1fr); }
+    .uni-grid { grid-template-columns: repeat(2, 1fr); }
+    h1 { font-size: 32px; }
+    .nav-links { display: none; }
+    .steps { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!--
+  DUMMY LANDING PAGE — CONTENT/COPY DRAFT FOR REVIEW
+  Product: Mal Ascend (student lending pilot) · Waitlist capture: name, email, phone
+  Form is NOT wired up — static mockup only. Per execution plan, submissions should
+  route to Airtable (waitlist site → Airtable → underwriting queue).
+
+  OPEN ITEMS BEFORE THIS GOES LIVE (flagged for marketing/compliance/Farhan):
+  1. "2-day indicative funding" claim — not confirmed in Pilot Execution Plan or
+     Product Paper. Confirm actual SLA before publishing.
+  2. Grace period language is deliberately non-numeric — source docs say 24-month
+     deferment (during study) + 72-month amortization = 8yr term, not "6-month
+     grace" as referenced verbally. Confirm exact terms before adding a number.
+  3. "Ethical" is used instead of "Shariah-compliant" in primary headlines, per
+     the existing Mal marketing brief's own claim-status rule ("needs Legal
+     Sign-Off" for the Shariah-compliant claim). Swap in if already cleared.
+  4. No named competitor comparisons — comparison table uses "a typical
+     study-abroad loan" generically. Add named comparisons only after legal review.
+-->
+
+<div class="announce">
+  Now accepting waitlist signups for the <span>September 2026 cohort</span> · 50 spots · 10 partner campuses
+</div>
+
+<div class="wrap">
+  <nav>
+    <div class="logo">Mal <span>Ascend</span></div>
+    <div class="nav-links">
+      <a href="#how-it-works">How it works</a>
+      <a href="#universities">Universities</a>
+      <a href="#eligibility">Eligibility</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#waitlist" class="btn">Join the waitlist</a>
+  </nav>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">Ethical · Collateral-Free · Built for Master's Students</div>
+      <h1>Got into Harvard, Wharton, or LBS? <span class="accent">We'll help fund it.</span></h1>
+      <p class="hero-sub">
+        Mal Ascend finances Master's and MBA students admitted to 10 of the world's top universities —
+        no collateral, no co-signer, no hidden charges. Just your acceptance letter and a decision, fast.
+      </p>
+      <a href="#waitlist" class="btn" style="font-size:16px;padding:14px 26px;">Join the waitlist →</a>
+      <div class="hero-trust">
+        <div><span class="dot"></span> No collateral, ever</div>
+        <div><span class="dot"></span> No hidden fees</div>
+        <div><span class="dot"></span> Global USD account before you land</div>
+      </div>
+    </div>
+
+    <div class="form-card" id="waitlist">
+      <h3>Join the waitlist</h3>
+      <div class="sub">Be first in line for the September 2026 cohort.</div>
+      <form>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@email.com" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+ country code and number" required>
+        </div>
+        <button type="submit" class="btn">Join the waitlist</button>
+      </form>
+      <div class="form-note">No fees to join. We'll only contact you about your application.</div>
+    </div>
+  </div>
+</div>
+
+<!-- STAT BAR -->
+<div class="stat-bar">
+  <div class="wrap stat-row">
+    <div class="stat"><div class="num">$100K</div><div class="lbl">max tuition funded per student</div></div>
+    <div class="stat"><div class="num">$0</div><div class="lbl">collateral required</div></div>
+    <div class="stat"><div class="num">$0</div><div class="lbl">hidden fees — one fixed rate</div></div>
+    <div class="stat"><div class="num">10</div><div class="lbl">top-ranked partner campuses</div></div>
+    <div class="stat"><div class="num">50/50</div><div class="lbl">split or full tuition — your choice</div></div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">How It Works</div>
+      <h2>From acceptance letter to funded, in five steps</h2>
+      <p class="section-sub">No branch visits, no paperwork chase. Everything happens online.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Apply</h4>
+        <p>Share your acceptance letter, ID, and a few details about your programme and work history.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Get a decision</h4>
+        <p>We assess your admission and future earning potential — not your family's assets — and return an indicative offer.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Open your account</h4>
+        <p>Set up your global USD account via Zenus, ready before you land in-country.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>We pay your school</h4>
+        <p>Tuition goes straight to your university, semester by semester — half or all of it, your call.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <h4>Repay after you graduate</h4>
+        <p>Repayments pause while you study, with a grace period after graduation before instalments begin.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USPs -->
+<section class="usp-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Why Mal Ascend</div>
+      <h2>Financing built for students, not against them</h2>
+      <p class="section-sub">Every term is disclosed up front. No surprises, no fine print designed to work against you.</p>
+    </div>
+    <div class="usp-grid">
+      <div class="usp-card">
+        <div class="usp-icon">🔓</div>
+        <h4>Zero collateral, zero co-signer</h4>
+        <p>You're funded on your admission and future earning potential — not your family's property or savings.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon">🧾</div>
+        <h4>Zero hidden fees</h4>
+        <p>One fixed rate, disclosed before you sign. No surprise charges buried in the fine print.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon">⚖️</div>
+        <h4>Flexible funding</h4>
+        <p>Fund half your tuition or all of it — semester by semester, matched to what you actually need.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon">⚡</div>
+        <h4>Fast decisions</h4>
+        <p>Show us your acceptance letter and get an indicative funding decision — no months-long wait.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon">🌍</div>
+        <h4>A bank account before you land</h4>
+        <p>Get a global USD account via Zenus set up before you arrive — so you're not starting from zero.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon">🤝</div>
+        <h4>Ethical by design</h4>
+        <p>No interest games, no penalty traps. Structured so what you owe is what you signed up for — nothing more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">The Difference</div>
+      <h2>How Mal Ascend compares</h2>
+      <p class="section-sub">Against a typical study-abroad loan.</p>
+    </div>
+    <table class="compare">
+      <thead>
+        <tr><th></th><th>Mal Ascend</th><th>Typical study-abroad loan</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Collateral required</td><td class="yes">Never</td><td class="no">Often required</td></tr>
+        <tr><td>Co-signer required</td><td class="yes">Never</td><td class="no">Usually required</td></tr>
+        <tr><td>Underwriting basis</td><td class="yes">Admission + future earnings</td><td class="no">Family income / assets</td></tr>
+        <tr><td>Fee transparency</td><td class="yes">One fixed rate, disclosed upfront</td><td class="no">Often layered with extra charges</td></tr>
+        <tr><td>Partial tuition funding</td><td class="yes">Yes — fund half or all</td><td class="no">Usually all-or-nothing</td></tr>
+        <tr><td>Global account before arrival</td><td class="yes">Yes, via Zenus</td><td class="no">Not typically offered</td></tr>
+        <tr><td>Disbursement</td><td class="yes">Direct to your university</td><td class="no">Varies</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- UNIVERSITIES -->
+<section id="universities" class="usp-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Where It's Valid</div>
+      <h2>10 campuses, for our pilot cohort</h2>
+      <p class="section-sub">Admitted to a Master's or MBA programme at one of these schools? You're in scope.</p>
+    </div>
+    <div class="uni-grid">
+      <div class="uni-card">Harvard<span class="prog">MBA & Master's</span></div>
+      <div class="uni-card">Princeton<span class="prog">Policy & Master's</span></div>
+      <div class="uni-card">Yale<span class="prog">MBA & Master's</span></div>
+      <div class="uni-card">Columbia<span class="prog">MBA & Master's</span></div>
+      <div class="uni-card">UPenn — Wharton<span class="prog">MBA & Master's</span></div>
+      <div class="uni-card">Cornell<span class="prog">MBA & Master's</span></div>
+      <div class="uni-card">Dartmouth — Tuck<span class="prog">MBA & Master's</span></div>
+      <div class="uni-card">INSEAD — Fontainebleau<span class="prog">MBA & Master's</span></div>
+      <div class="uni-card">INSEAD — Singapore<span class="prog">MBA & Master's</span></div>
+      <div class="uni-card">London Business School<span class="prog">MBA & Master's</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ELIGIBILITY -->
+<section id="eligibility">
+  <div class="wrap">
+    <div class="elig-box">
+      <div class="col">
+        <h3>Who this is for</h3>
+        <ul>
+          <li>Admitted to a Master's or MBA programme at one of our 10 partner campuses</li>
+          <li>Age 25 or older, with at least 1 year of post-degree work experience</li>
+          <li>Able to pass standard identity and background checks</li>
+          <li>Willing to open a global USD account as part of the process</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Where our students are based</h3>
+        <p style="font-size:14px;color:#cbd0e0;margin-bottom:6px;">Our September cohort is drawn from these corridors:</p>
+        <div class="corridor-tags">
+          <span>India</span><span>Nigeria</span><span>Pakistan</span><span>Bangladesh</span>
+          <span>Morocco</span><span>Indonesia</span><span>Egypt</span><span>Turkey</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap" style="max-width:760px;">
+    <div class="section-head">
+      <div class="section-eyebrow">FAQ</div>
+      <h2>Questions, answered</h2>
+    </div>
+    <div class="faq-item">
+      <h4>Is this really collateral-free?</h4>
+      <p>Yes. We fund you based on your admission and future earning potential — not property, savings, or a co-signer.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How much can I get funded?</h4>
+      <p>Up to $100,000 in tuition, paid directly to your university, plus additional living-expense support for eligible second-year students.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do I have to fund my entire tuition through Mal Ascend?</h4>
+      <p>No — you can choose to fund a portion or all of it, matched to what you actually need.</p>
+    </div>
+    <div class="faq-item">
+      <h4>When do I start repaying?</h4>
+      <p>Repayments pause while you're studying, with a grace period after you graduate before instalments begin. Full terms are confirmed at your offer stage.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Which universities are eligible right now?</h4>
+      <p>Our pilot cohort covers Harvard, Princeton, Yale, Columbia, UPenn (Wharton), Cornell, Dartmouth (Tuck), INSEAD (Fontainebleau & Singapore), and London Business School — Master's and MBA programmes only.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Is there a cost to join the waitlist?</h4>
+      <p>No. Joining the waitlist is free and doesn't obligate you to anything.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section>
+  <div class="final-cta">
+    <h2>Your admission letter got you in. Let's get you funded.</h2>
+    <p class="section-sub">Join the waitlist for the September 2026 cohort — 50 spots, 10 campuses.</p>
+    <a href="#waitlist" class="btn">Join the waitlist →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-disclaimer">
+      Mal Ascend is currently in a pilot phase for a controlled cohort across 10 partner campuses.
+      Joining the waitlist does not guarantee funding eligibility or approval. All terms shown are
+      indicative, subject to eligibility review, and may change before final offer.
+    </div>
+    <div class="footer-copy">© 2026 Mal Ascend. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
